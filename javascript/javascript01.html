@@ -40,22 +40,22 @@
         <div class="container">
             <div class="main__menu">
                 <ul>
-                    <li><a href="#">00. 변수 : 데이터 저장</a></li>
-                    <li><a href="#">00. 변수 : 데이터 저장 + 데이터 변경</a></li>
-                    <li><a href="#">00. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
-                    <li><a href="#">00. 상수 : 데이터 저장</a></li>
-                    <li><a href="#">00. 배열 : 데이터 저장(여러개) : 표현방법1</a></li>
-                    <li><a href="#">00. 배열 : 데이터 저장(여러개) : 표현방법2</a></li>
-                    <li><a href="#">00. 배열 : 데이터 저장(여러개) : 표현방법3</a></li>
-                    <li><a href="#">00. 배열 : 데이터 저장(여러개) : 표현방법4</a></li>
-                    <li><a href="#">00. 객체 : 데이터 저장(키와값) : 표현방법1</a></li>
-                    <li><a href="#">00. 객체 : 데이터 저장(키와값) : 표현방법2</a></li>
-                    <li><a href="#">00. 객체 : 데이터 저장(키와값) : 표현방법3</a></li>
-                    <li><a href="#">00. 객체 : 데이터 저장(키와값) : 표현방법4</a></li>
-                    <li><a href="#">00. 객체 : 데이터 저장(키와값) : 표현방법5</a></li>
-                    <li><a href="#">00. 객체 : 데이터 저장(키와값) : 표현방법6</a></li>
-                    <li><a href="#">00. 객체 : 데이터 저장(키와값) : 표현방법7</a></li>
-                    <li><a href="#">00. 객체 : 데이터 저장(키와값) : 표현방법8</a></li>
+                    <li><a href="#">01. 변수 : 데이터 저장</a></li>
+                    <li><a href="#">02. 변수 : 데이터 저장 + 데이터 변경</a></li>
+                    <li><a href="#">03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
+                    <li><a href="#">04. 상수 : 데이터 저장</a></li>
+                    <li><a href="#">05. 배열 : 데이터 저장(여러개) : 표현방법1</a></li>
+                    <li><a href="#">06. 배열 : 데이터 저장(여러개) : 표현방법2</a></li>
+                    <li><a href="#">07. 배열 : 데이터 저장(여러개) : 표현방법3</a></li>
+                    <li><a href="#">08. 배열 : 데이터 저장(여러개) : 표현방법4</a></li>
+                    <li><a href="#">09. 객체 : 데이터 저장(키와값) : 표현방법1</a></li>
+                    <li><a href="#">10. 객체 : 데이터 저장(키와값) : 표현방법2</a></li>
+                    <li><a href="#">11. 객체 : 데이터 저장(키와값) : 표현방법3</a></li>
+                    <li><a href="#">12. 객체 : 데이터 저장(키와값) : 표현방법4</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
                 </ul>
             </div>
             <div class="main_sample">
@@ -134,7 +134,7 @@
                     <!-- //sample03 -->
                 </div>
                 <div id="sample04" class="sample">
-                    <h3>00. 상수 : 데이터 저장 + 데이터 변경불가</h3>
+                    <h3>04. 상수 : 데이터 저장 + 데이터 변경불가</h3>
                     <p>상수는 데이터 저장은 가능하나 변경은 불가능합니다. 상수(const)는 이미 선언한 상수에 대해 중복 선언이 불가능하며 상수의 값을 재지정할 수도 없습니다.</p>
                     <div class="script">
 <pre><code class="language-js"> {
@@ -158,12 +158,174 @@
                         //Assignment to constant variable
                     </div>
                 </div>
-                <div id="sample05" class="sample"></div>
-                <div id="sample06" class="sample"></div>
-                <div id="sample07" class="sample"></div>
-                <div id="sample08" class="sample"></div>
-                <div id="sample09" class="sample"></div>
-                <div id="sample10" class="sample"></div>
+                <div id="sample05" class="sample">
+                    <h3>05. 배열 : 데이터 저장(여러개) : 표현방법1</h3>
+                    <p>배열에 기본적으로 데이터를 넣어주는 방법</p>
+                    <div class="script">
+<pre><code class="language-js"> {
+    const arr = new Array();
+    arr[0] = 100;
+    arr[1] = 200;
+    arr[2] = "javascript";
+
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascipt
+                    </div>
+                </div>
+                <div id="sample06" class="sample">
+                    <h3>06. 배열 : 데이터 저장(여러개) : 표현방법2</h3>
+                    <p>배열은 자동으로 0부터 시작이기 때문에 arr[number]를 생략가능</p>
+                    <div class="script">
+<pre><code class="language-js"> {
+    const arr = new Array(100, 200, "javascript");
+
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascipt
+                    </div>
+                </div>
+                <div id="sample07" class="sample">
+                    <h3>07. 배열 : 데이터 저장(여러개) : 표현방법3</h3>
+                    <p>new Array를 생략하고 데이터를 저장하는 방법</p>
+                    <div class="script">
+<pre><code class="language-js"> {
+    const arr = [];
+    arr[0] = 100;
+    arr[1] = 200;
+    arr[2] = "javascript"
+
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascipt
+                    </div>
+                </div>
+                <div id="sample08" class="sample">
+                    <h3>08. 배열 : 데이터 저장(여러개) : 표현방법4</h3>
+                    <p>new Array와 각각의 번호지정을 생략하고 저장하는 방법</p>
+                    <div class="script">
+<pre><code class="language-js"> {
+    const arr = [100, 200, "javascript"];
+
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascipt
+                    </div>
+                </div>
+                <div id="sample09" class="sample">
+                    <h3>09. 객체 : 데이터 저장(키와 값) : 표현방법1</h3>
+                    <p>객체는 배열과 같은 방법으로 데이터를 저장가능</p>
+                    <div class="script">
+<pre><code class="language-js"> {
+    const obj = new Object();
+    obj[0] = 100;
+    obj[1] = 200;
+    obj[2] = "javascript";
+
+    console.log(obj[0]);
+    console.log(obj[1]);
+    console.log(obj[2]);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascipt
+                    </div>
+                </div>
+                <div id="sample10" class="sample">
+                    <h3>10. 객체 : 데이터 저장(키와 값) : 표현방법2</h3>
+                    <p>숫자가 아닌 a, b, c의 키 값을 주고 데이터를 저장가능</p>
+                    <div class="script">
+<pre><code class="language-js"> {
+    const obj = new Object();
+    obj.a = 100;
+    obj.b = 200;
+    obj.c = "javascript"
+
+    console.log(obj.a);
+    console.log(obj.b);
+    console.log(obj.c);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascipt
+                    </div>
+                </div>
+                <div id="sample10" class="sample">
+                    <h3>11. 객체 : 데이터 저장(키와 값) : 표현방법3</h3>
+                    <p>new Object를 생략하고 데이터 저장가능</p>
+                    <div class="script">
+<pre><code class="language-js"> {
+    const obj = {}
+    obj.a = 100;
+    obj.b = 200;
+    obj.c = "javascript";
+
+    console.log(obj.a);
+    console.log(obj.b);
+    console.log(obj.c);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascipt
+                    </div>
+                </div>
+                <div id="sample10" class="sample">
+                    <h3>12. 객체 : 데이터 저장(키와 값) : 표현방법4</h3>
+                    <p>배열과 마찬가지로 한줄로 데이터를 저장 가능하지만<br>
+                    키와 값을 같이 적어주어야 함 {키:값, 키:값}</p>
+                    <div class="script">
+<pre><code class="language-js"> {
+    const obj = {a:100, b:200, c:"javascipt"};
+
+    console.log(obj.a);
+    console.log(obj.b);
+    console.log(obj.c);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascipt
+                    </div>
+                </div>
             </div>
         </div>
     </main>
