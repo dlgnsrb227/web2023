@@ -62,12 +62,6 @@
 <pre data-line="1-3" class="line-numbers"><code class="language-js"> for(let i=1; i&lt;=100; i++){
     console.log(i);
 }
-
-// for 반복문을 사용해서 1부터 100까지 출력
-// i의 초기값 1 (i=1);  
-// i는 100보다 작거나 같다의 조건문 (i&lt;=100);
-// 조건값이 true면 console.log(i) 실행
-// 실행 후 증감식 (i++) 실행  --> 반복
 </code></pre>
                     </div>
                     <div class="result">
@@ -78,6 +72,14 @@
                             </div>
                         </details>
                     </div>
+                    <div class="notice">
+                        <h4>for 반복문</h4>
+                        <p>for 반복문을 사용해서 1부터 100까지 출력<br>
+                            i의 초기값 1 (i=1);<br>
+                            i는 100보다 작거나 같다의 조건문 (i&lt;=100);<br>
+                            조건값이 true면 console.log(i) 실행<br>
+                            실행 후 증감식 (i++) 실행  --> 반복</p>
+                    </div>
                 </div>
                 <!-- sample01 -->
 
@@ -87,10 +89,7 @@
                     <div class="script">
 <pre data-line="1-3" class="line-numbers"><code class="language-js"> for(let i=0; i&lt;51; i++){
     console.log(i);
-    }
-
-    // i의 초기값 0으로 변경 (i=0);
-    // i의 조건문 변경 i&lt;=50 혹은 i&lt;51 둘 다 가능
+}
 </code></pre>
                     </div>
                     <div class="result">
@@ -101,6 +100,11 @@
                             </div>
                         </details>
                     </div>
+                    <div class="notice">
+                        <h4>for 반복문</h4>
+                        <p>i의 초기값 0으로 변경 (i=0);<br>
+                            i의 조건문 변경 i&lt;=50 혹은 i&lt;51 둘 다 가능</p>
+                    </div>
                 </div>
                 <div id="sample02" class="sample">
                     <h3>03. 데이터 이펙트 : 1부터 100까지 짝수만 출력하기</h3>
@@ -109,9 +113,6 @@
 <pre data-line="1-3" class="line-numbers"><code class="language-js"> for(let i=2; i&lt;=100; i+=2){
     console.log(i);
 }
-
-    // 2부터 시작해서 i값이 100보다 작거나 같을 때 출력,
-    // 조건문 false까지 2씩 더하며 반복
 </code></pre>
                     </div>
                     <div class="result">
@@ -121,6 +122,11 @@
                                 2, 4, 6, 8, 10, 12 ~ 98, 100
                             </div>
                         </details>
+                    </div>
+                    <div class="notice">
+                        <h4>for반복문 (2씩증가)</h4>
+                        <p>2부터 시작해서 i값이 100보다 작거나 같을 때 출력,<br>
+                            조건문 false까지 2씩 더하며 반복</p>
                     </div>
                 </div>
                 <div id="sample02" class="sample">
@@ -134,8 +140,7 @@
     if(i % 5 == 0){
         console.log(i);
     }
- }  // if()문과 %연산을 사용하여도 배수 출력이 가능하다.
-    // i를 5로 나누었을 때 나머지가 0이면 출력
+ }
 </code></pre>
                     </div>
                     <div class="result">
@@ -145,6 +150,11 @@
                                 5, 10, 15, 20, 25 ~ 95, 100
                             </div>
                         </details>
+                    </div>
+                    <div class="notice">
+                        <h4>if()문과 %연산자 사용</h4>
+                        <p>if()문과 %연산을 사용하여도 배수 출력이 가능하다.<br>
+                            i를 5로 나누었을 때 나머지가 0이면 출력</p>
                     </div>
                 </div>
             </div>
