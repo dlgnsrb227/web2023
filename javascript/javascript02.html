@@ -101,6 +101,7 @@
                     <p>변수 x, y, z에 값을 저장하고 console.log로 불러올 수 있다.</p>
                 </div>
             </div>
+            <!-- sample01 -->
             <div id="sample02" class="sample">
                 <h3>02. 상수 : 데이터 불러오기</h3>
                 <p>상수를 불러오는 방법</p>
@@ -124,6 +125,7 @@
                     <p>상수도 변수와 마찬가지로 출력 가능하다.</p>
                 </div>
             </div>
+            <!-- sample02 -->            
             <div id="sample03" class="sample">
                 <h3>03. 배열 : 데이터 불러오기</h3>
                 <p>배열을 불러오는 방법</p>
@@ -147,6 +149,7 @@
                     <p>배열은 console.log(배열이름[순서]); 로 출력 가능하다.</p>
                 </div>
             </div>
+            <!-- sample03 -->
             <div id="sample04" class="sample">
                 <h3>04. 배열 : 데이터 불러오기 : 2차 배열</h3>
                 <p>배열 안의 배열을 불러오는 방법</p>
@@ -171,6 +174,7 @@
                         console.log(배열이름[순서][배열 안 배열의 순서]로 출력 가능하다.</p>
                 </div>
             </div>
+            <!-- sample04 -->
             <div id="sample05" class="sample">
                 <h3>05. 배열 : 데이터 불러오기 : 갯수 구하는 방법</h3>
                 <p>for문을 이용해서 1부터 100까지 출력하는 방법입니다.</p>
@@ -194,6 +198,7 @@
                     <p>배열의 갯수는 console.log(배열이름.length)로 출력 가능하다.</p>
                 </div>
             </div>
+            <!-- sample05 -->
             <div id="sample06" class="sample">
                 <h3>06. 배열 : 데이터 불러오기 : for()문</h3>
                 <p>for문을 이용해서 1부터 9까지 불러오는 방법</p>
@@ -225,6 +230,39 @@
                         i=9; 9&lt9; 조건에 맞지 않으므로 end;</p>
                 </div>
             </div>
+            <!-- sample06 -->
+            <div id="sample07" class="sample">
+                <h3>07. 배열 : 데이터 불러오기 : 중첩for()문</h3>
+                <p>for문 안에 다시 for문을 넣어줄 수 있다.</p>
+                <div class="script">
+<pre data-line="1-8" class="line-numbers"><code class="language-js">{
+    for(let i=1; i<=10; i++){
+        console.log("i : " + i);
+        for(let j=1; j<=10; j++){
+            console.log("j = " + j);
+        }
+    }
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            i : 1 에 j : 1~10<br>
+                            i : 2 에 j : 1~10<br>
+                            i : 10까지 반복
+                        </div>
+                    </details>
+                </div>
+                <div class="notice">
+                    <h4>for 중첩문 사용하기</h4>
+                    <p>for문 안에 for문을 중첩하여 결과값을 출력한다<br>
+                    첫 번째 for문 실행 후, 두 번째 for문이 조건식을 만족하는 결과를 모두 출력하고<br>
+                    다시 첫 번째 for문으로 돌아간다.</p>
+                </div>
+            </div>
+            <!-- sample07 -->
         </div>
     </main>
     <!-- //main -->
@@ -238,57 +276,57 @@
     <script>
         // 01. 변수 : 데이터 불러오기
         // 변수안에 저장된 데이터를 불러오는 방법입니다.
-        {
-            let x = 100, y = 200, z = "javascript";
+        // {
+        //     let x = 100, y = 200, z = "javascript";
 
-            console.log(x, y, z);
-        }
+        //     console.log(x, y, z);
+        // }
 
-        // 02. 상수 : 데이터 불러오기
-        // 상수안에 저장된 데이터를 불러오는 방법입니다.
-        {
-            const x = 100, y = 200, z = "javascript";
+        // // 02. 상수 : 데이터 불러오기
+        // // 상수안에 저장된 데이터를 불러오는 방법입니다.
+        // {
+        //     const x = 100, y = 200, z = "javascript";
 
-            console.log(x, y, z);
-        }
+        //     console.log(x, y, z);
+        // }
 
-        // 03. 배열 : 데이터 불러오기
-        // 배열에 저장된 데이터를 불러오는 방법입니다.
-        {
-            const arr = [100, 200, "javascript"];
+        // // 03. 배열 : 데이터 불러오기
+        // // 배열에 저장된 데이터를 불러오는 방법입니다.
+        // {
+        //     const arr = [100, 200, "javascript"];
 
-            console.log(arr[0], arr[1], arr[2]);
-        }
+        //     console.log(arr[0], arr[1], arr[2]);
+        // }
 
-        // 04. 배열 : 데이터 불러오기 : 2차 배열
-        {
-            const arr = [100, 200, ["javascript","react"]]
+        // // 04. 배열 : 데이터 불러오기 : 2차 배열
+        // {
+        //     const arr = [100, 200, ["javascript","react"]]
 
-            console.log(arr[0], arr[1], arr[2][0], arr[2][1]);
-        }
+        //     console.log(arr[0], arr[1], arr[2][0], arr[2][1]);
+        // }
 
-        // 05. 배열 : 데이터 불러오기 : 갯수 구하는 방법
-        {
-            const arr = [100, 200, "javascript"]
+        // // 05. 배열 : 데이터 불러오기 : 갯수 구하는 방법
+        // {
+        //     const arr = [100, 200, "javascript"]
 
-            console.log(arr.length); // 갯수 : length 
-        }
+        //     console.log(arr.length); // 갯수 : length 
+        // }
 
-        // 06. 배열 : 데이터 불러오기 : for()문
-        {
-            const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+        // // 06. 배열 : 데이터 불러오기 : for()문
+        // {
+        //     const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
-            // console.log(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8]);
+        //     // console.log(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8]);
 
-            //for(초기값; 조건식; 증감식;){
-            //     실행문
-            // }
+        //     //for(초기값; 조건식; 증감식;){
+        //     //     실행문
+        //     // }
 
-            for(let i = 0; i<9; i++) {
-                console.log(arr[i]);
-            }   // 초기값(i=0); 조건식(i<9); 증감식(i++) ->i++ 는 i가 1씩 증가
-                // i = 0, true, clg 실행 -> i 1증가 ====> i<9가 false가 될 때까지 반복.
-        }       // i<9 가 false가 되는 부분은 i = 8 이므로 arr[8]까지만 작업
+        //     for(let i = 0; i<9; i++) {
+        //         console.log(arr[i]);
+        //     }   // 초기값(i=0); 조건식(i<9); 증감식(i++) ->i++ 는 i가 1씩 증가
+        //         // i = 0, true, clg 실행 -> i 1증가 ====> i<9가 false가 될 때까지 반복.
+        // }       // i<9 가 false가 되는 부분은 i = 8 이므로 arr[8]까지만 작업
                 // i=0; 0<9; console.log(arr[0]); i++
                 // i=1; 1<9; console.log(arr[1]); i++
                 // i=2; 2<9; console.log(arr[2]); i++ 계속 반복 (조건이 맞는 값까지)
@@ -300,7 +338,32 @@
         //         console.log(brr[i]);
         //     }
         // }
+        
+        // 06번 연습
+
+        // {
+        //     const A = [1,2,3,4,5,6,7,8,9,10];
+
+        //     for(let i=0; i<10; i++){ // for(let i=0; i<A.length; i++) 배열 A의 갯수
+
+        //         console.log(A[i]);
+
+        //         // 마지막 i=9가 실행되었을 때 i=10이 되고
+        //         // 10이 된 상태에서 다음 과정에 조건을 만족하지 못했으므로 i=10상태에서 끝.
+        //         // 시험에서 물어보는 것 (i=9가 아님)
+        //     }
+        // }
+
         // 07. 배열 : 데이터 불러오기 : 중첩for()문
+        // {
+        //     for(let i=1; i<=10; i++){
+        //         console.log("i : " + i);
+        //         for(let j=1; j<=10; j++){
+        //             console.log("j = " + j);
+        //         }
+        //     }
+        // }
+        
     </script>
 
 </body>
