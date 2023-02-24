@@ -48,19 +48,19 @@
         <div class="container">
             <div class="main__menu">
                 <ul>
-                    <li><a href="#">01. if문</a></li>
-                    <li><a href="#">02. if문 생략</a></li>
-                    <li><a href="#">03. 삼항 연산자</a></li>
-                    <li><a href="#">04. 다중 if(else if)문</a></li>
-                    <li><a href="#">05. 중첩 if문</a></li>
+                    <li><a href="#">01. 데이터 제어하기 : if문</a></li>
+                    <li><a href="#">02. 데이터 제어하기 : if문 생략</a></li>
+                    <li><a href="#">03. 데이터 제어하기 : 삼항 연산자</a></li>
+                    <li><a href="#">04. 데이터 제어하기 : 다중 if(else if)문</a></li>
+                    <li><a href="#">05. 데이터 제어하기 : 중첩 if문</a></li>
 
-                    <li><a href="#">06. switch문</a></li>
-                    <li><a href="#">07. while문</a></li>
-                    <li><a href="#">08. do while문</a></li>
-                    <li><a href="#">09. for문</a></li>
-                    <li><a href="#">10. 중첩 for문</a></li>
-                    <li><a href="#">11. break문</a></li>
-                    <li><a href="#">12. continue문</a></li>
+                    <li><a href="#">06. 데이터 제어하기 : switch문</a></li>
+                    <li><a href="#">07. 데이터 제어하기 : while문</a></li>
+                    <li><a href="#">08. 데이터 제어하기 : do while문</a></li>
+                    <li><a href="#">09. 데이터 제어하기 : for문</a></li>
+                    <li><a href="#">10. 데이터 제어하기 : 중첩 for문</a></li>
+                    <li><a href="#">11. 데이터 제어하기 : break문</a></li>
+                    <li><a href="#">12. 데이터 제어하기 : continue문</a></li>
                 </ul>
             </div>
         </div>
@@ -141,7 +141,7 @@ if(num == 100){
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            실행되었습니다.(False)
+                            truetrue
                         </div>
                     </details>
                 </div>
@@ -150,36 +150,42 @@ if(num == 100){
                     <p>색이 들어간 라인은 같은 내용의 if문인데,<br>
                     if와 else를 생략하고 표현 가능하다.<br>
                     컴퓨터가 인식할 때 첫 번째 표현은 else문까지 다 읽는 반면에,<br>
-                    두 번째 문장은 뒤에 else문을 컴퓨터가 읽지 않는다.</p>
+                    두 번째 문장은 뒤에 else문을 컴퓨터가 읽지 않기 때문에 훨씬 효율적이다.</p>
                 </div>
             </div>
             <!-- sample03 -->
             <div id="sample04" class="sample">
                 <h3> 04. 다중 if문</h3>
-                <p>if문은 생략 가능해서 간략하게 표현 가능하다.</p>
+                <p>else if문을 사용하여 각각의 결과 값을 설정할 수 있다.</p>
                 <div class="script">
-<pre data-line="1-5" class="line-numbers"><code class="language-js">const num = 100;{
-    if(num) document.write("실행되었습니다.(True)");
-    else document.write("실행되었습니다.(False)");
+<pre data-line="3-12" class="line-numbers"><code class="language-js">{
+    const num = 100;
+    if(num == 90){
+        document.write("실행되었습니다.(num == 90)");
+    } else if(num == 100){
+        document.write("실행되었습니다.(num == 100)");
+    } else if(num == 110){
+        document.write("실행되었습니다.(num == 110)");
+    } else if(num == 120){
+        document.write("실행되었습니다.(num == 120)");
+    } else {
+        document.write("실행되었습니다.")
+    }
 }
-
-if(num) document.write("실행되었습니다(True)");
-else document.write("실행되었습니다.(False)");
 </code></pre>
                 </div>
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            실행되었습니다.(False)
+                            실행되었습니다.(num == 100)<br>
+                            // if(num == x) 의 값에 따라 결과가 달라진다.
                         </div>
                     </details>
                 </div>
                 <div class="notice">
-                    <h4>if문</h4>
-                    <p>0, null, undefined, false, 빈문자열("") 다섯가지만 false가 출력.<br>
-                        값이 없는 것에 대해서 false가 뜬다.<br>
-                    위 false값이 나오는것 외 모든 것은 true가 나온다.</p>
+                    <h4>다중 if문 (else if)</h4>
+                    <p>if문에 else if를 추가하여 변수가 변화함에 따라 각각의 결과를 출력 가능하다.</p>
                 </div>
             </div>
             <!-- sample04 -->
@@ -214,30 +220,46 @@ else document.write("실행되었습니다.(False)");
             <!-- sample05 -->
             <div id="sample09" class="sample">
                 <h3> 09. for문</h3>
-                <p>if문은 생략 가능해서 간략하게 표현 가능하다.</p>
+                <p>반복되는 내용에 for문을 사용 가능하다.</p>
                 <div class="script">
-<pre data-line="1-5" class="line-numbers"><code class="language-js">const num = 100;{
-    if(num) document.write("실행되었습니다.(True)");
-    else document.write("실행되었습니다.(False)");
+<pre data-line="1-3,6-8,10-12,14-17" class="line-numbers"><code class="language-js">for(let i=1; i&lt;=100; i++){
+    document.write(i);
 }
 
-if(num) document.write("실행되었습니다(True)");
-else document.write("실행되었습니다.(False)");
+const arr = [1,2,3,4,5,6,7,8,9,10];
+for(let i=0; i&lt;arr.length; i++){
+    document.write(arr[i]);
+}
+
+for(let i=1; i&lt;arr.length; i+=2){
+    document.write(arr[i]);
+}
+
+for(let i=0; i&lt;arr.length; i++){
+    if(arr[i] % 2 == 0){
+        document.write(arr[i]);
+}
 </code></pre>
                 </div>
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            실행되었습니다.(False)
+                            1~100<br>
+                            1 2 3 4 5 6 7 8 9 10<br>
+                            2 4 6 8 10<br>
+                            2 4 6 8 10
                         </div>
                     </details>
                 </div>
                 <div class="notice">
-                    <h4>if문</h4>
-                    <p>0, null, undefined, false, 빈문자열("") 다섯가지만 false가 출력.<br>
-                        값이 없는 것에 대해서 false가 뜬다.<br>
-                    위 false값이 나오는것 외 모든 것은 true가 나온다.</p>
+                    <h4>for문 기본</h4>
+                    <p>첫 번째 for문 부터 순서대로<br>
+                    1부터 100까지 출력하기<br>
+                    배열안에 있는 값 for문으로 출력하기<br>
+                    배열안에서 짝수만 출력하기<br>
+                    배열안에서 짝수만 if문을 같이 사용하여 출력하기<br>
+                    예시라 i를 써줬지만 같은 곳에 작성하려면 변수를 다르게 주어야한다.</p>
                 </div>
             </div>
             <!-- sample09 -->
@@ -289,17 +311,15 @@ else document.write("실행되었습니다.(False)");
         // else document.write("실행되었습니다.(False)");
 
         // 03. 삼항 연산자
-        // {
-        //     const num = 100;
+            // const num = 100;
 
-        //     if(num == 100){
-        //         document.write("true");
-        //     } else {
-        //         document.write("false");
-        //     }    원본
+            // if(num == 100){
+            //     document.write("true");
+            // } else {
+            //     document.write("false");
+            // }    //원본
 
-        //     (num == 100) ? document.write("true") : document.write("false")
-        // }
+            // (num == 100) ? document.write("true") : document.write("false")
             // 뒤에 else문을 컴퓨터가 읽지 않음 (효율적)
 
         // 04. 다중 if문
