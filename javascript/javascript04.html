@@ -191,30 +191,36 @@ if(num == 100){
             <!-- sample04 -->
             <div id="sample05" class="sample">
                 <h3>05. 중첩 if문</h3>
-                <p>if문은 생략 가능해서 간략하게 표현 가능하다.</p>
+                <p>if문 안에 또 다른 if문을 넣어줄 수 있다.</p>
                 <div class="script">
-<pre data-line="1-5" class="line-numbers"><code class="language-js">const num = 100;{
-    if(num) document.write("실행되었습니다.(True)");
-    else document.write("실행되었습니다.(False)");
+<pre data-line="1-14" class="line-numbers"><code class="language-js">{
+    const num = 100
+    if(num ==100){
+        document.write("실행되었습니다.(1)");
+        if(num == 100){
+            document.write("실행되었습니다.(2)");
+            if(num == 100){
+                document.write("실행되었습니다.(3)");
+            }
+        }
+    } else {
+        document.write("실행되었습니다.(4)");
+    }
 }
-
-if(num) document.write("실행되었습니다(True)");
-else document.write("실행되었습니다.(False)");
 </code></pre>
                 </div>
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            실행되었습니다.(False)
+                            실행되었습니다.(1)실행되었습니다.(2)실행되었습니다.(3)
                         </div>
                     </details>
                 </div>
                 <div class="notice">
-                    <h4>if문</h4>
-                    <p>0, null, undefined, false, 빈문자열("") 다섯가지만 false가 출력.<br>
-                        값이 없는 것에 대해서 false가 뜬다.<br>
-                    위 false값이 나오는것 외 모든 것은 true가 나온다.</p>
+                    <h4>중첩 if문</h4>
+                    <p>조건문 안에 조건문을 넣어주게 되면 첫 번째와 두 번째 조건이 모두 true여야 출력 가능하다.<br>
+                    즉, 겉의 조건을 만족해야 순차적으로 안의 조건으로 들어갈 수 있다.</p>
                 </div>
             </div>
             <!-- sample05 -->
