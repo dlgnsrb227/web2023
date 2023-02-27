@@ -84,6 +84,202 @@
                 </ul>
             </div>
         </div>
+        <div class="main_sample">
+            <div id="sample01" class="sample">
+                <h3>01. 선언적 함수</h3>
+                <p>함수를 실행하는 기본적인 방법</p>
+                <div class="script">
+<pre data-line="1-4" class="line-numbers"><code class="language-js">function func(){
+    document.write("실행되었습니다.<br>");
+}
+func();
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+                <div class="notice">
+                    <h4>함수 선언하기</h4>
+                    <p>function의 이름을 function으로 지정할 수는 없는데,<br>
+                    function은 이미 javascipt에서 사용되고 있는 명령어가 있기 때문이다.</p>
+                </div>
+            </div>
+            <!-- sample01 -->
+            <div id="sample02" class="sample">
+                <h3>02. 익명 함수</h3>
+                <p>변수에 함수를 저장하는 방법</p>
+                <div class="script">
+<pre data-line="1-4" class="line-numbers"><code class="language-js">const func = function (){
+    document.write("실행되었습니다.<br>");
+}
+func();
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+                <div class="notice">
+                    <h4>변수에 함수넣기</h4>
+                    <p>func이라는 변수를 만들어 선언함수를 넣어 실행할 수 있다.</p>
+                </div>
+            </div>
+            <!-- sample02 -->
+            <div id="sample03" class="sample">
+                <h3>03. 매개변수 함수</h3>
+                <p>변수를 불러오는 방법</p>
+                <div class="script">
+<pre data-line="1-4" class="line-numbers"><code class="language-js">function func(str){
+    document.write(str);
+}
+func("실행되었습니다.<br>");
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100, 200, javascipt
+                        </div>
+                    </details>
+                </div>
+                <div class="notice">
+                    <h4>변수 불러오기</h4>
+                    <p>변수 x, y, z에 값을 저장하고 console.log로 불러올 수 있다.</p>
+                </div>
+            </div>
+            <!-- sample03 -->
+            <div id="sample04" class="sample">
+                <h3>04. 리턴값 함수</h3>
+                <p>변수를 불러오는 방법</p>
+                <div class="script">
+<pre data-line="1-4" class="line-numbers"><code class="language-js">function func(str){
+    document.write(str);
+}
+func("실행되었습니다.<br>");
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100, 200, javascipt
+                        </div>
+                    </details>
+                </div>
+                <div class="notice">
+                    <h4>변수 불러오기</h4>
+                    <p>변수 x, y, z에 값을 저장하고 console.log로 불러올 수 있다.</p>
+                </div>
+            </div>
+            <!-- sample04 -->
+            <div id="sample05" class="sample">
+                <h3>05. 화살표 함수 : 선언적 함수</h3>
+                <p>변수를 불러오는 방법</p>
+                <div class="script">
+<pre data-line="1-4" class="line-numbers"><code class="language-js">func = () => {
+    document.write("실행되었습니다.<br>");
+}
+func();
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100, 200, javascipt
+                        </div>
+                    </details>
+                </div>
+                <div class="notice">
+                    <h4>변수 불러오기</h4>
+                    <p>변수 x, y, z에 값을 저장하고 console.log로 불러올 수 있다.</p>
+                </div>
+            </div>
+            <!-- sample05 -->
+            <div id="sample06" class="sample">
+                <h3>06. 화살표 함수 : 익명 함수</h3>
+                <p>변수를 불러오는 방법</p>
+                <div class="script">
+<pre data-line="1-4" class="line-numbers"><code class="language-js">const func = () => {
+    document.write("실행되었습니다.<br>");
+}
+func();
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100, 200, javascipt
+                        </div>
+                    </details>
+                </div>
+                <div class="notice">
+                    <h4>변수 불러오기</h4>
+                    <p>변수 x, y, z에 값을 저장하고 console.log로 불러올 수 있다.</p>
+                </div>
+            </div>
+            <!-- sample06 -->
+            <div id="sample07" class="sample">
+                <h3>07. 화살표 함수 : 매개변수 함수</h3>
+                <p>변수를 불러오는 방법</p>
+                <div class="script">
+<pre data-line="1-4" class="line-numbers"><code class="language-js">func = (str) => {
+    document.write(str);
+}
+func("실행되었습니다.<br>");
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100, 200, javascipt
+                        </div>
+                    </details>
+                </div>
+                <div class="notice">
+                    <h4>변수 불러오기</h4>
+                    <p>변수 x, y, z에 값을 저장하고 console.log로 불러올 수 있다.</p>
+                </div>
+            </div>
+            <!-- sample07 -->
+            <div id="sample08" class="sample">
+                <h3>08. 화살표 함수 : 리턴값 함수</h3>
+                <p>변수를 불러오는 방법</p>
+                <div class="script">
+<pre data-line="1-5" class="line-numbers"><code class="language-js">func = () => {
+    const str = "실행되었습니다.<br>";
+    return str;
+}
+document.write(func());
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100, 200, javascipt
+                        </div>
+                    </details>
+                </div>
+                <div class="notice">
+                    <h4>변수 불러오기</h4>
+                    <p>변수 x, y, z에 값을 저장하고 console.log로 불러올 수 있다.</p>
+                </div>
+            </div>
+            <!-- sample08 -->
+        </div>
     </main>
     <!-- //main -->
 
@@ -93,6 +289,191 @@
     <!-- //footer -->
 
     <script src="assets/js/prism.js"></script>
+
+    <script>
+        // 변수, 상수, 배열, 객체 : 데이터 저장
+        // 함수 : 데이터 실행
+
+        // 힘수 이름 짓는 규칙
+        // 1. _har  유일하게 쓸 수 있는 특수기호 : _,-
+        // 2. 2kd   앞에 숫자 시작 불가능
+        // 3. var   자바스크립트에서 사용하는 명령
+        
+        // 선언적 함수
+        // {
+        //     function func(){
+        //         document.write("실행되었습니다.<br>");
+        //     }
+        //     func(); // 가장 기본 문법.
+        // }
+
+        // // 익명함수 (변수에 저장해서 쓰는 함수)
+        // {
+        //     const func = function(){
+        //         document.write("실행되었습니다.<br>");
+        //     };
+        //     func();
+        // }
+
+        // // 매개변수 함수 (전달시켜주는 함수)
+        // {
+        //     // let str = "실행되었습니다.<br>";
+            
+        //     function func(str){
+        //         document.write(str);
+        //     }
+        //     func("실행되었습니다.<br>");
+        // }
+
+        // // 리턴값(결과, 끝) 함수
+        // {
+        //     function func(){
+        //         const str = "함수가 실행되었습니다.";
+        //         return str;
+        //     };
+        //     document.write(func());
+        // }
+        // document.write("<br><br>");
+        
+        // // function을 없애고 = () => {} 로 표현
+        // // 05. 화살표 함수 : 선언적 함수
+        // {
+        //     func = () => {
+        //         document.write("실행되었습니다.");
+        //     }
+        //     func();
+        // }
+        // document.write("<br>")
+
+        // // 06. 화살표 함수 : 익명 함수
+        // {
+        //     const func =() => {
+        //         document.write("실행되었습니다.");
+        //     }
+        //     func();
+        // }
+        // document.write("<br>")
+
+        // // 07. 화살표 함수 : 매개변수 함수
+        // {
+        //     func = (str) => {
+        //         document.write(str);
+        //     }
+        //     func("실행되었습니다.");
+        // }
+        // document.write("<br>")
+
+        // // 08. 화살표 함수 : 리턴값 함수
+        // {
+        //     func = () => {
+        //         const str = "실행되었습니다."
+        //         return str;
+        //     };
+        //     document.write(func());
+        // }
+
+
+        // 10부터 88까지 짝수만 출력하세요.
+        // for(let i=10; i<=88; i+=2){
+        //     document.write(i);
+        // }
+
+        // document.write("<br>");
+
+        // for(let i=2; i<=9; i++){
+        //     document.write(i + "단" + "<br>");
+        //     for(let j=1; j<=9; j++){
+        //         document.write(i + "*" + j + "=" + i*j + "<br>");
+        //     }
+        // }
+        // document.write("<br>");
+        
+        // let table = "<table border=1>"
+        // let num = 1
+        // for(let i=1; i<=10; i++){
+        //     table += "<tr>"
+        //     for(let j=1; j<=10; j++){
+        //         if(num % 2 !==0){
+        //             table += "<td style='color:blue'>" + num + "</td>"
+        //         }else{
+        //             table += "<td style='color:red'>" + num + "</td>"
+        //         }
+        //         num++
+        //     }
+        //     table += "</tr>"
+        // }
+        // table += "</table>"
+        // document.write(table);
+
+        // 선언적 함수
+        {
+            function func(){
+                document.write("실행되었습니다.<br>");
+            }
+            func();
+        }
+
+        // 익명 함수
+        {
+            const func = function (){
+                document.write("실행되었습니다.<br>");
+            }
+            func();
+        }
+
+        // 매개변수 함수
+        {
+            function func(str){
+                document.write(str);
+            }
+            func("실행되었습니다.<br>");
+        }
+            
+        // 리턴값 함수
+        {
+            function func(){
+                const str = "실행되었습니다.<br>"
+                return str;
+            }
+            document.write(func());
+        }
+
+        // 선언적 함수 화살표
+        {
+            func = () => {
+                document.write("실행되었습니다.<br>");
+            }
+            func();
+        }
+
+        // 익명함수 화살표
+        {
+            const func = () => {
+                document.write("실행되었습니다.<br>");
+            }
+            func();
+        }
+
+        // 매개변수 함수 화살표
+        {
+            func = (str) => {
+                document.write(str);
+            }
+            func("실행되었습니다.<br>");
+        }
+
+        // 리턴값 함수 화살표
+        {
+            func = () => {
+                const str = "실행되었습니다.<br>";
+                return str;
+            }
+            document.write(func());
+        }
+        
+
+
+        </script>
 
 </body>
 </html>
