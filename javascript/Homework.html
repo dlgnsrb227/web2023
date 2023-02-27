@@ -46,16 +46,34 @@
         </tr>
     </table>
     <script>
+    // let table = "<table border=1>"
+    // let num = 1;
+
+    // for(let i=1; i<=5; i++){
+    //     table += "<tr>"
+    //     for(let j=1; j<=5; j++){
+    //         table += "<td>" + num + "</td>"
+    //         num++
+    //     }
+    //     table += "</tr>"
+    // }
+    // table += "</table>"
+    // document.write(table);
+
+    // document.write("<br>");
+
     let table = "<table border=1>"
-    let num = 0;
+    let num = 1;
 
     for(let i=1; i<=5; i++){
         table += "<tr>"
         for(let j=1; j<=5; j++){
-            table += "<td>" + num + "</td>"
-        }
-        for(let x=1; x<=25; x++){
-            num++
+            if(num % 2 == 0){
+                table += "<td>", "<span style='color:red'>" + num + "</span>", "</td>"
+                num++
+            } else {
+                table += "<td>", "<span style='color:blue'>" + num + "<span>", "</td>"
+            }
         }
         table += "</tr>"
     }
@@ -63,13 +81,6 @@
     document.write(table);
 
     document.write("<br>");
-
-    //     for(let i=1; i<=25; i++){
-    //         document.write(i);
-    //         num++;
-    //     }
-    // document.write("<br>");
-    // document.write(num)
     </script>
 </body>
 </html>
