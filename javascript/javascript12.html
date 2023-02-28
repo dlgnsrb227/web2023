@@ -278,6 +278,59 @@ document.write(table);
                 <!-- sample07 -->
                 <div id="sample08" class="sample">
                     <h3>08. 데이터 이펙트 : 테이블 25칸(짝수:빨간색, 홀수:파란색)</h3>
+                    <p>for문과 if문 활용하여 테이블 만들기</p>
+                    <div class="script">
+<pre data-line="6-11" class="line-numbers"><code class="language-js">let table = "&lt;table border=1>";
+let count = 1;
+for(let i=1; i&lt;=5; i++){
+    table += "&lt;tr>"
+    for(let j=1; j&lt;=5; j++){
+        if(count % 2 == 0){
+            table += "&lt;td style='color:red'>" + count + "&lt;/td>"
+        } else {
+            table += "&lt;td style='color:blue'>" + count + "&lt;/td>"
+        }
+        count++
+    }
+    table += "&lt;/tr>"
+}
+table += "&lt;/table>";
+document.write(table);
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                <script>
+                                    let table = "<table border=1>";
+                                    let count = 1;
+                                    for(let i=1; i<=5; i++){
+                                        table += "<tr>"
+                                        for(let j=1; j<=5; j++){
+                                            if(count % 2 == 0){
+                                                table += "<td style='color:red'>" + count + "</td>"
+                                            } else {
+                                                table += "<td style='color:blue'>" + count + "</td>"
+                                            }
+                                            count++
+                                        }
+                                        table += "</tr>"
+                                        }
+                                    table += "</table>";
+                                    document.write(table);
+                                </script>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <h4>위 6번에서 만든 테이블에서 count라는 변수를 만들어 각 &lt;td>태그에 숫자를 넣어주고,<br>
+                        count의 짝수, 홀수를 구분하는 조건문을 넣어 각각의 스타일태그를 걸어주었다.</p>
+                    </div>
+                </div>
+                <!-- sample08 -->
+                <div id="sample09" class="sample">
+                    <h3>09. 데이터 이펙트 : 테이블 25칸(3의배수만/5의 배수는 빨간색)</h3>
                     <p>for중첩문을 이용하여 구구단 만들기가 가능하다.</p>
                     <div class="script">
 <pre data-line="1-6" class="line-numbers"><code class="language-js">for(let i=2; i&lt;=9; i++){
@@ -314,7 +367,7 @@ document.write(table);
                         두 번째 for문에도 i값을 적용시킬 수 있다.</p>
                     </div>
                 </div>
-                <!-- sample07 -->
+                <!-- sample09 -->
             </div>
             <!-- main_sample -->
         </div>
