@@ -7,7 +7,7 @@
     <title>과제</title>
 </head>
 <body>
-
+<!-- 
     <table border="1">
         <tr>
             <td>j</td> 
@@ -44,7 +44,7 @@
             <td>j</td>
             <td>j</td>
         </tr>
-    </table>
+    </table> -->
     <script>
     // let table = "<table border=1>"
     // let num = 1;
@@ -69,18 +69,17 @@
         table += "<tr>"
         for(let j=1; j<=5; j++){
             if(num % 2 == 0){
-                table += "<td>", "<span style='color:red'>" + num + "</span>", "</td>"
-                num++
+                table += "<td style='color:red'>" + num + "</td>"
             } else {
-                table += "<td>", "<span style='color:blue'>" + num + "<span>", "</td>"
+                table += "<td style='color:blue'>" + num + "</td>"
             }
+            num++
         }
         table += "</tr>"
     }
     table += "</table>"
     document.write(table);
 
-    document.write("<br>");
     </script>
 </body>
 </html>
