@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        {
+            // 01.선언적 함수
+            function func(){
+                document.write("01.함수가 실행되었습니다.<br>");
+            }
+            func();
+        }
+        {
+            // 02. 익명함수
+            const func = function (){
+                document.write("02.함수가 실행되었습니다.<br>");
+            }
+            func();
+        }
+        {
+            // 03. 함수 10번 반복문
+            function func(){
+                for(let i=1; i<=10; i++){
+                    document.write("03함수가 실행되었습니다.<br>")
+                }
+            }
+            func();
+        }
+        {
+            // 04. return값 함수
+            function func(){
+                const func = str;
+                return str;
+            }
+            document.write("04.함수가 실행되었습니다.<br>");
+        }
+        {
+            // 05. 매개변수 함수
+            function func(str){
+                document.write(str);
+            }
+            func("05.함수가 실행되었습니다.<br>")
+        }
+        {
+            // 06. 선언적함수 화살표함수
+            func = () => {
+                document.write("06.함수가 실행되었습니다.<br>")
+            }
+            func();
+        }
+        {
+            // 07. 10칸짜리 테이블
+            function func(){
+                let table = "<table border=1>"
+                let num = 1
+                for(let i=1; i<=10; i++){
+                    table += "<tr>"
+                    for(let j=1; j<=10; j++){
+                        table += "<td>" + num + "</td>"
+                        num++
+                    }
+                    table += "</tr>"
+                }
+                table += "</table>"
+                document.write(table);
+            }
+            func();
+        }
+
+        {
+            const nrr = [1,2,3,4,5,6,7,8,9];
+
+            nrr.forEach(function(el){
+                document.write(el);
+            });
+
+            nrr.forEach(el => document.write(el));
+
+            document.write("<br>");
+
+            // nrr.forEach(function(el){
+            //     if(el % 2 == 0){
+            //         document.write("<span style='color:red'>"+el+"</span>")
+            //     } else {
+            //         document.write("<span style='color:blue'>"+el+"</span>")
+            //     }
+            // });
+
+            // document.write("<br>");
+
+            // nrr.forEach(function(el){
+            //     for(let j=1; j<=9; j++){
+            //         document.write(el + "*" + j + "=" + el*j + "<br>")
+            //     }
+            // });
+        }
+        document.write("<br>");
+
+        {
+            const arr = [1,2,3,4,5,6,7,8,9];
+            const btt = [10,11,12,13,14,15,16,17,18,19]
+            
+        }
+    </script>
+</body>
+</html>

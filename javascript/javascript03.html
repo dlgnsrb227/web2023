@@ -137,34 +137,35 @@ func();
             <!-- sample02 -->
             <div id="sample03" class="sample">
                 <h3>03. 매개변수 함수</h3>
-                <p>변수를 불러오는 방법</p>
+                <p>매개변수를 사용해서 결과를 전달해주는 방법</p>
                 <div class="script">
 <pre data-line="1-4" class="line-numbers"><code class="language-js">function func(str){
     document.write(str);
 }
-func("실행되었습니다.<br>");
+func("실행되었습니다.")
 </code></pre>
                 </div>
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            100, 200, javascipt
+                            실행되었습니다.
                         </div>
                     </details>
                 </div>
                 <div class="notice">
-                    <h4>변수 불러오기</h4>
-                    <p>변수 x, y, z에 값을 저장하고 console.log로 불러올 수 있다.</p>
+                    <h4>매개변수 사용하기</h4>
+                    <p>매개변수를 사용하고, 결과값을 나중에 적어 매개변수에게 전달해주는 방법이다.</p>
                 </div>
             </div>
             <!-- sample03 -->
             <div id="sample04" class="sample">
                 <h3>04. 리턴값 함수</h3>
-                <p>변수를 불러오는 방법</p>
+                <p>return으로 결과를 표시한다는 의미로 사용 가능하다.</p>
                 <div class="script">
-<pre data-line="1-4" class="line-numbers"><code class="language-js">function func(str){
+<pre data-line="1-5" class="line-numbers"><code class="language-js">function func(str){
     document.write(str);
+    return str;
 }
 func("실행되었습니다.<br>");
 </code></pre>
@@ -173,13 +174,13 @@ func("실행되었습니다.<br>");
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            100, 200, javascipt
+                            실행되었습니다.
                         </div>
                     </details>
                 </div>
                 <div class="notice">
-                    <h4>변수 불러오기</h4>
-                    <p>변수 x, y, z에 값을 저장하고 console.log로 불러올 수 있다.</p>
+                    <h4>return 사용하기</h4>
+                    <p></p>
                 </div>
             </div>
             <!-- sample04 -->
@@ -257,7 +258,7 @@ func("실행되었습니다.<br>");
             <!-- sample07 -->
             <div id="sample08" class="sample">
                 <h3>08. 화살표 함수 : 리턴값 함수</h3>
-                <p>변수를 불러오는 방법</p>
+                <p>return을 사용하는 방법</p>
                 <div class="script">
 <pre data-line="1-5" class="line-numbers"><code class="language-js">func = () => {
     const str = "실행되었습니다.<br>";
@@ -270,113 +271,105 @@ document.write(func());
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            100, 200, javascipt
+                            실행되었습니다.
                         </div>
                     </details>
                 </div>
                 <div class="notice">
-                    <h4>변수 불러오기</h4>
-                    <p>변수 x, y, z에 값을 저장하고 console.log로 불러올 수 있다.</p>
+                    <h4>return 사용하기</h4>
+                    <p>변수 str에 결과를 저장하고, return을 이용해서 결과값을 불러온다.</p>
                 </div>
             </div>
             <!-- sample08 -->
             <div id="sample09" class="sample">
                 <h3>09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값</h3>
-                <p>변수를 불러오는 방법</p>
+                <p>익명함수와 매개변수함수, 리턴값 함수를 합쳐 화살표함수로 나타내는 방법</p>
                 <div class="script">
-<pre data-line="1-5" class="line-numbers"><code class="language-js">func = () => {
-    const str = "실행되었습니다.<br>";
+<pre data-line="1-5" class="line-numbers"><code class="language-js">const func = (str) => {
     return str;
 }
-document.write(func());
+document.write(func("실행되었습니다."));
 </code></pre>
                 </div>
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            100, 200, javascipt
+                            실행되었습니다.
                         </div>
                     </details>
                 </div>
                 <div class="notice">
-                    <h4>변수 불러오기</h4>
-                    <p>변수 x, y, z에 값을 저장하고 console.log로 불러올 수 있다.</p>
+                    <h4>함수 생략하기</h4>
+                    <p>func 변수를 만들어 매개변수를 넣어주고 리턴값으로 결과를 불러오는 방법이다.</p>
                 </div>
             </div>
             <!-- sample09 -->
             <div id="sample10" class="sample">
                 <h3>10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호생략</h3>
-                <p>변수를 불러오는 방법</p>
+                <p>09번 방법에서 괄호를 생략하는 방법</p>
                 <div class="script">
-<pre data-line="1-5" class="line-numbers"><code class="language-js">func = () => {
-    const str = "실행되었습니다.<br>";
+<pre data-line="1-5" class="line-numbers"><code class="language-js">const func = str => {
     return str;
 }
-document.write(func());
+document.write("실행되었습니다.");
 </code></pre>
                 </div>
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            100, 200, javascipt
+                            실행되었습니다.
                         </div>
                     </details>
                 </div>
                 <div class="notice">
-                    <h4>변수 불러오기</h4>
-                    <p>변수 x, y, z에 값을 저장하고 console.log로 불러올 수 있다.</p>
+                    <h4>함수 생략하기</h4>
+                    <p>매개변수 자리에 변수가 하나이기 때문에 괄호 생략이 가능하다.</p>
                 </div>
             </div>
             <!-- sample10 -->
             <div id="sample11" class="sample">
                 <h3>11. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호생략 + 리턴생략</h3>
-                <p>변수를 불러오는 방법</p>
+                <p>10번 방법에서 리턴을 생략하는 방법</p>
                 <div class="script">
-<pre data-line="1-5" class="line-numbers"><code class="language-js">func = () => {
-    const str = "실행되었습니다.<br>";
-    return str;
-}
-document.write(func());
+<pre data-line="1-5" class="line-numbers"><code class="language-js">const func = str => str;
+document.write("실행되었습니다.");
 </code></pre>
                 </div>
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            100, 200, javascipt
+                            실행되었습니다.
                         </div>
                     </details>
                 </div>
                 <div class="notice">
-                    <h4>변수 불러오기</h4>
-                    <p>변수 x, y, z에 값을 저장하고 console.log로 불러올 수 있다.</p>
+                    <h4>함수 생략하기</h4>
+                    <p>return 변수; 에서 변수만 남기고 return을 생략 가능하다.</p>
                 </div>
             </div>
             <!-- sample11 -->
             <div id="sample12" class="sample">
                 <h3>12. 화살표 함수 : 선언적함수 + 매개변수 + 리턴값 + 괄호생략 + 리턴생략</h3>
-                <p>변수를 불러오는 방법</p>
+                <p>11번과 같은 방법으로 선언적함수로 시작하여 생략 가능하다.</p>
                 <div class="script">
-<pre data-line="1-5" class="line-numbers"><code class="language-js">func = () => {
-    const str = "실행되었습니다.<br>";
-    return str;
-}
-document.write(func());
+<pre data-line="1-5" class="line-numbers"><code class="language-js">func = str => str;
+document.write("실행되었습니다.");
 </code></pre>
                 </div>
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            100, 200, javascipt
+                            실행되었습니다.
                         </div>
                     </details>
                 </div>
                 <div class="notice">
-                    <h4>변수 불러오기</h4>
-                    <p>변수 x, y, z에 값을 저장하고 console.log로 불러올 수 있다.</p>
+                    <h4>함수 생략하기</h4>
+                    <p>익명함수를 선언적함수로 사용하여도 같은 방법으로 생략이 가능하다.</p>
                 </div>
             </div>
             <!-- sample12 -->
@@ -422,32 +415,33 @@ document.write(func());
         //     document.write(d(1,2,3)); // 매개변수 + 리턴값
         // }
 
-        // 09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값
-        {
-            const func = (str) => {
-                return str; //return undefined 가 기본적으로 다 있음.
-            }
-            document.write(func("실행되었습니다."));
-        }
+        // // 09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값
+        // {
+        //     const func = (str) => {
+        //         return str; //return undefined 가 기본적으로 다 있음.
+        //     }
+        //     document.write(func("실행되었습니다."));
+        // }
 
-        // 10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호생략
-        {   //변수 값이 하나면 괄호 생략 가능
-            const func = str => {
-                return str;
-            }
-            document.write("실행되었습니다.");
-        }
+        // // 10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호생략
+        // {   //변수 값이 하나면 괄호 생략 가능
+        //     const func = str => {
+        //         return str;
+        //     }
+        //     document.write("실행되었습니다.");
+        // }
         
-        // 11. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호생략 + 리턴생략
-        {   //변수 값이 하나면 괄호 생략 가능
-            const func = str => str;
-            document.write("실행되었습니다.");
-        } // return과 중괄호까지 생략
+        // // 11. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호생략 + 리턴생략
+        // {   //변수 값이 하나면 괄호 생략 가능
+        //     const func = str => str;
+        //     document.write("실행되었습니다.");
+        // } //12. return과 중괄호까지 생략
 
-        {
-            func = str => str;
-            document.write("실행되었습니다.");
-        }
+        // {
+        //     func = str => str;
+        //     document.write("실행되었습니다.");
+        // }
+
         </script>
 
 </body>
