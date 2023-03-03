@@ -163,11 +163,11 @@ func("실행되었습니다.")
                 <h3>04. 리턴값 함수</h3>
                 <p>return으로 결과를 표시한다는 의미로 사용 가능하다.</p>
                 <div class="script">
-<pre data-line="1-5" class="line-numbers"><code class="language-js">function func(str){
-    document.write(str);
+<pre data-line="1-5" class="line-numbers"><code class="language-js">function func(){
+    const str = "실행되었습니다."
     return str;
 }
-func("실행되었습니다.<br>");
+document.write(func());
 </code></pre>
                 </div>
                 <div class="result">
