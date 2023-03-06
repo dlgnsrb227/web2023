@@ -539,7 +539,7 @@ console.log(name3);
             <!-- sample16 -->
             <div id="sample17" class="sample">
                 <h3>17. 객체 : 데이터 불러오기 : for in</h3>
-                <p>배열의 요소를 개별 변수에 할당하는 방법 중 하나</p>
+                <p>for in을 사용해서 키와 값을 따로 출력하는 방법</p>
                 <div class="script">
 <pre data-line="7-9" class="line-numbers"><code class="language-js">const obj = {
     a : 100,
@@ -564,14 +564,14 @@ for(let key in obj){
                 <div class="notice">
                     <h4>for in</h4>
                     <p>
-                        for in을 사용해 키와 값을 따로 출력할 수 있다.
+                        for(let key in 배열이름)의 형식으로 키와 값을 따로 출력할 수 있다.
                     </p>
                 </div>
             </div>
             <!-- sample17 -->
             <div id="sample18" class="sample">
                 <h3>18. 객체 : 데이터 불러오기 : map()</h3>
-                <p>배열의 요소를 개별 변수에 할당하는 방법 중 하나</p>
+                <p>배열 안의 객체를 map()을 사용해 출력하는 방법</p>
                 <div class="script">
 <pre data-line="7-11" class="line-numbers"><code class="language-js">const obj = [{
     a : 100,
@@ -590,76 +590,155 @@ obj.map((el) => {
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-
+                            100 200 javascipt
                         </div>
                     </details>
                 </div>
                 <div class="notice">
                     <h4>map()</h4>
-                    <p>map은 배열에서 쓰이는 method기 때문에 객체 저장을 배열안에 해주어야한다.</p>
+                    <p>map은 배열에서 쓰이는 method기 때문에 객체가 배열 안에 있을 때 사용 가능하다.</p>
                 </div>
             </div>
             <!-- sample18 -->
             <div id="sample19" class="sample">
                 <h3>19. 객체 : 데이터 불러오기 : hasOwnProperty()</h3>
-                <p>배열의 요소를 개별 변수에 할당하는 방법 중 하나</p>
+                <p>객체안의 데이터를 확인하는 방법</p>
                 <div class="script">
-<pre data-line="1-8" class="line-numbers"><code class="language-js">
+<pre data-line="7-15" class="line-numbers"><code class="language-js">const obj = {
+    a : 100,
+    b : 200,
+    c : "javascript"
+}
+
+console.log(obj.hasOwnProperty("a"));
+console.log(obj.hasOwnProperty("b"));
+console.log(obj.hasOwnProperty("c"));
+console.log(obj.hasOwnProperty("d"));
+
+console.log("a" in obj);
+console.log("b" in obj);
+console.log("c" in obj);
+console.log("d" in obj);
 </code></pre>
                 </div>
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-
+                            true<br>
+                            true<br>
+                            true<br>
+                            false<br>
+                            true<br>
+                            true<br>
+                            true<br>
+                            false<br>
                         </div>
                     </details>
                 </div>
                 <div class="notice">
-                    <h4>배열구조분해할당</h4>
-                    <p></p>
+                    <h4>hasOwnProperty</h4>
+                    <p>obj.hasOwnproperty("키")의 형식으로 해당 키 값에 저장된 데이터가 있는지 확인 가능하다.<br>
+                    해당 키에 대한 데이터가 있다면 true, 없다면 false로 뜬다.</p>
                 </div>
             </div>
             <!-- sample19 -->
             <div id="sample20" class="sample">
                 <h3>20. 객체 : 데이터 불러오기 : 객체 펼침연산자</h3>
-                <p>배열의 요소를 개별 변수에 할당하는 방법 중 하나</p>
+                <p>배열, 객체, 문자열 등의 요소를 펼쳐서 개별 요소로 분리하는 연산자.</p>
                 <div class="script">
-<pre data-line="1-8" class="line-numbers"><code class="language-js">
+<pre data-line="7-12,24-29" class="line-numbers"><code class="language-js">{
+    const obj = {
+        a : 100,
+        b : 200,
+        c : "javascript"
+    }
+    const spread = {...obj, d : "react"};
+
+    console.log(spread.a);
+    console.log(spread.b);
+    console.log(spread.c);
+    console.log(spread.d);
+}
+{
+    const obj1 = {
+        a : 100,
+        b : 200,
+    }
+    const obj2 = {
+        c : "javascript",
+        d : "react"
+    }
+    const spread = {...obj1, ...obj2};
+
+    console.log(spread.a);
+    console.log(spread.b);
+    console.log(spread.c);
+    console.log(spread.d);
+}
 </code></pre>
                 </div>
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-
+                            100 200 javascipt react<br>
+                            100 200 javascipt react
                         </div>
                     </details>
                 </div>
                 <div class="notice">
-                    <h4>배열구조분해할당</h4>
-                    <p></p>
+                    <h4>객체 펼침연산자</h4>
+                    <p>객체에서도 펼침연산자를 사용할 수 있는데, 위와 같은 형식으로 출력 가능하다.<br>
+                    출력 외에도 새로운 데이터를 추가할 수도 있다.<br>
+                    객체에서도 개별요소로 사용할 수 있게 만들어준다.<br>
+                    서로 다른 객체에서 한번에 사용 가능하다.</p>
                 </div>
             </div>
             <!-- sample20 -->
             <div id="sample21" class="sample">
                 <h3>21. 객체 : 데이터 불러오기 : 객체 구조분해할당</h3>
-                <p>배열의 요소를 개별 변수에 할당하는 방법 중 하나</p>
+                <p>객체의 요소를 개별 변수에 할당하는 방법 중 하나</p>
                 <div class="script">
-<pre data-line="1-8" class="line-numbers"><code class="language-js">
+<pre data-line="8-11,20-24" class="line-numbers"><code class="language-js">{
+    const obj = {
+        a : 100,
+        b : 200,
+        c : "javascript"
+    }
+
+const {a, b, c} = obj;
+console.log(a);
+console.log(b);
+console.log(c);
+}
+{
+    const obj = {
+        a : 100,
+        b : 200,
+        c : "javascript"
+    }
+
+    const {a : name1, b : name2, c : name3} = obj;
+    console.log(name1);
+    console.log(name2);
+    console.log(name3);
+}
 </code></pre>
                 </div>
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-
+                            100 200 javascipt<br>
+                            100 200 javascipt
                         </div>
                     </details>
                 </div>
                 <div class="notice">
-                    <h4>배열구조분해할당</h4>
-                    <p></p>
+                    <h4>객체 구조분해할당</h4>
+                    <p>각각의 요소를 개별 변수에 할당하는 것이 가능하지만, 같은 키를 입력해주어야 저장이 가능하다.<br>
+                    키를 변수에 넣을 수도 값을 변수에 넣을 수도 있다.</p>
                 </div>
             </div>
             <!-- sample21 -->
@@ -999,16 +1078,16 @@ obj.map((el) => {
         // }
         // {
         //     //17. 객체 : 데이터 불러오기 : for in
-            const obj = {
-                a : 100,
-                b : 200,
-                c : "javascript"
-            }
+            // const obj = {
+            //     a : 100,
+            //     b : 200,
+            //     c : "javascript"
+            // }
 
-            for(let key in obj){
-                console.log(key);
-                console.log(obj[key]);
-            }
+            // for(let key in obj){
+            //     console.log(key);
+            //     console.log(obj[key]);
+            // }
         // }
         // {
         //     // 18. 객체 : 데이터 불러오기 : map()
@@ -1045,50 +1124,50 @@ obj.map((el) => {
         // }
         {
             // 20. 객체 : 데이터 불러오기 : 객체 펼침연산자
-            const obj = {
-                a : 100,
-                b : 200,
-                c : "javascript"
-            }
-            const spread = {...obj, d : "react"};
+            // const obj = {
+            //     a : 100,
+            //     b : 200,
+            //     c : "javascript"
+            // }
+            // const spread = {...obj, d : "react"};
 
-            console.log(spread.a);
-            console.log(spread.b);
-            console.log(spread.c);
-            console.log(spread.d);
+            // console.log(spread.a);
+            // console.log(spread.b);
+            // console.log(spread.c);
+            // console.log(spread.d);
         }
         {
             // 20. 객체 : 데이터 불러오기 : 객체 펼침연산자
-            const obj1 = {
-                a : 100,
-                b : 200,
-            }
-            const obj2 = {
-                c : "javascript",
-                d : "react"
-            }
-            const spread = {...obj1, ...obj2};
+            // const obj1 = {
+            //     a : 100,
+            //     b : 200,
+            // }
+            // const obj2 = {
+            //     c : "javascript",
+            //     d : "react"
+            // }
+            // const spread = {...obj1, ...obj2};
 
-            console.log(spread.a);
-            console.log(spread.b);
-            console.log(spread.c);
-            console.log(spread.d);
+            // console.log(spread.a);
+            // console.log(spread.b);
+            // console.log(spread.c);
+            // console.log(spread.d);
         }
         {
             // 21. 객체 : 데이터 불러오기 : 객체 구조분해할당
-            const obj = {
-                a : 100,
-                b : 200,
-                c : "javascript"
-            }
+            // const obj = {
+            //     a : 100,
+            //     b : 200,
+            //     c : "javascript"
+            // }
 
-            const {a, b, c} = obj;  //같은 키를 입력해주어야 함
-            console.log(a);
-            console.log(b);
-            console.log(c);
+            // const {a, b, c} = obj;  //같은 키를 입력해주어야 함
+            // console.log(a);
+            // console.log(b);
+            // console.log(c);
         }
-        {
-            // 21. 객체 : 데이터 불러오기 : 객체 구조분해할당
+        // {
+        //     // 21. 객체 : 데이터 불러오기 : 객체 구조분해할당
             const obj = {
                 a : 100,
                 b : 200,
@@ -1099,7 +1178,7 @@ obj.map((el) => {
             console.log(name1);
             console.log(name2);
             console.log(name3);
-        }
+        // }
     </script>
 
 </body>
