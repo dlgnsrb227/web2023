@@ -573,7 +573,17 @@ for(let key in obj){
                 <h3>18. 객체 : 데이터 불러오기 : map()</h3>
                 <p>배열의 요소를 개별 변수에 할당하는 방법 중 하나</p>
                 <div class="script">
-<pre data-line="1-8" class="line-numbers"><code class="language-js">
+<pre data-line="7-11" class="line-numbers"><code class="language-js">const obj = [{
+    a : 100,
+    b : 200,
+    c : "javascript"
+}];
+
+obj.map((el) => {
+    console.log(el.a);
+    console.log(el.b);
+    console.log(el.c);
+});
 </code></pre>
                 </div>
                 <div class="result">
@@ -585,8 +595,8 @@ for(let key in obj){
                     </details>
                 </div>
                 <div class="notice">
-                    <h4>배열구조분해할당</h4>
-                    <p></p>
+                    <h4>map()</h4>
+                    <p>map은 배열에서 쓰이는 method기 때문에 객체 저장을 배열안에 해주어야한다.</p>
                 </div>
             </div>
             <!-- sample18 -->
@@ -1002,17 +1012,17 @@ for(let key in obj){
         // }
         // {
         //     // 18. 객체 : 데이터 불러오기 : map()
-        //     const obj = [{
-        //         a : 100,
-        //         b : 200,
-        //         c : "javascript"
-        //     }]
+            // const obj = [{
+            //     a : 100,
+            //     b : 200,
+            //     c : "javascript"
+            // }]
 
-        //     obj.map((el) => {       // map은 배열에서 쓰이는 method기 때문에 객체 저장을 배열안에 해주어야한다.
-        //         console.log(el.a);
-        //         console.log(el.b);
-        //         console.log(el.c);
-        //     });
+            // obj.map((el) => {       // map은 배열에서 쓰이는 method기 때문에 객체 저장을 배열안에 해주어야한다.
+            //     console.log(el.a);
+            //     console.log(el.b);
+            //     console.log(el.c);
+            // });
         // }
         // {
         //     // 19. 객체 : 데이터 불러오기 : hasOwnProperty()
