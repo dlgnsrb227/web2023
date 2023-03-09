@@ -666,6 +666,52 @@ console.log("함수 밖"+z);
                 </div>
                 <!-- //sampleplus1 -->
                 <div id="samleplus2" class="sample">
+                    <h3>✔✔연산자 (전치, 후치)</h3>
+                    <p>연산자의 위치에 따라 달라지는 결과값 확인하기</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    var score = 10;
+    var result = ++score;
+    var result = score++;
+
+    console.log(result);
+    console.log(score);
+}
+{
+    let hap, j, k, l;
+    j = k = l = 1;
+    hap = ++j + k++ + ++l;
+
+    console.log(hap);
+    console.log(j);
+    console.log(k);
+    console.log(l);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                11<br>
+                                12<br>
+                                5<br>
+                                2<br>
+                                2<br>
+                                2<br>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <h4>연산자 (전치, 후치) 알아보기</h4>
+                        <p>연산자는 위치에 따라 결과값이 달라진다.<br>
+                        '++'연산자가 변수 앞에 오게되면 '='보다 우선순위가 높아 연산 후의 값이 적용이 되지만,<br>
+                        '++'연산자가 변수 뒤에 오게되면 '='보다 우선순위가 낮아 연산 전의 값이 적용이 된다.<br>
+                        그 값을 저장하는 변수에는 연산 전의 값이 적용이 되지만 해당 변수에는 연산이 적용된다.</p>
+                    </div>
+                </div>
+                <!-- //sampleplus2 -->
+                <div id="samleplus3" class="sample">
                     <h3>✔✔식별자, 예약자</h3>
                     <p></p>
                     <div class="script">
@@ -684,8 +730,8 @@ console.log("함수 밖"+z);
                         <p></p>
                     </div>
                 </div>
-                <!-- //sampleplus2 -->
-                <div id="samleplus3" class="sample">
+                <!-- //sampleplus3 -->
+                <div id="samleplus4" class="sample">
                     <h3>✔✔형변환, typeof</h3>
                     <p></p>
                     <div class="script">
@@ -704,7 +750,7 @@ console.log("함수 밖"+z);
                         <p></p>
                     </div>
                 </div>
-                <!-- //sampleplus3 -->
+                <!-- //sampleplus4 -->
 
             </div>
         </div>
