@@ -5,3 +5,10 @@
 퀴즈 게임01 : https://dlgnsrb227.github.io/web2023/javascript/quiz/quizEffect01.html
 
 # 사이트
+dlgnsrb227.github.io/web2023/
+dlgnsrb227.github.io/web2023/
+dlgnsrb227.github.io/web2023/
+dlgnsrb227.github.io/web2023/
+dlgnsrb227.github.io/web2023/
+dlgnsrb227.github.io/web2023/
+dlgnsrb227.github.io/web2023/
