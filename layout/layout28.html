@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>레이아웃23 - grid 유형 - 반응형</title>
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+          }
+          body {
+               background-color: #E1F5FE;
+          }
+          #wrap {
+               width: 1200px;
+               height: 1080px;
+               margin: 0 auto;
+               display: grid;
+               grid-template-areas: 
+                    "header header"
+                    "nav nav"
+                    "aside article1"
+                    "aside article2"
+                    "aside article3"
+                    "footer footer"
+               ;
+               grid-template-columns: 25% 75%;
+               grid-template-rows: 9.2592% 9.2592% 24.0740% 24.0740% 24.0740% 9.2592%;
+          }
+          #header {
+               background-color: #B3E5FC;
+               grid-area: header;
+          }
+          #nav {
+               background-color: #81D4FA;
+               grid-area: nav;
+          }
+          #aside {
+               background-color: #4FC3F7;
+               grid-area: aside;
+          }
+          #article1 {
+               background-color: #29B6F6;
+               grid-area: article1;
+          }
+          #article2 {
+               background-color: #03A9F4;
+               grid-area: article2;
+          }
+          #article3 {
+               background-color: #039BE5;
+               grid-area: article3;
+          }
+          #footer {
+               background-color: #0288D1;
+               grid-area: footer;
+          }
+          @media(max-width : 1280px){
+               #wrap {
+                    width: 96%;
+                    grid-template-areas: 
+                    "header header header"
+                    "nav nav nav"
+                    "aside article1 article1"
+                    "aside article2 article3"
+                    "footer footer footer"
+               ;
+                    grid-template-columns: 25% 37.5% 37.5%;
+                    grid-template-rows: 9.2592% 9.2592% 24.0740% 48.1481% 9.2592%;
+               }
+          }
+          @media(max-width : 768px){
+               #wrap {
+                    width: 100%;
+                    grid-template-areas: 
+                    "header header"
+                    "nav nav"
+                    "aside article1"
+                    "aside article2"
+                    "footer footer"
+                    ;
+                    grid-template-columns: 32.5520% 67.7083%;
+                    grid-template-rows: 9.2592% 9.2592% 36.1111% 36.1111% 9.2592%;
+               }
+          }
+          @media(max-width : 480px){
+               #wrap {
+                    grid-template-areas: 
+                    "header"
+                    "nav"
+                    "aside"
+                    "article1"
+                    "article2"
+                    "footer"
+                    ;
+                    grid-template-columns: 100%;
+                    grid-template-rows: 9.2592% 9.2592% 18.5185% 39.8148% 13.8888% 9.2592%;
+               }
+          }
+     </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="aside"></aside>
+        <article id="article1"></article>
+        <article id="article2"></article>
+        <article id="article3"></article>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
