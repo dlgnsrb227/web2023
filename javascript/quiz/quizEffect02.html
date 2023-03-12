@@ -17,6 +17,7 @@
           <ul>
                <li><a href="quizEffect01.html">1</a></li>
                <li class="active"><a href="quizEffect02.html">2</a></li>
+               <li><a href="quizEffect03.html">3</a></li>
           </ul>
      </header>
      <!-- //header -->
@@ -84,10 +85,9 @@
           const quizDesc = quizWrap.querySelector(".quiz__desc");
           const quizAnswerConfirm = quizWrap.querySelector(".quiz__answer .confirm");
           const quizAnswerResult = quizWrap.querySelector(".quiz__answer .result");
-          const dog__wrap = quizWrap.querySelector(".dog__wrap");
+          const dog__Wrap = quizWrap.querySelector(".dog__wrap");
           const quizFooter = quizWrap.querySelector(".quiz__footer");
           const quizAnswerInput = quizWrap.querySelector(".quiz__answer .input");
-
 
           // 문제 정보
           const infoType = "정보처리 기능사";
@@ -120,11 +120,11 @@
                     // alert("정답");
                     // 정답 버튼 제거
                     quizAnswerResult.style.color = "green";
-                    dog__wrap.classList.add("like");
+                    dog__Wrap.classList.add("like");
                } else {
                     // alert("오답");
                     quizAnswerResult.style.color = "red";
-                    dog__wrap.classList.add("dislike");
+                    dog__Wrap.classList.add("dislike");
                }
           });
      </script>

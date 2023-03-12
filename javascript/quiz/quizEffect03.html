@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 이펙트01</title>
+
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://unpkg.com/pattern.css" rel="stylesheet">
+
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../javascript14.html">Quiz</a> <em>주관식 확인하기 유형</em></h1>
+        <ul>
+            <li><a href="quizEffect01.html">1</a></li>
+            <li><a href="quizEffect02.html">2</a></li>
+            <li class="active"><a href="quizEffect03.html">3</a></li>
+        </ul>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="quiz__wrap">
+            <div class="quiz">
+                <div class="quiz__header">
+                        <h2 class="quiz__title"><span></span><em></em></h2>
+                </div>
+                <div class="quiz__main">
+                    <div class="quiz__question">
+                        <em></em>. <span></span>
+                    </div>
+                    <div class="quiz__view">
+                        <div class="dog__wrap">
+                            <div class="card-container">
+                                <div class="dog">
+                                    <div class="head">
+                                        <div class="ears"></div>
+                                        <div class="face"></div>
+                                        <div class="eyes">
+                                            <div class="teardrop"></div>
+                                        </div>
+                                        <div class="nose"></div>
+                                        <div class="mouth">
+                                            <div class="tongue"></div>
+                                        </div>
+                                        <div class="chin"></div>
+                                    </div>
+                                    <div class="body">
+                                        <div class="tail"></div>
+                                        <div class="legs"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz__answer">
+                        <input class="input" type="text" placeholder="정답을 적어주세요.">
+                        <button class="confirm">정답 확인하기</button>
+                        <div class="result"></div>
+                    </div>
+                </div>
+                <div class="quiz__footer">
+                    <div class="quiz__desc">설명</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:gnsrbdi@naver.com">gnsrdbi@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    
+    <script>
+        // 선택자
+        const quizWrap = document.querySelector(".quiz__wrap");
+        const quizTitle = quizWrap.querySelector(".quiz__title span");
+        const quizTime = quizWrap.querySelector(".quiz__title em");
+        const quizQuetionNum = quizWrap.querySelector(".quiz__question em");
+        const quizQuestion = quizWrap.querySelector(".quiz__question span");
+        const quizDesc = quizWrap.querySelector(".quiz__desc");
+        const quizAnswerConfirm = quizWrap.querySelector(".quiz__answer .confirm");
+        const quizAnswerResult = quizWrap.querySelector(".quiz__answer .result");
+        const dog__wrap = quizWrap.querySelector(".dog__wrap");
+        const quizFooter = quizWrap.querySelector(".quiz__footer");
+        const quizAnswerInput = quizWrap.querySelector(".quiz__answer .input");
+
+        // 문제 정보
+
+        // 문제 출력
+    </script>
+</body>
+</html>
