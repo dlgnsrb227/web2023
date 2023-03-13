@@ -107,6 +107,7 @@
      background-color: #fff;
      border: 8px ridge #cacaca;
      width: 500px;
+     margin: 10px;
 }
 
 
@@ -184,22 +185,20 @@
      overflow: hidden;
 }
 
-.quiz__footer {
+.quiz__desc {
      border-top: 6px ridge #cacaca;
      padding: 20px;
      font-family: HealthsetGothic;
      background-color: #f6f6f6;
+     /* display: none; */
 }
 
-.quiz__footer::before {
-     content: "✔Tip";
+.quiz__desc::before {
+     content: "✔Tip ";
      color: #F5534F;
      font-weight: bold;
 }
 
-.quiz__desc {
-     padding-top: 5px;
-}
 
 
 /* dog__wrap */
