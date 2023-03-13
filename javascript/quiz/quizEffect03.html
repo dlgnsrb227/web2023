@@ -34,6 +34,8 @@
                     </div>
                     <div class="quiz__view">
                         <div class="dog__wrap">
+                            <div class="true">정답 !</div>
+                            <div class="false">오답 !</div>
                             <div class="card-container">
                                 <div class="dog">
                                     <div class="head">
@@ -74,6 +76,8 @@
                     </div>
                     <div class="quiz__view">
                         <div class="dog__wrap">
+                            <div class="true">정답 !</div>
+                            <div class="false">오답 !</div>
                             <div class="card-container">
                                 <div class="dog">
                                     <div class="head">
@@ -114,6 +118,8 @@
                     </div>
                     <div class="quiz__view">
                         <div class="dog__wrap">
+                            <div class="true">정답 !</div>
+                            <div class="false">오답 !</div>
                             <div class="card-container">
                                 <div class="dog">
                                     <div class="head">
@@ -156,12 +162,14 @@
     <script>
         // 선택자
         const quizWrap = document.querySelector(".quiz__wrap");
-        const quizTitle = quizWrap.querySelectorAll(".quiz__title");               // 시험 종목, 시간
+        const quizTitle = quizWrap.querySelectorAll(".quiz__title");                    // 시험 종목, 시간
         const quizQuestionNum = quizWrap.querySelectorAll(".quiz__question em");        // 문제 번호
         const quizQuestion = quizWrap.querySelectorAll(".quiz__question span");         // 문제 내용
         const quizAnswerResult = quizWrap.querySelectorAll(".quiz__answer .result");    // 문제 정답
         const quizDesc = quizWrap.querySelectorAll(".quiz__desc");                      // 문제 해설
         const quizAnswerConfirm =quizWrap.querySelectorAll(".quiz__answer .confirm");   // 정답 버튼
+        const quizAnswerInput = quizWrap.querySelectorAll(".quiz__answer .input");      // 사용자 답
+        const dog__Wrap = quizWrap.querySelectorAll(".dog__wrap");
 
         // 문제정보
         const quizInfo = [
@@ -277,7 +285,20 @@
 
         quizAnswerConfirm.forEach(function(btn, num){
             btn.addEventListener("click", function(){
-                alert("Hi");
+                // 사용자 정답
+                const userAnswer = quizAnswerInput[num].value.trim().toUpperCase();
+                quizAnswerConfirm[num].style.display = "none";
+                quizAnswerInput[num].style.display = "none";
+                quizAnswerResult[num].style.display = "block";
+                quizDesc[num].style.display = "block";
+                // 사용자 답과 정답 비교
+                if(userAnswer == quizInfo[num].infoAnswer){
+                    quizAnswerResult[num].style.color = "green";
+                    dog__Wrap[num].classList.add("like");
+                } else {
+                    quizAnswerResult[num].style.color = "red";
+                    dog__Wrap[num].classList.add("dislike");
+                }
             });
         });
 
