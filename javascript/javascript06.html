@@ -48,12 +48,131 @@
         <div class="container">
             <div class="main__menu">
                 <ul>
-                    <li><a href="#">01. 변수 : 데이터 저장</a></li>
-                    <li><a href="#">01. 상수 : 데이터 저장</a></li>
-                    <li><a href="#">01. 배열 : 데이터 저장</a></li>
-                    <li><a href="#">01. 객체 : 데이터 저장</a></li>
+                    <li><a href="#">배열 메서드 : join() : 배열 요소 문자열 결합</a></li>
+                    <li><a href="#">배열 메서드 : push() : 배열 마지막 요소에 요소를 추가</a> 🎆</li>
+                    <li><a href="#">배열 메서드 : pop() : 배열 마지막 요소를 삭제</a></li>
+                    <li><a href="#">배열 메서드 : unshift() : 배열 처음 요소에 요소를 추가</a></li>
+                    <li><a href="#">배열 메서드 : shift() : 배열 처음 요소를 삭제</a></li>
+                    <li><a href="#">배열 메서드 : reverse()</a></li>
+                    <li><a href="#">배열 메서드 : sort()</a> 🎆</li>
+                    <li><a href="#">배열 메서드 : concat()</a></li>
+                    <li><a href="#">배열 메서드 : reduce()</a></li>
+                    <li><a href="#">배열 메서드 : reduceRight()</a></li>
+                    <li><a href="#">배열 메서드 : slice()</a> 🎆🎆</li>
+                    <li><a href="#">배열 메서드 : splice()</a> 🎆🎆</li>
+                    <li><a href="#">배열 메서드 : indexOf()</a> 🎆</li>
+                    <li><a href="#">배열 메서드 : lastIndexOf()</a></li>
+                    <li><a href="#">배열 메서드 : includes()</a></li>
+                    <li><a href="#">배열 메서드 : find()</a></li>
+                    <li><a href="#">배열 메서드 : findIndex()</a></li>
+                    <li><a href="#">배열 메서드 : filter()</a></li>
+                    <li><a href="#">배열 메서드 : map()</a></li>
                 </ul>
             </div>
+        </div>
+        <div class="main_sample">
+            <div id="sample00" class="sample">
+                <h3>배열 메서드 : join()</h3>
+                <p>join() 메서드 사용하는 방법</p>
+                <div class="script">
+<pre data-line="2,7" class="line-numbers"><code class="language-js">
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            결과
+                        </div>
+                    </details>
+                </div>
+                <div class="notice">
+                    <h4>join()</h4>
+                    <p>join() 메서드는 배열 요소를 문자열로 결합하여 문자열로 반환한다.</p>
+                </div>
+            </div>
+            <!-- sample00 -->
+            <div id="sample01" class="sample">
+                <h3>배열메서드 : push()</h3>
+                <p>push(), pop() 메서드 사용하는 방법</p>
+                <div class="script">
+<pre data-line="2,7" class="line-numbers"><code class="language-js">const arrNum = [100, 200, 300, 400, 500];
+const arrPush = arrNum.push(600);
+
+console.log(arrNum);
+
+const arrNum2 = [100, 200, 300, 400, 500];
+const arrPush2 = arrNum2.pop();
+
+console.log(arrNum2);
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            [100, 200, 300, 400, 500, 600]<br>
+                            [100, 200, 300, 400]
+                        </div>
+                    </details>
+                </div>
+                <div class="notice">
+                    <h4>push(), pop()</h4>
+                    <p>push() 메서드는 배열 마지막 요소 뒤에 요소를 추가하고, pop()메서드는 배열 마지막 요소를 삭제한다.</p>
+                </div>
+            </div>
+            <!-- sample01 -->
+            <div id="sample02" class="sample">
+                <h3>배열메서드 : unshift() / shift()</h3>
+                <p>unshift(), shift() 메서드 사용하는 방법</p>
+                <div class="script">
+<pre data-line="2,7" class="line-numbers"><code class="language-js">const arrNum = [100, 200, 300, 400, 500];
+const arrUnshift = arrNum.unshift(600);
+
+console.log(arrNum);
+
+const arrNum2 = [100, 200, 300, 400, 500];
+const arrShift = arrNum2.shift();
+
+console.log(arrNum2);
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            [600, 100, 200, 300, 400, 500]<br>
+                            [200, 300, 400, 500]
+                        </div>
+                    </details>
+                </div>
+                <div class="notice">
+                    <h4>unshift(), shift()</h4>
+                    <p>unshift() 메서드는 배열 처음 요소 앞에 요소를 추가하고, shift() 메서드는 배열 처음 요소를 삭제한다.</p>
+                </div>
+            </div>
+            <!-- sample02 -->
+            <div id="sample00" class="sample">
+                <h3>메서드명</h3>
+                <p>설명</p>
+                <div class="script">
+<pre data-line="2,7" class="line-numbers"><code class="language-js">
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            결과
+                        </div>
+                    </details>
+                </div>
+                <div class="notice">
+                    <h4></h4>
+                    <p></p>
+                </div>
+            </div>
+            <!-- sample00 -->
         </div>
     </main>
     <!-- //main -->
@@ -64,6 +183,17 @@
     <!-- //footer -->
 
     <script src="assets/js/prism.js"></script>
+
+    <script>
+        const arrNum = [100, 200, 300, 400, 500];
+        const text = arrNum.join('');   //100200300400500
+        const text2 = arrNum.join(' '); //100 200 300 400 500
+        const text3 = arrNum.join('*'); //100*200*300*400*500
+        const text4 = arrNum.join('-'); //100-200-300-400-500
+        const text5 = arrNum.join(''); //100-200-300-400-500
+
+        console.log(text5)
+    </script>
 
 </body>
 </html>

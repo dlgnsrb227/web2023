@@ -237,6 +237,7 @@
      box-shadow: inset 0 0 0 4px #8d8d8d;
      margin-right: 15px;
      transition: all 0.2s;
+     flex-shrink: 0;
 }
 
 .quiz__choice label input:checked + span {
@@ -244,6 +245,74 @@
 }
 .quiz__choice label input:checked + span::before {
      box-shadow: inset 0 0 0 8px #678e69;
+}
+
+.quiz__check {
+     position: fixed;
+     right: 40px;
+     bottom: 70px;
+     width: 100px;
+     height: 100px;
+     line-height: 95px;
+     border-radius: 45%;
+     text-align: center;
+     background-color: rgb(247, 157, 157);
+     font-family: HealthsetGothic;
+     font-weight: bold;
+     font-size: 20px;
+     color: #fff;
+     transition: all 0.2s;
+     z-index: 1000;
+}
+
+.quiz__check:hover {
+     cursor: pointer;
+     background-color: #f87070;
+     border: 1px solid #949494;
+     font-size: 22px;
+}
+
+/* .quiz__modal {
+     position: fixed;
+     left: 0;
+     top: 0;
+     z-index: 2000;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.3);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.quiz__modal .modal {
+     width: 500px;
+     height: 500px;
+     background-color: #fff;
+} */
+
+.quiz__info {
+     width: 130px;
+     border-radius: 10px;
+     height: 50px;
+     position: fixed;
+     right: 25px;
+     bottom: 200px;
+     text-align: center;
+     line-height: 50px;
+     background-color: #c48484;
+     font-family: HealthsetGothic;
+     color: #fff;
+}
+
+.quiz__info::after {
+     content: '';
+     position: absolute;
+     left: 50%;
+     margin-left: -10px;
+     bottom: -10px;
+     border-top: 10px solid #c48484;
+     border-left: 10px solid transparent;
+     border-right: 10px solid transparent;
 }
 
 
