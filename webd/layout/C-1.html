@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        #wrap {
+            width: 1000px;
+            display: flex;
+        }
+        #main {
+            width: 70%;
+        }
+        #side {
+            width: 30%;
+            height: 650px;
+        }
+        #side .logo {
+            height: 20%;
+            background-color: #fff0f3;
+        }
+        #side .menu {
+            height: 80%;
+            background-color: #ffccd5;
+        }
+        #header {
+            height: 350px;
+            background-color: #ffb3c1;
+        }
+        #nav {
+            height: 200px;
+            background-color: #ff8fa3;
+            display: flex;
+        }
+        #nav .cont1 {
+            width: 33.3333%;
+            background-color: #ff758f;
+        }
+        #nav .cont2 {
+            width: 33.3333%;
+            background-color: #ff4d6d;
+        }
+        #nav .cont3 {
+            width: 33.3333%;
+            background-color: #c9184a;
+        }
+        #footer {
+            height: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        #footer .foot1 {
+            width: 20%;
+            height: 100px;
+            background-color: #a4133c;
+        }
+        #footer .foot2 {
+            width: 80%;
+            height: 50px;
+            background-color: #800f2f;
+        }
+        #footer .foot3 {
+            width: 80%;
+            height: 50px;
+            background-color: #590d22;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <section id="side">
+            <div class="logo">로고</div>
+            <div class="menu">메뉴
+            </div>
+        </section>
+        <main id="main">
+            <header id="header">이미지 슬라이드</header>
+            <nav id="nav">
+                <div class="cont1">공지사항</div>
+                <div class="cont2">배너</div>
+                <div class="cont3">바로가기</div>
+            </nav>
+            <footer id="footer">
+                <div class="foot1">로고</div>
+                <div class="foot2">하단메뉴</div>
+                <div class="foot3">Copyright</div>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
