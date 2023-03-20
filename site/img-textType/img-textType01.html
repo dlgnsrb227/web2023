@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이미지텍스트 유형01</title>
+    <title>이미지/텍스트 유형01</title>
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
     <style>
+        /* reset */
         * {
             margin: 0;
             padding: 0;
@@ -15,12 +16,15 @@
             text-decoration: none;
             color: #000;
         }
-        h1,h2,h3,h4,h5,h6 {
+        h1, h2, h3, h4, h5, h6 {
             font-weight: normal;
         }
         img {
             vertical-align: top;
             width: 100%;
+        }
+        li {
+            list-style: none;
         }
         .blind {
             position: absolute;
@@ -30,7 +34,6 @@
             margin: -1px;
             overflow: hidden;
         }
-
         .mt10 {margin-top: 10px !important;}
         .mt20 {margin-top: 20px !important;}
         .mt30 {margin-top: 30px !important;}
@@ -38,7 +41,6 @@
         .mt50 {margin-top: 50px !important;}
         .mt60 {margin-top: 60px !important;}
         .mt70 {margin-top: 70px !important;}
-
         .mb10 {margin-bottom: 10px !important;}
         .mb20 {margin-bottom: 20px !important;}
         .mb30 {margin-bottom: 30px !important;}
@@ -46,13 +48,12 @@
         .mb50 {margin-bottom: 50px !important;}
         .mb60 {margin-bottom: 60px !important;}
         .mb70 {margin-bottom: 70px !important;}
-
-
+        /* common */
         .container {
             width: 1160px;
             margin: 0 auto;
             padding: 0 20px;
-            /* background-color: rgba(0, 0, 0, 0.1); */
+            /* background-color: rgba(0,0,0,0.1); */
         }
         .nexon {
             font-family: 'NexonLv1Gothic';
@@ -61,18 +62,8 @@
         .section {
             padding: 120px 0;
         }
-        .center {
+        .section.center {
             text-align: center;
-        }
-        .section__small {
-            font-size: 14px;
-            border-radius: 50px;
-            padding: 1px 23px;
-            background-color: #8179e1;
-            color: #fff;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 20px;
         }
         .section__h2 {
             font-size: 50px;
@@ -82,80 +73,116 @@
         }
         .section__desc {
             font-size: 22px;
-            line-height: 25px;
-            color: #666666;
+            color: #666;
             margin-bottom: 70px;
             font-weight: 300;
             line-height: 1.5;
         }
-
-        /* imgtext__type */
-        .imgtext__inner {
+        /* imgText__wrap */
+        .imgText__inner {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
-        .imgtext__inner .imgtext {
-            width: 373px;
-            height: 500px;
-            margin-left: 20px;
+        .imgText__inner article {
+            width: 32.333%;
         }
-        .imgtext__small {
-               font-size: 14px;
-               border-radius: 50px;
-               padding: 1px 23px;
-               background-color: #8179e1;
-               color: #fff;
-               text-transform: uppercase;
-               display: inline-block;
-               margin-bottom: 16px;
-        }
-        .imgtext .imgtext__h2 {
-            font-size: 50px;
-            margin-bottom: 25px;
-        }
-        .imgtext .imgtext__pp {
+        .imgText__inner .text span {
+            background-color: #8179E1;
+            font-size: 14px;
+            color: #fff;
+            padding: 1px 20px;
+            border-radius: 50px;
             margin-bottom: 15px;
-            line-height: 150%;
-            color: #666666;
+            display: inline-block;
         }
-        .imgtext li {
-            margin-left: 15px;
-            line-height: 150%;
-            color: #666666;
+        .imgText__inner .text h3 {
+            font-size: 50px;
+            margin-bottom: 17px;
         }
-
+        .imgText__inner .text p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        .imgText__inner .text li {
+            position: relative;
+            padding-left: 14px;
+        }
+        .imgText__inner .text li::before {
+            content: "";
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #666;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+        .imgText__inner .text li a {
+            color: #666;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        .imgText__inner .img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500px;
+            border-radius: 10px;
+            position: relative;
+        }
+        .imgText__inner .img a {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 40px;
+        }
+        .imgText__inner .img.i1 {
+            background-image: url(../asset/img/imgtextType01_01.jpg);
+        }
+        .imgText__inner .img.i2 {
+            background-image: url(../asset/img/imgtextType01_02.jpg);
+        }
+        .imgText__inner .img.i1 a {
+            background-color: #0d192bc2;
+        }
+        .imgText__inner .img.i2 a {
+            background-color: #16155fa9;
+        }
     </style>
 </head>
 <body>
-    <section class="imgtext__wrap section nexon">
+    <section class="imgText__wrap section nexon">
+        <h2 class="blind">한강을 끼고있는 공원</h2>
         <div class="container">
-            <div class="imgtext__inner">
-                <article class="imgtext text">
-                    <span class="imgtext__small">park</span>
-                    <h2 class="imgtext__h2">한강을 끼고있는 공원</h2>
-                    <p class="imgtext__pp">한강 주변에는 다양한 공원이 있습니다. 여기에 몇 가지 추천 공원을 알려드리겠습니다.</p>
+            <div class="imgText__inner">
+                <article class="text">
+                    <span>PARK</span>
+                    <h3>한강을 끼고있는 공원</h3>
+                    <p>한강 주변에는 다양한 공원이 있습니다. 여기에 몇 가지 추천 공원을 알려드리겠습니다.</p>
                     <ul>
-                        <li>반포 한강공원</li>
-                        <li>여의도 한강공원</li>
-                        <li>이촌 한강공원</li>
-                        <li>뚝섬 한강공원</li>
-                        <li>난지 한강공원</li>
-                        <li>잠원 한강공원</li>
-                        <li>망원 한강공원</li>
-                        <li>잠실 한강공원</li>
-                        <li>광나루 한강공원</li>
-                        <li>강서 한강공원</li>
-                        <li>양화 한강공원</li>
+                        <li><a href="#">반포 한강공원</a></li>
+                        <li><a href="#">여의도 한강공원</a></li>
+                        <li><a href="#">이촌 한강공원</a></li>
+                        <li><a href="#">뚝섬 한강공원</a></li>
+                        <li><a href="#">난지 한강공원</a></li>
+                        <li><a href="#">잠원 한강공원</a></li>
+                        <li><a href="#">망원 한강공원</a></li>
+                        <li><a href="#">잠실 한강공원</a></li>
+                        <li><a href="#">광나루 한강공원</a></li>
+                        <li><a href="#">강서 한강공원</a></li>
+                        <li><a href="#">양화 한강공원</a></li>
                     </ul>
                 </article>
-                <article class="imgtext image">
-                    <figure class="imgtext__img">
-                        <img src="../asset/img/imgtextType01_01.jpg" alt="공원 이미지1">
-                    </figure>
+                <article class="img i1">
+                    <a href="#">한강공원 리스트</a>
                 </article>
-                <article class="imgtext image">
-                    <figure class="imgtext__img">
-                        <img src="../asset/img/imgtextType01_02.jpg" alt="공원 이미지2">
-                    </figure>
+                <article class="img i2">
+                    <a href="#">한강공원 리스트</a>
                 </article>
             </div>
         </div>
