@@ -267,6 +267,8 @@
         // 선택자
         const searchBox = document.querySelector(".search__box input");     // 검색
         const searchList = document.querySelectorAll(".search__list li");      // 목록
+        const searchInfo = document.querySelector(".search__info span")
+        const hideBox = document.querySelectorAll(".search__list .hide")
 
         // 검색
         searchBox.addEventListener("keyup", () => {
@@ -285,6 +287,7 @@
                 }
             });
         });
+        searchInfo.innerHTML = searchList.length;
     </script>
 </body>
 </html>
