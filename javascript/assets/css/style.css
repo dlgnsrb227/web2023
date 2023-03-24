@@ -110,6 +110,7 @@ body {
     height: 50%;
     z-index: -1;
     border-radius: 20px;
+    transition: all 0.3s;
 }
 .main__menu li:hover strong::before {
     height: 100%;
@@ -185,6 +186,7 @@ body {
 .main_sample li {
     position: relative;
     padding-left: 12px;
+
 }
 .main_sample li::before {
     content: '';

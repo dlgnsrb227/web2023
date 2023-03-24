@@ -88,14 +88,29 @@
                     <h3>배열 메서드 : join()</h3>
                     <p>join() 메서드 사용하는 방법</p>
                     <div class="script">
-    <pre data-line="2,7" class="line-numbers"><code class="language-js">
-    </code></pre>
+<pre data-line="" class="line-numbers"><code class="language-js">{
+    const arr = [100, 200, 300, 400, 500];
+
+    const text1 = arr.join("*");
+    const text2 = arr.join("-");
+    const text3 = arr.join("");
+    const text4 = arr.join(" ");
+
+    console.log(text1);
+    console.log(text2);
+    console.log(text3);
+    console.log(text4);
+}
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                결과
+                                100*200*300*400*500<br>
+                                100-200-300-400-500<br>
+                                100200300400500<br>
+                                100 200 300 400 500
                             </div>
                         </details>
                     </div>
@@ -109,16 +124,16 @@
                     <h3>배열메서드 : push()</h3>
                     <p>push(), pop() 메서드 사용하는 방법</p>
                     <div class="script">
-    <pre data-line="2,7" class="line-numbers"><code class="language-js">const arrNum = [100, 200, 300, 400, 500];
-    const arrPush = arrNum.push(600);
-    
-    console.log(arrNum);
-    
-    const arrNum2 = [100, 200, 300, 400, 500];
-    const arrPush2 = arrNum2.pop();
-    
-    console.log(arrNum2);
-    </code></pre>
+<pre data-line="2,7" class="line-numbers"><code class="language-js">const arrNum = [100, 200, 300, 400, 500];
+const arrPush = arrNum.push(600);
+
+console.log(arrNum);
+
+const arrNum2 = [100, 200, 300, 400, 500];
+const arrPush2 = arrNum2.pop();
+
+console.log(arrNum2);
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
@@ -139,16 +154,16 @@
                     <h3>배열메서드 : unshift() / shift()</h3>
                     <p>unshift(), shift() 메서드 사용하는 방법</p>
                     <div class="script">
-    <pre data-line="2,7" class="line-numbers"><code class="language-js">const arrNum = [100, 200, 300, 400, 500];
-    const arrUnshift = arrNum.unshift(600);
-    
-    console.log(arrNum);
-    
-    const arrNum2 = [100, 200, 300, 400, 500];
-    const arrShift = arrNum2.shift();
-    
-    console.log(arrNum2);
-    </code></pre>
+<pre data-line="2,7" class="line-numbers"><code class="language-js">const arrNum = [100, 200, 300, 400, 500];
+const arrUnshift = arrNum.unshift(600);
+
+console.log(arrNum);
+
+const arrNum2 = [100, 200, 300, 400, 500];
+const arrShift = arrNum2.shift();
+
+console.log(arrNum2);
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
@@ -169,8 +184,8 @@
                     <h3>메서드명</h3>
                     <p>설명</p>
                     <div class="script">
-    <pre data-line="2,7" class="line-numbers"><code class="language-js">
-    </code></pre>
+<pre data-line="2,7" class="line-numbers"><code class="language-js">
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
