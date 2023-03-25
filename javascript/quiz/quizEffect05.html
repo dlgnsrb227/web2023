@@ -879,9 +879,8 @@
 
         // 선택자
         const quizWrap = document.querySelector(".quiz__wrap");
-        const quizQuestion = quizWrap.querySelector(".quiz__question");
-        let quizScore = 0;
 
+        let quizScore = 0;
 
         // 문제 출력
         const updateQuiz = () => {
@@ -943,7 +942,6 @@
                         </div>
                     </div>
                 `);
-                
             });
 
             exam.push(`
@@ -985,7 +983,7 @@
             document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "block");
 
             // 점수 보이기
-            document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore/quizInfo.length*100)) + "점";
+            document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore/quizInfo.length)*100) + "점";
 
             alert(quizScore + "개 맞았습니다.");
             // 정답 버튼 숨기기
