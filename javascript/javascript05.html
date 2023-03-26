@@ -103,7 +103,13 @@ console.log("javascript reference".includes("reference", 12))
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                결과
+                                true<br>
+                                true<br>
+                                false<br>
+                                true<br>
+                                true<br>
+                                true<br>
+                                false
                             </div>
                         </details>
                     </div>
@@ -144,7 +150,23 @@ console.log("javascript reference".indexOf("r", 12));
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                결과
+                                0<br>
+                                -1<br>
+                                0<br>
+                                1<br>
+                                0<br>
+                                -1<br>
+                                11<br>
+                                11<br>
+                                11<br>
+                                -1<br>
+                                0<br>
+                                -1<br>
+                                11<br>
+                                11<br>
+                                -1<br>
+                                11<br>
+                                15
                             </div>
                         </details>
                     </div>
@@ -170,19 +192,19 @@ console.log("javascript reference".lastIndexOf("a"))
 console.log("javascript reference".lastIndexOf("jv"))
 console.log("javascript reference".lastIndexOf("reference"))
 console.log("javascript reference".lastIndexOf("r"))
-console.log("javascript reference".lastIndexOf("javascript", 0))
-console.log("javascript reference".lastIndexOf("javascript", 1))
-console.log("javascript reference".lastIndexOf("reference", 0))
-console.log("javascript reference".lastIndexOf("reference", 1))
-console.log("javascript reference".lastIndexOf("reference", 11))
-console.log("javascript reference".lastIndexOf("reference", 12))
 </code></pre>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                결과
+                                0<br>
+                                -1<br>
+                                0<br>
+                                3<br>
+                                -1<br>
+                                11<br>
+                                15
                             </div>
                         </details>
                     </div>
@@ -201,7 +223,7 @@ console.log("javascript reference".lastIndexOf("reference", 12))
                     <p>"문자열".match(검색값)"<br>
                         "문자열".match(정규식 표현)"</p>
                     <div class="script">
-    <pre data-line="" class="line-numbers"><code class="language-js">console.log("javascript reference".match("javascript"));
+<pre data-line="" class="line-numbers"><code class="language-js">console.log("javascript reference".match("javascript"));
 console.log("javascript reference".match("reference"));
 console.log("javascript reference".match("r"));
 console.log("javascript reference".match("R"));
@@ -213,13 +235,24 @@ console.log("javascript reference".match(/Reference/g));
 console.log("javascript reference".match(/r/));
 console.log("javascript reference".match(/r/g));
 console.log("javascript reference".match(/w/g));
-    </code></pre>
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                결과
+                                javascript<br>
+                                reference<br>
+                                r<br>
+                                null<br>
+                                ja<br>
+                                reference<br>
+                                null<br>
+                                reference<br>
+                                null<br>
+                                r<br>
+                                r r r<br>
+                                null
                             </div>
                         </details>
                     </div>
@@ -256,7 +289,16 @@ console.log("javascript reference".search(/[a-z]/g));
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                결과
+                                0<br>
+                                11<br>
+                                11<br>
+                                1<br>
+                                -1<br>
+                                -1<br>
+                                11<br>
+                                -1<br>
+                                11<br>
+                                0
                             </div>
                         </details>
                     </div>
