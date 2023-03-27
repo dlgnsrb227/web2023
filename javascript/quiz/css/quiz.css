@@ -123,6 +123,12 @@
      text-align: center;
 }
 
+.quiz__main h4 {
+     text-align: center;
+     padding-top: 5px;
+     font-family: DungGeunMo;
+}
+
 
 .quiz__question {
      padding: 20px;
@@ -159,6 +165,22 @@
 
 .quiz__answer .confirm:hover {
      background-color: #72fc92;
+}
+
+.quiz__answer .next {
+     background-color: #89ffe6;
+     border: 6px ridge #cacaca;
+     width: 100%;
+     font-family: HealthsetGothic;
+     padding: 10px 20px;
+     font-size: 22px;
+     cursor: pointer;
+     transition: all 0.3s;
+     font-weight: bold;
+}
+
+.quiz__answer .next:hover {
+     background-color: #6fd1bc;
 }
 
 .quiz__answer .result {
