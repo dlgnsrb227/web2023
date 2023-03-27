@@ -260,12 +260,17 @@
 
             if(userAnswer == currentAnswer){
                 dogWrap.classList.add("like");
+                quizScore++;
             } else {
                 dogWrap.classList.add("dislike");
             }
 
             quizAnswer.style.display = "block";
             quizDesc.style.display = "block";
+
+            if(quizInfo.length - quizCount == 1){
+                alert(quizScore + "개 맞았습니다.");
+            }
         };
 
         // 정답 확인
