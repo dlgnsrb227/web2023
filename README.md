@@ -16,4 +16,3 @@
 텍스트 유형 : https://dlgnsrb227.github.io/web2023/site/textType/textType01.html   
 슬라이드 유형 : https://dlgnsrb227.github.io/web2023/site/sliderType/sliderType01.html   
 헤더 유형 : https://dlgnsrb227.github.io/web2023/site/headerType/headerType01.html
-asdasdasdasdasd
