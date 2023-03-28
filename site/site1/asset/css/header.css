@@ -1,0 +1,36 @@
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #ccc;
+}
+.header__logo {
+    width: 20%;
+}
+.header__menu {
+    text-align: center;
+    width: 60%;
+}
+.header__menu li {
+    display: inline-block;
+}
+.header__menu li a {
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 0 15px;
+}
+.header__menu li a:hover {
+    border-left: 1px dashed #cacaca;
+    border-right: 1px dashed #cacaca;
+}
+.header__member {
+    width: 20%;
+    text-align: right;
+}
+.header__member a {
+    border: 1px solid #000;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+}
