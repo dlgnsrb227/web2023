@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마무리 문제1</title>
+    <style>
+        .img1 {
+            width: 500px;
+            height: 300px;
+            background-image: url(practiceimg/Han-river1.png);
+            background-size: cover;
+        }
+        .img2 {
+            width: 500px;
+            height: 300px;
+            background-image: url(practiceimg/Han-river2.png);
+            background-size: cover;
+        }
+        .menu {
+            width: 60px;
+            height: 60px;
+            background-color: #000;
+            position: absolute;
+            right: 0px;
+            top: 10px;
+            background-image: url(practiceimg/menu.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .sidebar {
+            width: 200px;
+            height: 700px;
+            background-color: #000;
+            position: absolute;
+            right: -200px;
+            top: 10px;
+        }
+        .open {
+            width: 200px;
+            height: 700px;
+            background-color: #000;
+            position: absolute;
+            right: 00px;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu"></div>
+        <div class="sidebar"></div>
+    </header>
+    <main>
+        <h2>마우스 오버하면 이미지 바꾸기</h2>
+        <div class="img1"></div>
+    </main>
+
+    <script>
+        {
+            document.querySelector(".img1").addEventListener("mouseover", () => {
+                document.querySelector(".img1").classList.add("img2");
+            });
+            document.querySelector(".img1").addEventListener("mouseout", () => {
+                document.querySelector(".img1").classList.remove("img2");
+            });
+        }
+        {
+            document.querySelector(".menu").addEventListener("click", () => {
+                document.querySelector(".sidebar")
+            });
+        }
+    </script>
+</body>
+</html>
