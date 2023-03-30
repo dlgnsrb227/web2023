@@ -86,7 +86,7 @@
             </div>
             <!-- main__menu -->
             <div class="main_sample">
-                <div id="sample21" class="sample">
+                <!-- <div id="sample21" class="sample">
                     <h3>21. join()</h3>
                     <p>join() 메서드 사용하는 방법</p>
                     <div class="script">
@@ -120,9 +120,9 @@
                         <h4>join()</h4>
                         <p>join() 메서드는 배열 요소를 문자열로 결합하여 문자열로 반환한다.</p>
                     </div>
-                </div>
+                </div> -->
                 <!-- sample21 -->
-                <div id="sample23" class="sample">
+                <!-- <div id="sample23" class="sample">
                     <h3>23. push(), pop()</h3>
                     <p>push(), pop() 메서드 사용하는 방법</p>
                     <div class="script">
@@ -150,9 +150,9 @@ console.log(arrNum2);
                         <h4>push(), pop()</h4>
                         <p>push() 메서드는 배열 마지막 요소 뒤에 요소를 추가하고, pop()메서드는 배열 마지막 요소를 삭제한다.</p>
                     </div>
-                </div>
+                </div> -->
                 <!-- sample23 -->
-                <div id="sample27" class="sample">
+                <!-- <div id="sample27" class="sample">
                     <h3>27. unshift() / shift()</h3>
                     <p>unshift(), shift() 메서드 사용하는 방법</p>
                     <div class="script">
@@ -180,13 +180,13 @@ console.log(arrNum2);
                         <h4>unshift(), shift()</h4>
                         <p>unshift() 메서드는 배열 처음 요소 앞에 요소를 추가하고, shift() 메서드는 배열 처음 요소를 삭제한다.</p>
                     </div>
-                </div>
+                </div> -->
                 <!-- sample27 -->
                 <div id="sample29" class="sample">
                     <h3>29. slice()</h3>
                     <p>배열.slice(시작 위치, [끝나는 위치])</p>
                     <div class="script">
-<pre data-line="2,7" class="line-numbers"><code class="language-js">const arr = ["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"];
+<pre data-line="" class="line-numbers"><code class="language-js">const arr = ["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"];
 
 console.log(arr.slice(0));
 console.log(arr.slice(1));
@@ -229,51 +229,66 @@ console.log(arr.slice(-3, -1));
                     <div class="script">
 <pre data-line="" class="line-numbers"><code class="language-js">const arrNum1 = [100, 200, 300, 400, 500];
 const result1 = arrNum1.splice(1);
-console.log(arrNum1);        // 남은 값
-console.log(result1);        // 지워진 값
+console.log(arrNum1);
+console.log(result1);
 
 const arrNum2 = [100, 200, 300, 400, 500];
 const result2 = arrNum2.splice(1, 2);
-console.log(arrNum2);       //[100, 400, 500]
-console.log(result2);       //[200, 300]
+console.log(arrNum2);
+console.log(result2);
 
 const arrNum3 = [100, 200, 300, 400, 500];
 const result3 = arrNum3.splice(1, 3);
-console.log(arrNum3);       //[100, 500]
-console.log(result3);       //[200, 300, 400]
+console.log(arrNum3);
+console.log(result3);
 
 
 const arrNum4 = [100, 200, 300, 400, 500];
 const result4 = arrNum4.splice(1, 2, "javascript");
-console.log(arrNum4);       //[100, 'javascript', 400, 500]
-console.log(result4);       //[200, 300]
+console.log(arrNum4);
+console.log(result4);
 
 const arrNum5 = [100, 200, 300, 400, 500];
 const result5 = arrNum5.splice(1, 0, "javascript");
-console.log(arrNum5);       //[100, 'javascript', 200, 300, 400, 500]
-console.log(result5);       //[]
+console.log(arrNum5);
+console.log(result5);
 
 const arrNum6 = [100, 200, 300, 400, 500];
 const result6 = arrNum6.splice(0, 4, "javascript");
-console.log(arrNum6);       //['javascript', 500]
-console.log(result6);       //[100, 200, 300, 400]
+console.log(arrNum6);
+console.log(result6);
 
 const arrNum7 = [100, 200, 300, 400, 500];
 const result7 = arrNum7.splice(2, 2, "javascript", "react");
-console.log(arrNum7);       //[100, 200, 'javascript', 'react', 500]
-console.log(result7);       //[300, 400]
+console.log(arrNum7);
+console.log(result7);
 
 const arrNum8 = [100, 200, 300, 400, 500];
 const result8 = arrNum8.splice(-2, 2, "javascript");
-console.log(arrNum8);       //[100, 200, 300, 'javascript']
-console.log(result8);       //[400, 500]
+console.log(arrNum8);
+console.log(result8);
 </code></pre>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                결과
+                                [100]<br>
+                                [ ]<br>
+                                [100, 400, 500]<br>
+                                [200, 300]<br>
+                                [100, 500]<br>
+                                [200, 300, 400]<br>
+                                [100, 'javascript', 400, 500]<br>
+                                [200, 300]<br>
+                                [100, 'javascript', 200, 300, 400, 500]<br>
+                                [ ]<br>
+                                ['javascript', 500]<br>
+                                [100, 200, 300, 400]<br>
+                                [100, 200, 'javascript', 'react', 500]<br>
+                                [300, 400]<br>
+                                [100, 200, 300, 'javascript']<br>
+                                [400, 500]
                             </div>
                         </details>
                     </div>
