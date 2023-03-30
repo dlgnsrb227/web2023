@@ -48,12 +48,66 @@
         <div class="container">
             <div class="main__menu">
                 <ul>
-                    <li><a href="#"><strong>수학 메서드 : Math.round() : 반올림</strong></a></li>
-                    <li><a href="#"><strong>수학 메서드 : Math.floor() : 내림</strong></a></li>
-                    <li><a href="#"><strong>수학 메서드 : Math.ceil() : 올림</strong></a></li>
+                    <li><a href="#"><strong>수학 메서드 : Math.random() : 랜덤값(0~1 사이의 난수 값) : 숫자로 반환</strong></a></li>
+                    <li><a href="#"><strong>수학 메서드 : Math.round() : 반올림 : 숫자로 반환</strong></a></li>
+                    <li><a href="#"><strong>수학 메서드 : Math.floor() : 내림 : 숫자로 반환</strong></a></li>
+                    <li><a href="#"><strong>수학 메서드 : Math.ceil() : 올림 : 숫자로 반환</strong></a></li>
+                    <li><a href="#"><strong>수학 메서드 : Math.max() : 가장 큰 값 : 숫자로 반환</strong></a></li>
+                    <li><a href="#"><strong>수학 메서드 : Math.min() : 가장 작은 값 : 숫자로 반환</strong></a></li>
+                    <li><a href="#"><strong>수학 메서드 : Math.abs() : 절대값 : 숫자로 반환</strong></a></li>
+                    <li><a href="#"><strong>수학 메서드 : Math.trunc() : 값의 정수 부분 : 숫자로 반환</strong></a></li>
+                    <li><a href="#"><strong>수학 메서드 : Math.PI() : 원의 둘레에 대한 지름의 비율(π) : 숫자로 반환</strong></a></li>
+                    <li><a href="#"><strong>수학 메서드 : Math.sqrt() : 값의 제곱근(√) 값 : 숫자로 반환</strong></a></li>
                 </ul>
             </div>
             <!-- main__menu -->
+            <div class="main_sample">
+                <div id="sample01" class="sample">
+                    <h3>01. Math.random</h3>
+                    <p>Math.random</p>
+                    <div class="notice">
+                        <h4></h4>
+                        <ul>
+                            <li>0~1 사이의 난수 값을 반환합니다.</li>
+                        </ul>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                                <th>클릭</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample01_N1"></td>
+                                <td class="sample01_Q1"></td>
+                                <td class="sample01_M1"></td>
+                                <td class="sample01_P1"></td>
+                                <td class="sample01_B1"><button>클릭</button></td>
+                            </tr>
+                            <tr>
+                                <td class="sample01_N2"></td>
+                                <td class="sample01_Q2"></td>
+                                <td class="sample01_M2"></td>
+                                <td class="sample01_P2"></td>
+                                <td class="sample01_B2"><button>클릭</button></td>
+                            </tr>
+                            <tr>
+                                <td class="sample01_N3"></td>
+                                <td class="sample01_Q3"></td>
+                                <td class="sample01_M3"></td>
+                                <td class="sample01_P3"></td>
+                                <td class="sample01_B3"><button>클릭</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            <!-- sample06 -->
+            </div>
         </div>
         <!-- container -->
     </main>
@@ -63,6 +117,58 @@
         <a href="mailto:gnsrbdi@naver.com">gnsrbdi@naver.com</a>
     </footer>
     <!-- //footer -->
+
+    <script>
+        const Num1 = document.querySelector(".sample01_N1");
+        const NNum1 = document.querySelector(".sample01_Q1");
+        const Met1 = document.querySelector(".sample01_M1");
+        const Re1 = document.querySelector(".sample01_P1");
+        const Click1 = document.querySelector(".sample01_B1 button");
+
+        const Num2 = document.querySelector(".sample01_N2");
+        const NNum2 = document.querySelector(".sample01_Q2");
+        const Met2 = document.querySelector(".sample01_M2");
+        const Re2 = document.querySelector(".sample01_P2");
+        const Click2 = document.querySelector(".sample01_B2 button");
+
+        const Num3 = document.querySelector(".sample01_N3");
+        const NNum3 = document.querySelector(".sample01_Q3");
+        const Met3 = document.querySelector(".sample01_M3");
+        const Re3 = document.querySelector(".sample01_P3");
+        const Click3 = document.querySelector(".sample01_B3 button");
+
+
+        // 01
+        Num1.innerHTML = "1";
+        NNum1.innerHTML = "0~1(난수)";
+        Met1.innerHTML = "Math.random()";
+        Click1.addEventListener("click", () => {
+            Re1.innerHTML = Math.random();
+        });
+        // document.querySelectorAll(".table button").forEach(function(el){
+        //     el.addEventListener("click", () => {
+        //         alert("warning");
+        //     })
+        // });
+
+        // 02
+        Num2.innerHTML = "2";
+        NNum2.innerHTML = "0~1(정수)";
+        Met2.innerHTML = "Math.random()";
+        Click2.addEventListener("click", () => {
+            Re2.innerHTML = Math.floor(Math.random()*10);
+        });
+        
+
+        // 03
+        Num3.innerHTML = "3";
+        NNum3.innerHTML = "1~100(정수)";
+        Met3.innerHTML = "Math.random()";
+        Click3.addEventListener("click", () => {
+            Re3.innerHTML = Math.floor(Math.random()*100+1);
+        });
+        
+    </script>
 
     <script src="assets/js/prism.js"></script>
 
