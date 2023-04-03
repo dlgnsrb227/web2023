@@ -83,7 +83,7 @@
                         <div class="cbt__title">수험자 : <em></em></div>
                         <div class="cbt__score">
                             <span>전체 문항 : <em></em> 문항</span>
-                            <span>남은 문항 : <em></em> 문항</span>
+                            <span>남은 문항 : <em class="end"></em> 문항</span>
                         </div>
                     </div>
                 </div>
@@ -128,6 +128,7 @@
         const cbtSubmit = document.querySelector(".cbt__submit");
         const cbtName = document.querySelector(".cbt__title em");
         const cbtScore = document.querySelector(".cbt__score em");
+        const cbtScoreEnd = document.querySelector(".cbt__score .end");
 
         let questionAll = [];                 //모든 문제 정보
 
@@ -144,8 +145,8 @@
                         number: index +1,
                     }
                     const answerChoices = [...item.incorrect_answers];  //answerChoices에 json파일에 있는 incorrect_answers(오답)배열 저장
-                    formattedQuestion.Answer = Math.floor(Math.random() * (answerChoices.length) +1 );     // 정답을 랜덤으로 불러오기
-                    answerChoices.splice(formattedQuestion.Answer -1, 0, item.correct_answer);             // 보기를 랜덤으로 추가
+                    formattedQuestion.Answer = Math.floor(Math.random() * (answerChoices.length) + 1);     // 정답을 랜덤으로 불러오기
+                    answerChoices.splice(formattedQuestion.Answer - 1, 0, item.correct_answer);             // 보기를 랜덤으로 추가
 
                     answerChoices.forEach((choice, index) => {          //answerChoices에 forEach문을 사용하여 "choice"(문자열)에 번호를 추가하여 저장
                         formattedQuestion["choice" + (index + 1)] = choice;     // forEach문에서 choice가 요소를 칭하는 변수로 사용했으므로 choice는 오답내용
@@ -181,8 +182,7 @@
 
         const newQuestion = () => {
             questionAll.forEach((question, number) => {
-                exam.push(
-                    `
+                exam.push(`
                     <div class="cbt">
                         <div class="cbt__question"><span>${question.number}. </span>${question.question}</div>
                         <div class="cbt__question__img"></div>
@@ -198,8 +198,7 @@
                         </div>
                         <div class="cbt__desc hide">${question.Desc}</div>
                     </div>
-                    `
-                )
+                    `)
                 omr.push(`
                     <div class="omr">
                         <strong>${question.number}</strong>
@@ -225,11 +224,14 @@
 
             cbtQuiz.innerHTML = exam.join('');
             cbtOmr.innerHTML = omr.join('');
-            // cbtName.innerHTML = prompt("수험자 성함을 적어주세요.");
-
-
+            cbtName.innerHTML = prompt("수험자 성함을 적어주세요.");
+      
+            cbtScore.innerHTML = questionAll.length;
+            cbtScoreEnd.innerHTML = questionAll.length;
+            
         };
-
+        
+        
         // 정답 확인
 
         const answerQuiz = () => {
@@ -255,6 +257,7 @@
                     label[question.Answer-1].classList.add("correct");
                 }
 
+                // 해설 보이기
                 const quizDesc = document.querySelectorAll(".cbt__desc");
 
                 if(quizDesc[number].innerText == "undefined"){
@@ -269,6 +272,7 @@
 
         cbtSubmit.addEventListener("click", answerQuiz);
         dataQuestion();
+
     </script>
 </body>
 </html>
