@@ -170,8 +170,8 @@
                     <div data-lit-hue="20" data-lit-count="100" class="lit-container">
                         <button class="minimal">시작하기</button>
                     </div>
-                </div> -->
-            </div>
+                </div>
+            </div> -->
         </div>
         <!-- quiz__wrap__cbt -->
     </main>
@@ -183,6 +183,7 @@
     <!-- //footer -->
 
     <script>
+        const cbt = document.querySelectorAll(".cbt");
         const cbtQuiz = document.querySelector(".cbt__quiz");
         const cbtOmr = document.querySelector(".cbt__omr");
         const cbtSubmit = document.querySelector(".cbt__submit");
@@ -233,54 +234,51 @@
                     return formattedQuestion;
                 });
                 newQuestion();  // 문제 만들기
+
+                // 전체 문제수
+                questionLength = questionAll.length;
+                cbtLength.innerHTML = questionLength;
+                cbtRest.innerHTML = questionLength;
             })
             .catch((err) => console.log(err));
 
         }
 
         // 문제 만들기
-        const exam = [];
-        const omr = [];
-
         const newQuestion = () => {
+            const exam = [];
+            const omr = [];
+
             questionAll.forEach((question, number) => {
                 exam.push(`
                     <div class="cbt">
-                        <div class="cbt__question"><span>${question.number}. </span>${question.question}</div>
+                        <div class="cbt__question"><span>${question.number}</span>. ${question.question}</div>
                         <div class="cbt__question__img">${question.question_img}</div>
                         <div class="cbt__question__desc">${question.question_desc}</div>
                         <div class="cbt__selects">
-                            <input type="radio" id="select${number}_1" name="select${number}" value="${number}_1" onclick="answerSelectcbt(this)">
+                            <input type="radio" id="select${number}_1" name="select${number}" value="${number}_1" onclick="answerSelect2(this)">
                             <label for="select${number}_1"><span>${question.choice1}</span></label>
-                            <input type="radio" id="select${number}_2" name="select${number}" value="${number}_2" onclick="answerSelectcbt(this)">
+                            <input type="radio" id="select${number}_2" name="select${number}" value="${number}_2" onclick="answerSelect2(this)">
                             <label for="select${number}_2"><span>${question.choice2}</span></label>
-                            <input type="radio" id="select${number}_3" name="select${number}" value="${number}_3" onclick="answerSelectcbt(this)">
+                            <input type="radio" id="select${number}_3" name="select${number}" value="${number}_3" onclick="answerSelect2(this)">
                             <label for="select${number}_3"><span>${question.choice3}</span></label>
-                            <input type="radio" id="select${number}_4" name="select${number}" value="${number}_4" onclick="answerSelectcbt(this)">
+                            <input type="radio" id="select${number}_4" name="select${number}" value="${number}_4" onclick="answerSelect2(this)">
                             <label for="select${number}_4"><span>${question.choice4}</span></label>
                         </div>
                         <div class="cbt__desc hide">${question.Desc}</div>
                     </div>
-                    `)
+                `);
                 omr.push(`
                     <div class="omr">
                         <strong>${question.number}</strong>
-                        <input type="radio" name="select${number}" id="omr${number}_1" value="${number}_1" onclick="answerSelectomr(this)">
-                        <label for="omr${number}_1">
-                            <span class="label-inner">1</span>
-                        </label>
-                        <input type="radio" name="select${number}" id="omr${number}_2" value="${number}_2" onclick="answerSelectomr(this)">
-                        <label for="omr${number}_2">
-                            <span class="label-inner">2</span>
-                        </label>
-                        <input type="radio" name="select${number}" id="omr${number}_3" value="${number}_3" onclick="answerSelectomr(this)">
-                        <label for="omr${number}_3">
-                            <span class="label-inner">3</span>
-                        </label>
-                        <input type="radio" name="select${number}" id="omr${number}_4" value="${number}_4" onclick="answerSelectomr(this)">
-                        <label for="omr${number}_4">
-                            <span class="label-inner">4</span>
-                        </label>
+                        <input type="radio" name="select${number}" id="omr${number}_1" value="${number}_1" onclick="answerSelect(this)">
+                        <label for="omr${number}_1"><span class="label-inner">1</span></label>
+                        <input type="radio" name="select${number}" id="omr${number}_2" value="${number}_2" onclick="answerSelect(this)">
+                        <label for="omr${number}_2"><span class="label-inner">2</span></label>
+                        <input type="radio" name="select${number}" id="omr${number}_3" value="${number}_3" onclick="answerSelect(this)">
+                        <label for="omr${number}_3"><span class="label-inner">3</span></label>
+                        <input type="radio" name="select${number}" id="omr${number}_4" value="${number}_4" onclick="answerSelect(this)">
+                        <label for="omr${number}_4"><span class="label-inner">4</span></label>
                     </div>
                 `)
             });
@@ -321,14 +319,14 @@
                 const quizDesc = document.querySelectorAll(".cbt__desc");
 
                 if(quizDesc[number].innerText == "undefined"){
-                    quizDesc[number].classList.add("hide")
+                    quizDesc[number].classList.add("hide");
                 } else {
-                    quizDesc[number].classList.remove("hide")
+                    quizDesc[number].classList.remove("hide");
                 }
             });
         };
 
-        const answerSelectcbt = (elem) => {
+        const answerSelect2 = (elem) => {
             const answer = elem.value;
             const answerNum = answer.split("_");
 
@@ -341,11 +339,11 @@
             cbtRest.innerHTML = questionLength - answerInputs.length;
         };
 
-        const answerSelectomr = (elem) => {
+        const answerSelect = (elem) => {
             const answer = elem.value;
             const answerNum = answer.split("_");
             
-            const cbt = document.querySelectorAll(".cbt__quiz .cbt");     // 전체 100문제
+            const cbt = document.querySelectorAll(".cbt .cbt__selects");     // 전체 100문제
             const label = cbt[answerNum[0]].querySelectorAll("input");  // 보기 4개
             label[answerNum[1]-1].checked = true;
 
@@ -355,50 +353,6 @@
 
         cbtSubmit.addEventListener("click", answerQuiz);
         dataQuestion();
-
-        // // 버블버튼
-        // const bubbleBtn = () => {
-        //     const clip = (v, min, max = Infinity) => {
-        //         if (v < min) return min;
-        //         else if (v > max) return max;
-        //         else return v;
-        //     };
-
-        //     const randRange = (min, max) => Math.random() * max + min;
-
-        //     function bubble(x, y, rect, hue, target) {
-        //         // 변수 만들기
-        //         const size = randRange(20, rect.width / 5);
-        //         const circleHue = hue + randRange(-20, 20);
-        //         const animDuration = randRange(clip(size ** 2/1000, 1), 6) 
-        //         const zIndex = Math.random() < 0.1 ? 2 : -1;
-        //         // 원 만들기
-        //         const circle = document.createElement("span");
-        //         circle.className = "lit";
-        //         circle.style.left = x + "px";
-        //         circle.style.top = y + "px";
-        //         circle.style.width = size + "px";
-        //         circle.style.height = size + "px";
-        //         circle.style.background = `hsl(${circleHue}deg, 100%, 60%)`;
-        //         circle.style.zIndex = zIndex
-        //         circle.style.animationDuration = animDuration + "s";
-        //         target.appendChild(circle);
-        //     }
-
-        //     document.querySelectorAll("[data-lit-hue]").forEach((target) => {
-        //         const rect = target.getBoundingClientRect();
-        //         const hue = Number(target.getAttribute("data-lit-hue"));
-        //         const count = Number(target.getAttribute("data-lit-count") || 50);
-
-        //         for (let i = 0; i < count; i++) {
-        //             const x = randRange(0, rect.width);
-        //             const y = randRange(0, rect.height);
-        //             bubble(x, y, rect, hue, target);
-        //         }
-        //     });
-        // };
-
-        // bubbleBtn();
 
     </script>
 </body>

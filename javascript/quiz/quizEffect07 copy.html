@@ -107,7 +107,7 @@
 
         //데이터 가져오기
         const dataQuestion = () => {
-            fetch("https://dlgnsrb227.github.io/web2023/javascript/quiz/json/gineungsaWD2023_01.json")
+            fetch("https://dlgnsrb227.github.io/web2023/javascript/quiz/json/gineungsaWD2016_01.json")
             .then(res => res.json())
             .then(items => {
                 questionAll = items.map((item, index) => {
@@ -180,13 +180,13 @@
                 omr.push(`
                     <div class="omr">
                         <strong>${question.number}</strong>
-                        <input type="radio" name="omr${number}" id="omr${number}_1" value="${number}_1" onclick="answerSelect(this)">
+                        <input type="radio" name="select${number}" id="omr${number}_1" value="${number}_1" onclick="answerSelect(this)">
                         <label for="omr${number}_1"><span class="label-inner">1</span></label>
-                        <input type="radio" name="omr${number}" id="omr${number}_2" value="${number}_2" onclick="answerSelect(this)">
+                        <input type="radio" name="select${number}" id="omr${number}_2" value="${number}_2" onclick="answerSelect(this)">
                         <label for="omr${number}_2"><span class="label-inner">2</span></label>
-                        <input type="radio" name="omr${number}" id="omr${number}_3" value="${number}_3" onclick="answerSelect(this)">
+                        <input type="radio" name="select${number}" id="omr${number}_3" value="${number}_3" onclick="answerSelect(this)">
                         <label for="omr${number}_3"><span class="label-inner">3</span></label>
-                        <input type="radio" name="omr${number}" id="omr${number}_4" value="${number}_4" onclick="answerSelect(this)">
+                        <input type="radio" name="select${number}" id="omr${number}_4" value="${number}_4" onclick="answerSelect(this)">
                         <label for="omr${number}_4"><span class="label-inner">4</span></label>
                     </div>
                 `)
