@@ -371,18 +371,19 @@
 }
 
 .cbt__button {
-     width: 280px;
-     position: fixed;
+     width: 250px;
      right: 20px;
      top: 90px;
-     padding: 10px 0;
-     display: flex;
-     justify-content: space-between;
+     padding: 10px;
+     text-align: center;
+     border-bottom: 3px ridge #cacaca;
 }
 
 .cbt__time {
      position: relative;
+     display: inline-block;
      padding: 10px 10px 10px 50px;
+     margin-bottom: 10px;
      background-color: #52cc00;
      border-radius: 30px;
      font-size: 18px;
@@ -405,6 +406,7 @@
 
 .cbt__submit {
      position: relative;
+     display: inline-block;
      border-radius: 30px;
      padding: 10px 10px 10px 50px;
      background-color: #6aa5ff;
@@ -428,13 +430,11 @@
 
 .cbt__aside {
      position: fixed;
-     right: 20px;
-     top: 160px;
-     width: 280px;
+     right: 40px;
+     top: 100px;
+     width: 260px;
      height: calc(100vh - 140px);
      background-color: #fff;
-     border: 5px ridge #cacaca;
-     overflow-y: auto;
 }
 
 .cbt__quiz {
@@ -452,7 +452,7 @@
 
 .cbt__info {
      background-color: #e1fae5;
-     border-bottom: 5px ridge #cacaca;
+     border: 5px ridge #cacaca;
 }
 
 .cbt__info .cbt__name {
@@ -472,7 +472,10 @@
 }
 
 .cbt__omr {
+     border: 5px ridge #cacaca;
      padding: 20px;
+     height: 600px;
+     overflow-y: auto;
 }
 
 .cbt__omr .omr {
@@ -693,6 +696,106 @@
      top: -45px;
 }
 
+.cbt__start {
+     position: fixed;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100vh;
+     z-index: 10000;
+     background-color: rgba(255, 255, 255, 0);
+     backdrop-filter: blur(10px);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.cbt__start > div {
+     width: 50%;
+     height: 50vh;
+     background-color: #fff;
+     border: 8px solid #b5b5b5;
+     border-radius: 10px;
+     position: relative;
+     text-align: center;
+}
+
+.cbt__modal1 .sel1 {
+     position: absolute;
+     left: 30%;
+     top: 10%;
+     text-align: center;
+     font-size: 18px;
+     width: 270px;
+     height: 60px;
+     border: 4px solid #a8cbbe;
+}
+
+.cbt__modal1 .sel2 {
+     position: absolute;
+     left: 30%;
+     top: 25%;
+     text-align: center;
+     font-size: 18px;
+     width: 270px;
+     height: 60px;
+     border: 4px solid #a8bfcb;
+}
+
+.cbt__modal1 button {
+     width: 120px;
+     height: 50px;
+     position: absolute;
+     top: 85%;
+     left: 40%;
+}
+
+/* .lit-container {
+     position: relative;
+}
+
+.minimal {
+     box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+     background: #fff;
+     display: grid;
+     align-content: center;
+     justify-content: center;
+     border-radius: 5px;
+     width: 300px;
+     height: 80px;
+     margin: 0 auto;
+     font-family: 'PyeongChang';
+     border: 1px solid #CACACA
+ }
+ .lit-container:hover .lit,
+ .lit-container:focus-within .lit {
+     background: rgba(153,153,153,0.2) !important;
+ }
+ [data-lit-hue] {
+     position: relative;
+ }
+ span.lit {
+     border-radius: 50%;
+     position: absolute;
+     pointer-events: none;
+     transform: translate(-50%, -50%);
+     animation: blow 2s ease-in infinite;
+     transition: all 400ms ease;
+ }
+ @keyframes blow {
+     0% {
+         transform: translate(-50%, -50%) scale(0.1);
+         opacity: 0;
+     }
+     10% {
+         transform: translate(-50%, -50%);
+         opacity: 1;
+     }
+     100% {
+         transform: translate(-50%, -40vh);
+         opacity: 0;
+     }
+ } */
 /* dog__wrap */
 .dog .tail,
 .dog .chin,
