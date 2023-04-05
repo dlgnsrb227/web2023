@@ -76,9 +76,9 @@
             <div class="cbt__aside">
                 <div class="cbt__info">
                     <div class="cbt__button">
-                        <div class="cbt__time"><span>59분 10초</span></div>
+                        <div class="cbt__time"><span>Start!</span></div>
                         <div class="cbt__submit">제출하기</div>
-                        <div class="cbt__result hide">제출하기</div>
+                        <div class="cbt__result hide"></div>
                     </div>
                     <div class="cbt__name">
                         <div class="cbt__title">수험자 : <em></em></div>
@@ -170,8 +170,8 @@
                         </select>
                     </div>
                     <div class="cbt__view">
-                        당신의 이름은 <input type="text" class="name"> 입니다.<br>
-                        당신은 <span class="subject">웹디자인 기능사시험</span>을 선택했습니다.
+                        성함을 입력해주세요<br><input type="text" class="name"><br><br>
+                        선택하신 시험문제는<br><span class="subject"></span><br>입니다.
                     </div>
                     <button class="cbt__start__btn">시작하기</button>
                 </div>
@@ -206,7 +206,7 @@
         let questionLength = 0; //전체 문제수
         let questionRest = questionLength; //남은 문제수
         let questionTime = "";
-        let questionTimeRemain = "1000";
+        let questionTimeRemain = "3600";
         let great = 0;
 
         // 시작하기
@@ -299,13 +299,13 @@
                 omr.push(`
                     <div class="omr">
                         <strong>${question.number}</strong>
-                        <input type="radio" name="select${number}" id="omr${number}_1" value="${number}_1" onclick="answerSelect(this)">
+                        <input type="radio" name="${number}" id="omr${number}_1" value="${number}_1" onclick="answerSelect(this)">
                         <label for="omr${number}_1"><span class="label-inner">1</span></label>
-                        <input type="radio" name="select${number}" id="omr${number}_2" value="${number}_2" onclick="answerSelect(this)">
+                        <input type="radio" name="${number}" id="omr${number}_2" value="${number}_2" onclick="answerSelect(this)">
                         <label for="omr${number}_2"><span class="label-inner">2</span></label>
-                        <input type="radio" name="select${number}" id="omr${number}_3" value="${number}_3" onclick="answerSelect(this)">
+                        <input type="radio" name="${number}" id="omr${number}_3" value="${number}_3" onclick="answerSelect(this)">
                         <label for="omr${number}_3"><span class="label-inner">3</span></label>
-                        <input type="radio" name="select${number}" id="omr${number}_4" value="${number}_4" onclick="answerSelect(this)">
+                        <input type="radio" name="${number}" id="omr${number}_4" value="${number}_4" onclick="answerSelect(this)">
                         <label for="omr${number}_4"><span class="label-inner">4</span></label>
                     </div>
                 `)
@@ -371,7 +371,7 @@
             });
             // 점수 알려주기
             let score = Math.ceil((great/questionAll.length)*100);
-            cbtResult.innerHTML = `${score}점 입니다.`
+            cbtResult.innerHTML = `총 ${great}개 맞았습니다.<br>점수는${score}점 입니다.`
 
             // 제출버튼 숨기기, 점수 보이기
             cbtSubmit.classList.add("hide");
