@@ -2,7 +2,6 @@
     {
         "subject" : "웹디자인 기능사",
         "question" : "디자인 원리 중 리듬(rhythm)의 요소와 거리가 먼 것은?",
-        "question_desc" : "문제에 대한 설명 부분",
         "correct_answer" : "대칭",
         "incorrect_answers" : ["점증","반복","강조"],
         "desc" : "디자인의 원리에는 통일, 강조, 균형, 비례, 반복, 변화, 조화, 대비, 리듬(율동)이 있으며 리듬은 유사한 형들이 일정한 규칙과 질서를 유지할 때 나타나는 현상을 말한다."
@@ -210,7 +209,6 @@
     },{
         "subject": "웹디자인 기능사",
         "question" : "HTML 태그에서 “cellpadding” 에 대해 올바르게 설명한 것은?",
-        "question_img": "gisa2020_01_01",
         "correct_answer" : "“table” 태그에서만 쓰는 속성으로 셀 구분선과 셀 안의 문자간의 여백을 설정한다.",
         "incorrect_answers" : [
                 "“table” 태그에서만 쓰는 속성으로 셀과 셀 사이의 간격을 설정한다.",
@@ -221,7 +219,6 @@
     },{
         "subject": "웹디자인 기능사",
         "question" : "연산자 좌우의 검색어를 모두 포함하는 데이터를 찾는 정보검색 연산자는?",
-        "question_img": "gisa2020_01_02",
         "correct_answer" : "AND",
         "incorrect_answers" : [
                 "OR",
@@ -333,7 +330,6 @@
     },{
         "subject": "웹디자인 기능사",
         "question" : "다음 HTML 태그 중 성격이 다른 태그는?",
-        "question_img": "gisa2020_01_03",
         "correct_answer" : "&lt;BR> &lt;/BR>",
         "incorrect_answers" : [
                 "&lt;OL> &lt;/OL>",
@@ -373,7 +369,8 @@
             "desc" : "디지타이저를 타블렛이라고 생각하시면 편할것 같습니다."
     },{
         "subject": "웹디자인 기능사",
-        "question" : "아래 스크립트를 분석한 내용으로 잘못된 것은?<img style='width:400px' src='img/img038.JPG'>",
+        "question" : "아래 스크립트를 분석한 내용으로 잘못된 것은?",
+        "question_desc" : "&lt;A href='#' onMouseOver='window.document.bgColor='yellow'' onMouseOut = 'window.document.bgColor='red'' onClick='window.document.bgColor='white''> 안녕하세요 &lt;/A>",
         "correct_answer" : "마우스로 “안녕하세요”를 클릭하면 새로운 팝업창이 열리고, 문자색이 변한다.",
         "incorrect_answers" : [
                 "“안녕하세요”에 마우스 포인터가 닿으면 배경색이 노란색으로 변한다.",
@@ -415,7 +412,6 @@
     },{
         "subject": "웹디자인 기능사",
         "question" : "다음은 무엇에 관한 설명인가?<br>-웹사이트의 전체구조, 화면구성, 콘텐츠 정보 등을 작성해 보는 것이다.<br>-화면 단위로 삽입될 구성 요소 및 구체적 내용을 정리해 놓는다.",
-        "question_desc": "a. SELECT DEPT FROM STUDENT;<br>b. SELECT DISTINCT DEPT FROM STUDENT;",
         "correct_answer" : "스토리보드",
         "incorrect_answers" : [
                 "레이아웃",
@@ -426,7 +422,6 @@
     },{
         "subject": "웹디자인 기능사",
         "question" : "3차원 대상물 표면에 2차원의 이미지를 입히는 과정을 무엇이라고 하는가?",
-        "question_desc": "과목(<i style='text-decoration: underline'>과목번호</i>, 과목명)<br>수강(<i style='text-decoration: underline'>수강번호</i>,학번,과목번호,학기)",
         "correct_answer" : "텍스처 매핑(Texture Mapping)",
         "incorrect_answers" : [
                 "쉐이딩(Shading)",
@@ -466,7 +461,8 @@
             "desc" : "웹 애니매이션의 깜빡임 현상을 줄이기 위해서는 FPS (Frame Per Second)를 최대한 높여 제작하는 것이 바람직하다."
     },{
         "subject": "웹디자인 기능사",
-        "question" : "다음과 같은 내비게이션 구조는?<img style='width:300px' src='img/img047.JPG'>",
+        "question" : "다음과 같은 내비게이션 구조는?",
+        "question_img" : "gineungsaWD2016_01_01",
         "correct_answer" : "계층 구조",
         "incorrect_answers" : [
                 "순차 구조",
@@ -516,7 +512,8 @@
             "desc" : "2세대-트렌지스터:컴퓨터 그래픽스 기반을 구축"
     },{
         "subject": "웹디자인 기능사",
-        "question" : "다음은 PhotoShop CS3에서 제작한 것이다. A 이미지를 B 이미지로 만들기 위해 필요한 명령어는?<img style='width:300px' src='img/img052.JPG'>",
+        "question" : "다음은 PhotoShop CS3에서 제작한 것이다. A 이미지를 B 이미지로 만들기 위해 필요한 명령어는?",
+        "question_img" : "gineungsaWD2016_01_02",
         "correct_answer" : "Flip Horizontal",
         "incorrect_answers" : [
                 "Flip Vertical",
