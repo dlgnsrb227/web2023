@@ -78,6 +78,7 @@
                     <div class="cbt__button">
                         <div class="cbt__time"><span>59분 10초</span></div>
                         <div class="cbt__submit">제출하기</div>
+                        <div class="cbt__result hide">제출하기</div>
                     </div>
                     <div class="cbt__name">
                         <div class="cbt__title">수험자 : <em></em></div>
@@ -126,6 +127,7 @@
                             <option value="gineungsaJC2006_05">정보처리기능사 2006년 5회</option>
                             <option value="gineungsaJC2007_01">정보처리기능사 2007년 1회</option>
                             <option value="gineungsaJC2007_02">정보처리기능사 2007년 2회</option>
+                            <option value="gineungsaJC2007_04">정보처리기능사 2007년 4회</option>
                             <option value="gineungsaJC2007_05">정보처리기능사 2007년 5회</option>
                             <option value="gineungsaJC2008_01">정보처리기능사 2008년 1회</option>
                             <option value="gineungsaJC2008_02">정보처리기능사 2008년 2회</option>
@@ -197,12 +199,15 @@
         const cbtStartBtn = document.querySelector(".cbt__start__btn");
         const cbtStart = document.querySelector(".cbt__start");
         const cbtTime = document.querySelector(".cbt__time");
+        const nameInput = document.querySelector(".cbt__view input");
+        const cbtResult = document.querySelector(".cbt__result");
 
         let questionAll = [];                 //모든 문제 정보
         let questionLength = 0; //전체 문제수
         let questionRest = questionLength; //남은 문제수
         let questionTime = "";
         let questionTimeRemain = "1000";
+        let great = 0;
 
         // 시작하기
         const startQuiz = () => {
@@ -210,7 +215,13 @@
 
             // 시간 설정
             questionTime = setInterval(reduceTime, 1000);
+
+            // 이름 받아오기
+            let youName = nameInput.value;
+
+            cbtName.innerHTML = youName;
         }
+
 
         
         // 문제 불러오기
@@ -336,6 +347,7 @@
                 const numberAnswer = userAnswer ? userAnswer.slice(-1) : undefined;
 
                 if(numberAnswer == question.Answer){
+                    great++;
                     console.log("정답")
                     cbtSelects[number].parentElement.classList.add("good");
                 } else{
@@ -355,7 +367,15 @@
                 } else {
                     quizDesc[number].classList.remove("hide");
                 }
+
             });
+            // 점수 알려주기
+            let score = Math.ceil((great/questionAll.length)*100);
+            cbtResult.innerHTML = `${score}점 입니다.`
+
+            // 제출버튼 숨기기, 점수 보이기
+            cbtSubmit.classList.add("hide");
+            cbtResult.classList.remove("hide");
         };
 
         const answerSelect2 = (elem) => {
@@ -375,8 +395,8 @@
             const answer = elem.value;
             const answerNum = answer.split("_");
             
-            const cbt = document.querySelectorAll(".cbt .cbt__selects");     // 전체 100문제
-            const label = cbt[answerNum[0]].querySelectorAll("input");  // 보기 4개
+            const select = document.querySelectorAll(".cbt__quiz .cbt");     // 전체 100문제
+            const label = select[answerNum[0]].querySelectorAll("input");  // 보기 4개
             label[answerNum[1]-1].checked = true;
 
             const answerInputs = document.querySelectorAll(".cbt__selects input:checked");
