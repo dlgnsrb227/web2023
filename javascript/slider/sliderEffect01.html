@@ -119,5 +119,39 @@
         // slider[0].style.opacity = "1";   // 첫 번째 이미지를 보이게
     </script>
 
+    <!-- GSAP -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        setInterval(() => {
+            nextIndex = (currentIndex + 1) % sliderCount;
+
+            gsap.to(slider[currentIndex], {
+                opacity : 0,
+                duration : 1,
+            });
+
+            gsap.to(slider[nextIndex], {
+                opacity : 1,
+                duration : 1,
+            });
+
+            currentIndex = nextIndex;
+        }, sliderInterval)
+    </script> -->
+
+    <!-- jQuery -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        setInterval(() => {
+            nextIndex = (currentIndex + 1) % $(".slider").length;
+
+            $(slider[currentIndex]).css({opacity : 0});
+            $(slider[nextIndex]).css({opacity : 1});
+
+            currentIndex = nextIndex;
+        }, sliderInterval);
+    </script> -->
+
 </body>
 </html>
