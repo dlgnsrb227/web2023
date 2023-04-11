@@ -86,7 +86,7 @@
     </script>
 
     <!-- javascript -->
-    <script>
+    <!-- <script>
         // sliderInner.style.transform = translateX("-0px");
         // sliderInner.style.transform = translateX("-800px");
         // sliderInner.style.transform = translateX("-1600px");
@@ -101,10 +101,10 @@
             
             sliderInner.style.transform = `translateX(${-800 * currentIndex}px)`;
         }, sliderInterval);
-    </script>
+    </script> -->
 
     <!-- GSAP -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script>
         setInterval(() => {
             currentIndex = (currentIndex + 1) % sliderCount;
@@ -112,10 +112,10 @@
             gsap.to(sliderInner, {
                 x : -800 * currentIndex,
                 duration : 1,
-                ease : "elastic.out(1, 0.8)"
+                ease : "elastic.out(1, 1)"
             });
         }, sliderInterval)
-    </script> -->
+    </script>
 
     <!-- jQuery -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
