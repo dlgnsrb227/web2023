@@ -115,11 +115,11 @@
 
     <script>
         let images = [
-        "img/sliderEffect06-min.jpg",
-        "img/sliderEffect07-min.jpg",
-        "img/sliderEffect08-min.jpg",
-        "img/sliderEffect09-min.jpg",
-        "img/sliderEffect10-min.jpg"
+            "img/sliderEffect06-min.jpg",
+            "img/sliderEffect07-min.jpg",
+            "img/sliderEffect08-min.jpg",
+            "img/sliderEffect09-min.jpg",
+            "img/sliderEffect10-min.jpg"
         ]
 
         function imageSlider(parent, images){
@@ -168,7 +168,7 @@
 
                     imageNodes[currentIndex].classList.remove("active");
                     currentIndex = i;
-                    imageNodes[i].classList.add("active");
+                    imageNodes[currentIndex].classList.add("active");
                 });
             });
 
