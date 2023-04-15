@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest415</title>
+    <link href="https://webfontworld.github.io/yangheeryu/GowunBatang.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #000007
+        }
+        #wrap {
+            width: 80%;
+            height: 100vh;
+            margin: 0 auto;
+            background-image: url("Img/city.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .saying__box {
+            width: 400px;
+            height: 40vh;
+            border-radius: 30px;
+            background-color: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0px 100px rgb(59, 59, 59);
+            margin: 0 auto;
+            transform: translateY(50%);
+        }
+        .saying h3 {
+            color: #5e5e5e;
+            padding: 10px;
+            font-weight: normal;
+        }
+        .saying span {
+            position: absolute;
+            top: 20%;
+            display: inline-block;
+            text-align: center;
+            padding: 0 20px;
+            font-size: 18px;
+            line-height: 2;
+            color: #fff;
+            font-family: "GowunBatang";
+        }
+        .saying p {
+            position: absolute;
+            font-size: 14px;
+            bottom: 20px;
+            right: 5px;
+            padding: 20px 30px 10px 0;
+            line-height: 2;
+            color: #cfcfcf;
+            font-family: "GowunBatang";
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="saying__box">
+            <div class="saying">
+                <h3></h3>
+                <span></span>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 선택자
+        const sayH = document.querySelector(".saying h3");
+        const saySpan = document.querySelector(".saying span");
+        const sayP = document.querySelector(".saying p");
+
+        // 명언이 들어갈 빈 배열
+        let quoteAll = [];
+
+        // 명언 불러오기
+        const quotesData = () => {
+            fetch("json/quest415.json")
+            .then(quotes => quotes.json())
+            .then(saying => {
+                // console.log(saying);
+                quoteAll = saying.quotes.map((el, index) => {
+                    const formattedSaying = {
+                        id : el.id,
+                        quote : el.quote,
+                        author : el.author
+                    }
+                    // console.log(formattedSaying)
+                    return formattedSaying;
+                });
+                // 명언 출력 실행문
+                updateQuote();
+            })
+            .catch((err) => console.log(err));
+        }
+        // 명언 불러오기 실행문
+        quotesData();
+
+        // 명언 출력
+        const updateQuote = () => {
+            quoteAll.forEach(() => {
+                let index = 0;
+                // 기본 첫 화면에 1번 문구 띄우기
+                sayH.innerHTML = `${quoteAll[0].id}.`
+                saySpan.innerHTML = quoteAll[0].quote;
+                sayP.innerHTML = quoteAll[0].author;
+                // 순차적으로 문구 띄우기
+                setInterval(() => {
+                    index = (index + 1) % quoteAll.length;
+                    sayH.innerHTML = `${quoteAll[index].id}.`
+                    saySpan.innerHTML = quoteAll[index].quote;
+                    sayP.innerHTML = quoteAll[index].author;
+                }, 5000);
+            });
+        };
+    </script>
+</body>
+</html>
