@@ -113,6 +113,7 @@
                 sayP.innerHTML = quoteAll[0].author;
                 // 순차적으로 문구 띄우기
                 setInterval(() => {
+                    // index = Math.floor(Math.random() * quoteAll.length);
                     index = (index + 1) % quoteAll.length;
                     sayH.innerHTML = `${quoteAll[index].id}.`
                     saySpan.innerHTML = quoteAll[index].quote;
