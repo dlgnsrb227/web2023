@@ -120,7 +120,16 @@
                 }
             }
             if(winnerNum.length === 6){
-                noticeNum.innerHTML = `${winnerNum.join(" . ")}`
+                for(let i=0; i<5; i++){
+                    for(let j=i+1; j<6; j++){
+                        if(winnerNum[i] > winnerNum[j]){
+                            temp = winnerNum[i];
+                            winnerNum[i] = winnerNum[j];
+                            winnerNum[j] = temp;
+                        }
+                    }
+                }
+                noticeNum.innerHTML = `🎉 ${winnerNum.join(" . ")} 🎉`
             } else {
                 drawLot();
             }
