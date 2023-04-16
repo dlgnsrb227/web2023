@@ -108,7 +108,7 @@
             }
             let winnerNum = [];
             for(let i=1; i<=6; i++){
-                let randomNum = Math.ceil(Math.random() * lottoNum.size);
+                let randomNum = Math.floor(Math.random() * lottoNum.size);
                 let count = 0;
                 for(const number of lottoNum){
                     if(count == randomNum){
