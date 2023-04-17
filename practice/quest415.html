@@ -74,6 +74,7 @@
 
     <script>
         // 선택자
+        const wrapB = document.querySelector("#wrap");
         const sayH = document.querySelector(".saying h3");
         const saySpan = document.querySelector(".saying span");
         const sayP = document.querySelector(".saying p");
@@ -119,6 +120,10 @@
                     sayH.innerHTML = `${quoteAll[index].id}.`
                     saySpan.innerHTML = quoteAll[index].quote;
                     sayP.innerHTML = quoteAll[index].author;
+
+                    let date = new Date().getTime();
+                    let url = `url("https://source.unsplash.com/random/?city&_=${date}")`;
+                    wrapB.style.backgroundImage = url;
                 }, 5000);
             });
         };
