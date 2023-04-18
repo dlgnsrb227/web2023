@@ -121,8 +121,8 @@
                     saySpan.innerHTML = quoteAll[index].quote;
                     sayP.innerHTML = quoteAll[index].author;
 
-                    let date = new Date().getTime();
-                    let url = `url("https://source.unsplash.com/random/?city&_=${date}")`;
+                    let randomNum = Math.floor(Math.random() * 1000);
+                    let url = `url("https://source.unsplash.com/random/?city&_=${randomNum}")`;
                     wrapB.style.backgroundImage = url;
                 }, 5000);
             });
