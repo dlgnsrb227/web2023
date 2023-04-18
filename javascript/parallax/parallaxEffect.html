@@ -181,6 +181,7 @@
 
             scroll.innerHTML = scrollTop;
 
+            // 기본형
             // document.querySelector(".info .offset1").innerHTML = document.getElementById("section1").offsetTop;
             // document.querySelector(".info .offset2").innerHTML = document.getElementById("section2").offsetTop;
             // document.querySelector(".info .offset3").innerHTML = document.getElementById("section3").offsetTop;
@@ -190,17 +191,31 @@
             // document.querySelector(".info .offset7").innerHTML = document.getElementById("section7").offsetTop;
             // document.querySelector(".info .offset8").innerHTML = document.getElementById("section8").offsetTop;
             // document.querySelector(".info .offset9").innerHTML = document.getElementById("section9").offsetTop;
-            
-            // for(let i=1; i<=9; i++){
-            //     document.querySelector(`.info .offset${i}`).innerHTML = document.getElementById(`section${i}`).offsetTop;
-            // }
-            
-            offSet.forEach((el, i) => {
-                offSet[i].innerHTML = document.getElementById(`section${i + 1}`).offsetTop;
-            });
 
-            // for(let index in offSet){
-            //     offSet[index].innerHTML = document.getElementById(`section ${index + 1}`).offsetTop;
+            // for문 사용
+            // for (let i=0; i<=8; i++){
+            //     offSet[i].innerHTML = document.getElementById(`section${i+1}`).offsetTop;
+            // }
+
+            // forEach 사용
+            // offSet.forEach((el, i) => {
+            //     el.innerHTML = document.getElementById(`section${i+1}`).offsetTop;
+            // });
+
+            // for in 사용
+            for(let index in offSet){
+                if(index.match(/[a-z]/) == null){
+                    offSet[parseInt(index)].innerHTML = document.getElementById(`section${parseInt(index)+1}`).offsetTop;
+                }
+            }
+
+            // for of 사용
+            // {
+            //     let index = 1;
+            //     for(let span of offSet){
+            //         span.innerHTML = document.getElementById(`section${index}`).offsetTop;
+            //         index++;
+            //     }
             // }
         });
 
