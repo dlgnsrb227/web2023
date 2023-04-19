@@ -191,6 +191,7 @@
             // document.querySelector(".info .offset7").innerHTML = document.getElementById("section7").offsetTop;
             // document.querySelector(".info .offset8").innerHTML = document.getElementById("section8").offsetTop;
             // document.querySelector(".info .offset9").innerHTML = document.getElementById("section9").offsetTop;
+        });
 
             // for문 사용
             // for (let i=0; i<=8; i++){
@@ -198,16 +199,17 @@
             // }
 
             // forEach 사용
-            // offSet.forEach((el, i) => {
-            //     el.innerHTML = document.getElementById(`section${i+1}`).offsetTop;
-            // });
+
+            offSet.forEach((el, i) => {
+                el.innerHTML = document.getElementById(`section${i+1}`).offsetTop;
+            });
 
             // for in 사용
-            for(let index in offSet){
-                if(index.match(/[a-z]/) == null){
-                    offSet[parseInt(index)].innerHTML = document.getElementById(`section${parseInt(index)+1}`).offsetTop;
-                }
-            }
+            // for(let index in offSet){
+            //     if(index.match(/[a-z]/) == null){
+            //         offSet[parseInt(index)].innerHTML = document.getElementById(`section${parseInt(index)+1}`).offsetTop;
+            //     }
+            // }
 
             // for of 사용
             // {
@@ -217,7 +219,7 @@
             //         index++;
             //     }
             // }
-        });
+
 
         //forEach
         //for in
