@@ -51,7 +51,7 @@
                     <li><a href="#sample01">01. <strong>string.prototype.at()</strong> :                 메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 요소를 반환합니다.</a></li>
                     <li><a href="#sample02">02. <strong>string.prototype.charAt()</strong> :             메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 단일문자를 반환합니다.</a></li>
                     <li><a href="#sample03">03. <strong>string.prototype.charCodeAt()</strong> :         메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 유니코드 정수 값을 반환합니다.</a></li>
-                    <li><a href="#sample04">04. <strong>string.prototype.charPointAt()</strong> :        메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 유니코드 포인트 정수 값을 반환합니다.</a></li>
+                    <li><a href="#sample04">04. <strong>string.prototype.codePointAt()</strong> :        메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 유니코드 포인트 정수 값을 반환합니다.</a></li>
                     <li><a href="#sample05">05. <strong>string.prototype.concat()</strong> :             메서드는 매개변수로 전달된 문자열을 받어, 결합된 새로운 문자열을 반환합니다.</a></li>
                     <li><a href="#sample06">06. <strong>string.prototype.includes()</strong>💢 :           메서드는 문자열 포함 여부를 검색하여, 불린(true, false)을 반환합니다.</a></li>
                     <li><a href="#sample07">07. <strong>string.prototype.indexOf()</strong>💢 :            메서드는 문자열을 검색하여, 주어진 값과 일치하는 첫 번째 위치값(index)을 반환합니다.</a></li>
@@ -87,7 +87,7 @@
             <div class="main_sample">
                 <div id="sample01" class="sample">
                     <h3>01. at()</h3>
-                    <p>"문자열".at(인덱스)</p>
+                    <p>"문자열".at(숫자)</p>
                     <div class="script">
 <pre data-line="" class="line-numbers"><code class="language-js">console.log("javascript reference".at("0"));
 console.log("javascript reference".at("1"));
@@ -125,88 +125,120 @@ console.log("javascript reference".at("-2"));
                 <!-- sample01 -->
                 <div id="sample02" class="sample">
                     <h3>02. charAt()</h3>
-                    <p>"문자열".at(인덱스)</p>
+                    <p>"문자열".charAt(숫자)</p>
                     <div class="script">
-    <pre data-line="" class="line-numbers"><code class="language-js">
-    </code></pre>
+    <pre data-line="" class="line-numbers"><code class="language-js">console.log("javascript reference".charAt());
+console.log("javascript reference".charAt(1));
+console.log("javascript reference".charAt(2));
+console.log("javascript reference".charAt(3));
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
+                                j<br>
+                                a<br>
+                                v<br>
+                                a
                             </div>
                         </details>
                     </div>
                     <div class="notice">
                         <h4></h4>
                         <ul>
-                            <li>at() 메서드는</li>
+                            <li>charAt() 메서드는 지정한 인덱스값에 해당하는 단일 문자 값을 반환합니다.</li>
                         </ul>
                     </div>
                 </div>
                 <!-- sample02 -->
                 <div id="sample03" class="sample">
                     <h3>03. charCodeAt()</h3>
-                    <p>"문자열".at(인덱스)</p>
+                    <p>"문자열".charCodeAt(숫자)</p>
                     <div class="script">
-    <pre data-line="" class="line-numbers"><code class="language-js">
-    </code></pre>
+<pre data-line="" class="line-numbers"><code class="language-js">console.log("javascript reference".charCodeAt("0"));
+console.log("javascript reference".charCodeAt("1"));
+console.log("javascript reference".charCodeAt("2"));
+console.log("javascript reference".charCodeAt("3"));
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
+                                106<br>
+                                97<br>
+                                118<br>
+                                97
                             </div>
                         </details>
                     </div>
                     <div class="notice">
                         <h4></h4>
                         <ul>
-                            <li>at() 메서드는</li>
+                            <li>charCodeAt() 메서드는 지정한 인덱스값에 해당하는 유니코드 값을 반환합니다.</li>
+                            <li>유니코드는 UTF-16 코드를 나타내는 0부터 65535 사이의 정수입니다.</li>
                         </ul>
                     </div>
                 </div>
                 <!-- sample03 -->
                 <div id="sample04" class="sample">
-                    <h3>04. charPointAt()</h3>
-                    <p>"문자열".at(인덱스)</p>
+                    <h3>04. codePointAt()</h3>
+                    <p>"문자열".codePointAt(숫자)</p>
                     <div class="script">
-    <pre data-line="" class="line-numbers"><code class="language-js">
-    </code></pre>
+<pre data-line="" class="line-numbers"><code class="language-js">console.log("javascript reference".codePointAt("0"));
+console.log("javascript reference".codePointAt("1"));
+console.log("javascript reference".codePointAt("2"));
+console.log("javascript reference".codePointAt("3"));
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
+                                106<br>
+                                97<br>
+                                118<br>
+                                97
                             </div>
                         </details>
                     </div>
                     <div class="notice">
                         <h4></h4>
                         <ul>
-                            <li>at() 메서드는</li>
+                            <li>codePointAt() 메서드는 지정한 인덱스값에 해당하는 유니코드 코드포인트를 반환합니다.</li>
                         </ul>
                     </div>
                 </div>
                 <!-- sample04 -->
                 <div id="sample05" class="sample">
                     <h3>05. concat()</h3>
-                    <p>"문자열".at(인덱스)</p>
+                    <p>"문자열".concat(문자열, 문자열,...)<br>
+                        "배열".concat(문자열, 문자열,...)</p>
                     <div class="script">
-    <pre data-line="" class="line-numbers"><code class="language-js">
-    </code></pre>
+<pre data-line="" class="line-numbers"><code class="language-js">console.log("javascript".concat(" reference"));
+console.log("javascript".concat(", ", "hello"));
+console.log(["java", "script"].concat(["referenece"]));
+console.log(["java","script"].concat(["refer", "ence"]));
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
+                                javascript reference<br>
+                                javascript, hello<br>
+                                ['java', 'script', 'referenece']<br>
+                                ['java', 'script', 'refer', 'ence']
                             </div>
                         </details>
                     </div>
                     <div class="notice">
                         <h4></h4>
                         <ul>
-                            <li>at() 메서드는</li>
+                            <li>concat() 메서드는 매개변수로 전달된 문자열을 받아, 결합된 새로운 문자열을 반환합니다.</li>
+                            <li>concat() 메서드는 기존의 문자열을 변경하지 않습니다.</li>
+                            <li>concat() 메서드는 배열과 문자열에서 모두 사용 가능합니다.</li>
                         </ul>
                     </div>
                 </div>
@@ -346,22 +378,32 @@ console.log("javascript reference".lastIndexOf("r"))
                 <!-- sample08 -->
                 <div id="sample09" class="sample">
                     <h3>09. localeCompare()</h3>
-                    <p>"문자열".at(인덱스)</p>
+                    <p>"문자열".localeCompare(인덱스)</p>
                     <div class="script">
-    <pre data-line="" class="line-numbers"><code class="language-js">
-    </code></pre>
+<pre data-line="" class="line-numbers"><code class="language-js">console.log("javascript reference".localeCompare("h"));
+console.log("javascript reference".localeCompare("i"));
+console.log("javascript reference".localeCompare("k"));
+console.log("javascript reference".localeCompare("l"));
+console.log("javascript reference".localeCompare("javascript reference"));
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
+                                1<br>
+                                1<br>
+                                -1<br>
+                                -1<br>
+                                0
                             </div>
                         </details>
                     </div>
                     <div class="notice">
                         <h4></h4>
                         <ul>
-                            <li>at() 메서드는</li>
+                            <li>localeCompare() 메서드는 두 개의 문자열을 지정된 로케일에 따라 비교합니다.</li>
+                            <li>localeCompare() 메서드는 대소문자를 구분합니다.</li>
                         </ul>
                     </div>
                 </div>
@@ -418,10 +460,10 @@ console.log("javascript reference".match(/w/g));
                 <!-- sample10 -->
                 <div id="sample11" class="sample">
                     <h3>11. matchAll()</h3>
-                    <p>"문자열".at(인덱스)</p>
+                    <p></p>
                     <div class="script">
-    <pre data-line="" class="line-numbers"><code class="language-js">
-    </code></pre>
+<pre data-line="" class="line-numbers"><code class="language-js">
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
@@ -433,95 +475,128 @@ console.log("javascript reference".match(/w/g));
                     <div class="notice">
                         <h4></h4>
                         <ul>
-                            <li>at() 메서드는</li>
+                            <li>matchAll() 메서드는</li>
                         </ul>
                     </div>
                 </div>
                 <!-- sample11 -->
                 <div id="sample12" class="sample">
                     <h3>12. normalize()</h3>
-                    <p>"문자열".at(인덱스)</p>
+                    <p>"문자열".normalize(유니코드 표준형식)</p>
                     <div class="script">
-    <pre data-line="" class="line-numbers"><code class="language-js">
-    </code></pre>
+<pre data-line="" class="line-numbers"><code class="language-js">console.log("Café".normalize());
+console.log("Café".normalize("NFD"));
+console.log("Café".normalize("NFKC"));
+console.log("Café".normalize("NFKD"));
+console.log("Café".normalize("NFC"));
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
+                                Café<br>
+                                Café<br>
+                                Café<br>
+                                Café<br>
+                                Café
                             </div>
                         </details>
                     </div>
                     <div class="notice">
                         <h4></h4>
                         <ul>
-                            <li>at() 메서드는</li>
+                            <li>normalize() 메서드는 문자열을 정규화하는 데 사용되는 메서드입니다.</li>
+                            <li>normalize() 메서드는 문자열의 유니코드 표준형식 중 하나로 문자열을 정규화합니다.</li>
                         </ul>
                     </div>
                 </div>
                 <!-- sample12 -->
                 <div id="sample13" class="sample">
                     <h3>13. padEnd()</h3>
-                    <p>"문자열".at(인덱스)</p>
+                    <p>"문자열".padEnd(길이)<br>
+                        "문자열".padEnd(길이, 문자열)</p>
                     <div class="script">
-    <pre data-line="" class="line-numbers"><code class="language-js">
-    </code></pre>
+<pre data-line="" class="line-numbers"><code class="language-js">console.log("javascript".padEnd(10, "hi"));
+console.log("javascript".padEnd(13, " hi"));
+console.log("javascript".padEnd(16, " hi"));
+console.log("javascript".padEnd(15));
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
+                                javascript<br>
+                                javascript hi<br>
+                                javascript hi hi<br>
+                                javascript_____ (공백)
                             </div>
                         </details>
                     </div>
                     <div class="notice">
                         <h4></h4>
                         <ul>
-                            <li>at() 메서드는</li>
+                            <li>padEnd() 메서드는 주어진 길이에 맞게 뒤 문자열을 채우고, 새로운 문자열을 반환합니다.</li>
                         </ul>
                     </div>
                 </div>
                 <!-- sample13 -->
                 <div id="sample14" class="sample">
                     <h3>14. padStart()</h3>
-                    <p>"문자열".at(인덱스)</p>
+                    <p>"문자열".padStart(길이)<br>
+                        "문자열".padStart(길이, 문자열)</p>
                     <div class="script">
-    <pre data-line="" class="line-numbers"><code class="language-js">
-    </code></pre>
+<pre data-line="" class="line-numbers"><code class="language-js">console.log("javascript".padStart(10, "hi"));
+console.log("javascript".padStart(13, "hi "));
+console.log("javascript".padStart(16, "hi "));
+console.log("javascript".padStart(15));
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
+                                javascript<br>
+                                hi javascript<br>
+                                hi hi javascript<br>
+                                _____(공백)javascript
                             </div>
                         </details>
                     </div>
                     <div class="notice">
                         <h4></h4>
                         <ul>
-                            <li>at() 메서드는</li>
+                            <li>padStart() 메서드는 주어진 길이에 맞게 앞 문자열을 채우고, 새로운 문자열을 반환합니다.</li>
                         </ul>
                     </div>
                 </div>
                 <!-- sample14 -->
                 <div id="sample15" class="sample">
                     <h3>15. repeat()</h3>
-                    <p>"문자열".at(인덱스)</p>
+                    <p>"문자열".repeat(숫자)</p>
                     <div class="script">
-    <pre data-line="" class="line-numbers"><code class="language-js">
-    </code></pre>
+<pre data-line="" class="line-numbers"><code class="language-js">console.log("javascript".repeat(0));
+console.log("javascript".repeat(1));
+console.log("javascript".repeat(2));
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
+                                (빈문자열)<br>
+                                javascript<br>
+                                javascriptjavascript<br>
                             </div>
                         </details>
                     </div>
                     <div class="notice">
                         <h4></h4>
                         <ul>
-                            <li>at() 메서드는</li>
+                            <li>repeat() 메서드는 문자열을 복사하여, 복사한 새로운 문자열을 반환합니다.</li>
+                            <li>repeat() 메서드는 기존 문자열을 변경하지 않습니다.</li>
+                            <li>repeat() 메서드는 매개변수 값을 양수로 설정합니다.</li>
                         </ul>
                     </div>
                 </div>
@@ -802,7 +877,32 @@ console.log(" javascript ".trim())
 
         // console.log("javascript".split("").reverse().join("/"))
 
-        console.log("javascript reference".at("-2"));
+        const str = "javascript reference";
+        // console.log("javascript".concat(" reference"));
+        // console.log("javascript".concat(", ", "hello"));
+        // console.log(["java", "script"].concat(["referenece"]));
+        // console.log(["java","script"].concat(["refer", "ence"]));
+
+        // console.log("javascript reference".localeCompare("h"));
+        // console.log("javascript reference".localeCompare("i"));
+        // console.log("javascript reference".localeCompare("k"));
+        // console.log("javascript reference".localeCompare("l"));
+        // console.log("javascript reference".localeCompare("javascript reference"));
+
+        // console.log("Café".normalize());
+        // console.log("Café".normalize("NFD"));
+        // console.log("Café".normalize("NFKC"));
+        // console.log("Café".normalize("NFKD"));
+        // console.log("Café".normalize("NFC"));
+
+        // console.log("javascript".padStart(10, "hi"));
+        // console.log("javascript".padStart(13, "hi "));
+        // console.log("javascript".padStart(16, "hi "));
+        // console.log("javascript".padStart(15));
+
+        console.log("javascript".repeat(0));
+        console.log("javascript".repeat(1));
+        console.log("javascript".repeat(2));
     </script>
 
 </body>
