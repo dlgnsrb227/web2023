@@ -1,5 +1,6 @@
 /* 웹폰트 */
 @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+@import url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo.css');
 
 /* 여백 초기화 */
 * {
@@ -7,7 +8,7 @@
     padding: 0;
     font-size: 16px;
     line-height: 1.6;
-    font-family: "NexonLv1Gothic";
+    font-family: "NanumSquareNeo";
 }
 
 /* 링크 초기화 */
@@ -36,13 +37,13 @@ body {
     padding-bottom: 40px;
     border-bottom: 1px dashed #dcdcdc;
 }
-/* #header h1 {
+#header h1 {
     text-align: center;
-} */
+}
 #header h1 a {
     font-size: 80px;
     font-weight: 800;
-    color: #0243f1;
+    color: #61BFAD;
 }
 /* #header nav {
     text-align: center;
@@ -51,20 +52,33 @@ body {
     display: inline;
 }
 #header nav ul li a {
-    border: 1px dashed #0243f1;
-    color: #0243f1;
+    border: 1px solid #61BFAD;
+    color: #61BFAD;
     padding: 10px 20px;
     margin: 6px 3px;
     display: inline-block;
     transition: background-color 0.3s; color: 0.3s;
 }
 #header nav ul li a:hover {
-    background-color: #0243f1;
+    background-color: #61BFAD;
     color: #fff;
 }
 #header nav ul li.active a {
-    background-color: #0243f1;
+    background-color: #61BFAD;
     color: #fff;
+}
+
+.gomain {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    width: 40px;
+    height: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 3.76648L19 8.82203V18C19 19.1046 18.1046 20 17 20H7C5.89543 20 5 19.1046 5 18V8.82203L12 3.76648ZM7 9.84466V18L17 18V9.84466L12 6.23355L7 9.84466Z' fill='%2361BFAD'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10 14H14V18H13V15H11V18H10V14Z' fill='%2361BFAD'/%3E%3C/svg%3E%0A");
 }
 
 @media (max-width: 600px){
@@ -102,7 +116,7 @@ body {
 }
 .main__menu li strong::before {
     content: '';
-    background: #0242f141;
+    background: #02cdf141;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -122,7 +136,7 @@ body {
 }
 .main__desc p {
     margin-bottom: 15px;
-    border-left: 5px solid #0243f1;
+    border-left: 5px solid #61BFAD;
     padding: 12px 10px 10px 20px;
     background-color: #f5f5f5;
 }
@@ -143,7 +157,7 @@ body {
     transition: all 0.15s;
 }
 .main__desc a:hover {
-    border: 1px solid #0243f1;
+    border: 1px solid #61BFAD;
     background-color: #f8f8f8;
 }
 .main_sample {
@@ -160,7 +174,7 @@ body {
     font-size: 20px;
     padding-left: 5px;
     border-bottom: 1px dotted #d9d9d9;
-    border-left: 4px solid #5cb0ff;
+    border-left: 4px solid #61BFAD;
 }
 .main_sample .sample p {
     margin-bottom: 10px;
@@ -179,7 +193,7 @@ body {
     margin-bottom: 0;
 }
 .main_sample .notice {
-    border-left: 3px solid #0243f1;
+    border-left: 3px solid #61BFAD;
     padding: 13px 10px 10px 15px;
     background-color: #f6f6f6;
 }
@@ -195,7 +209,7 @@ body {
     content: '';
     width: 3px;
     height: 3px;
-    background-color: #0243f1;
+    background-color: #61BFAD;
     position: absolute;
     left: 0;
     top: 9px;
