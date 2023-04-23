@@ -119,6 +119,7 @@ console.log("javascript reference".at("-2"));
                         <h4></h4>
                         <ul>
                             <li>at() 메서드는 인덱스값을 받아, 문자열에서 해당되는 인덱스의 요소를 반환합니다.</li>
+                            <li>at() 메서드는 해당 인덱스가 범위를 벗어나면 빈 문자열을 반환합니다.</li>
                             <li>at() 메서드는 배열과 문자열에서 모두 사용 가능합니다.</li>
                         </ul>
                     </div>
@@ -149,6 +150,7 @@ console.log("javascript reference".charAt(3));
                         <h4></h4>
                         <ul>
                             <li>charAt() 메서드는 지정한 인덱스값에 해당하는 단일 문자 값을 반환합니다.</li>
+                            <li>charAt() 해당 인덱스가 범위를 벗어나면 빈 문자열을 반환합니다.</li>
                         </ul>
                     </div>
                 </div>
@@ -178,6 +180,7 @@ console.log("javascript reference".charCodeAt("3"));
                         <h4></h4>
                         <ul>
                             <li>charCodeAt() 메서드는 지정한 인덱스값에 해당하는 유니코드 값을 반환합니다.</li>
+                            <li>charCodeAt() 메서드는 해당 인덱스가 범위를 벗어나면 NAN을 반환합니다.</li>
                             <li>유니코드는 UTF-16 코드를 나타내는 0부터 65535 사이의 정수입니다.</li>
                         </ul>
                     </div>
@@ -207,7 +210,8 @@ console.log("javascript reference".codePointAt("3"));
                     <div class="notice">
                         <h4></h4>
                         <ul>
-                            <li>codePointAt() 메서드는 지정한 인덱스값에 해당하는 유니코드 코드포인트를 반환합니다.</li>
+                            <li>codePointAt() 메서드는 지정한 인덱스값에 해당하는 유니코드 코드포인트 값을 반환합니다.</li>
+                            <li>codePointAt() 메서드는 해당 인덱스가 범위를 벗어나면 undefined를 반환합니다.</li>
                         </ul>
                     </div>
                 </div>
@@ -403,7 +407,8 @@ console.log("javascript reference".localeCompare("javascript reference"));
                     <div class="notice">
                         <h4></h4>
                         <ul>
-                            <li>localeCompare() 메서드는 두 개의 문자열을 지정된 로케일에 따라 비교합니다.</li>
+                            <li>localeCompare() 메서드는 두 개의 문자열을 유니코드 순서에 따라 비교합니다.</li>
+                            <li>localeCompare() 메서드는 비교 문자열이 먼저나오면 음수, 현재 문자열이 먼저나면 양수, 같은 경우 0을 반환합니다.</li>
                             <li>localeCompare() 메서드는 대소문자를 구분합니다.</li>
                         </ul>
                     </div>
@@ -682,8 +687,10 @@ console.log("javascript reference".search(/[a-z]/g));
                         </details>
                     </div>
                     <div class="notice">
-                        <h4>slice()</h4>
-                        <p>slice() 메서드는 시작 위치에서 종료 위치 값을 추출하여, 새로운 배열을 반환합니다.</p>
+                        <h4></h4>
+                        <ul>
+                            <li>slice() 메서드는 시작 위치에서 종료 위치 값을 추출하여, 새로운 배열을 반환합니다.</li>
+                        </ul>
                     </div>
                 </div>
                 <!-- sample19 -->
@@ -747,8 +754,10 @@ console.log("javascript reference".search(/[a-z]/g));
                         </details>
                     </div>
                     <div class="notice">
-                        <h4>split()</h4>
-                        <p>split() 메서드는 구분자를 이용하여 여러개의 문자열을 배열로 반환합니다.</p>
+                        <h4></h4>
+                        <ul>
+                            <li>split() 메서드는 구분자를 이용하여 여러개의 문자열을 배열로 반환합니다.</li>
+                        </ul>
                     </div>
                 </div>
                 <!-- sample22 -->
@@ -769,8 +778,10 @@ console.log(" javascript ".trim())
                         </details>
                     </div>
                     <div class="notice">
-                        <h4>trim()</h4>
-                        <p>문자열의 앞/뒤 공백을 제거하고 새로운 문자열을 반환합니다.</p>
+                        <h4></h4>
+                        <ul>
+                            <li>trim() 메서드는 문자열의 앞/뒤 공백을 제거하고 새로운 문자열을 반환합니다.</li>
+                        </ul>
                     </div>
                 </div>
                 <!-- sample30 -->
@@ -791,8 +802,10 @@ console.log(" javascript ".trim())
                         </details>
                     </div>
                     <div class="notice">
-                        <h4>trimEnd()</h4>
-                        <p>문자열의 뒤 공백을 제거하고 새로운 문자열을 반환합니다.</p>
+                        <h4></h4>
+                        <ul>
+                            <li>trimEnd() 메서드는 문자열의 뒤 공백을 제거하고 새로운 문자열을 반환합니다.</li>
+                        </ul>
                     </div>
                 </div>
                 <!-- sample31 -->
@@ -813,8 +826,10 @@ console.log(" javascript ".trim())
                         </details>
                     </div>
                     <div class="notice">
-                        <h4>trimStart()</h4>
-                        <p>문자열의 앞 공백을 제거하고 새로운 문자열을 반환합니다.</p>
+                        <h4></h4>
+                        <ul>
+                            <li>trimStart() 메서드는 문자열의 앞 공백을 제거하고 새로운 문자열을 반환합니다.</li>
+                        </ul>
                     </div>
                 </div>
                 <!-- sample32 -->
