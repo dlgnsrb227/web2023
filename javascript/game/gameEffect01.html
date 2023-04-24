@@ -76,14 +76,11 @@
             $(".header").removeClass("red blue green yellow")
         }
 
-        let timeoutID = setTimeout(classRemove, 3000);
-
         $(".icon1").draggable({
             containment: ".icon__box", scroll: false,
             start: function() {
                 $(".cursor img").attr("src", "img/game_mouse01.png")
-                clearTimeout(timeoutID)
-                // $(".header").removeClass("red blue green yellow")
+                $(".header").removeClass("red blue green yellow")
             },
             drag : function() {
                 $(".info").html("<em style='color:red'>Red</em> 뮤직듣기를 드래그 중입니다 !")
@@ -91,7 +88,7 @@
             },
             stop : function() {
                 setTimeout(printAgent, 10000);
-                setTimeout(classRemove, 3000);
+                // setTimeout(classRemove, 3000);
                 // $(".header").removeClass("red")
             }
         });
@@ -99,8 +96,7 @@
             containment: ".icon__box", scroll: false,
             start: function() {
                 $(".cursor img").attr("src", "img/game_mouse02.png")
-                clearTimeout(timeoutID)
-                // $(".header").removeClass("red blue green yellow")
+                $(".header").removeClass("red blue green yellow")
             },
             drag : function() {
                 $(".info").html("<em style='color:blue'>Blue</em> 뮤직듣기를 드래그 중입니다 !")
@@ -108,7 +104,7 @@
             },
             stop : function() {
                 setTimeout(printAgent, 10000);
-                setTimeout(classRemove, 3000);
+                // setTimeout(classRemove, 3000);
                 // $(".header").removeClass("blue")
             }
         });
@@ -116,8 +112,7 @@
             containment: ".icon__box", scroll: false,
             start: function() {
                 $(".cursor img").attr("src", "img/game_mouse03.png")
-                clearTimeout(timeoutID)
-                // $(".header").removeClass("red blue green yellow")
+                $(".header").removeClass("red blue green yellow")
             },
             drag : function() {
                 $(".info").html("<em style='color:green'>Green</em> 뮤직듣기를 드래그 중입니다 !")
@@ -125,7 +120,7 @@
             },
             stop : function() {
                 setTimeout(printAgent, 10000);
-                setTimeout(classRemove, 3000);
+                // setTimeout(classRemove, 3000);
                 // $(".header").removeClass("green")
             }
         });
@@ -133,8 +128,7 @@
             containment: ".icon__box", scroll: false,
             start: function() {
                 $(".cursor img").attr("src", "img/game_mouse04.png")
-                clearTimeout(timeoutID)
-                // $(".header").removeClass("red blue green yellow")
+                $(".header").removeClass("red blue green yellow")
             },
             drag : function() {
                 $(".info").html("<em style='color:yellow'>Yellow</em> 뮤직듣기를 드래그 중입니다 !")
@@ -142,7 +136,7 @@
             },
             stop : function() {
                 setTimeout(printAgent, 10000);
-                setTimeout(classRemove, 3000);
+                // setTimeout(classRemove, 3000);
                 // $(".header").removeClass("yellow")
             }
         });
@@ -157,7 +151,7 @@
             });
 
             printAgent();
-            printTime()
+            printTime();
 
             // printTime();    //오른쪽 상단 시간
             // printAgent();   //하단 중앙
