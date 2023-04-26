@@ -3,59 +3,59 @@ const allMusic = [
         name : "1. 음악이름",
         artist : "가수이름",
         img : "music_view01",
-        audio : "music_audio01"
+        audio : "Boom Bap Flick - Quincas Moreira"
     },{
         name : "2. 음악이름",
         artist : "가수이름",
         img : "music_view02",
-        audio : "music_audio02"
+        audio : "Can't Hide - Otis McDonald"
     },
     {
         name : "3. 음악이름",
         artist : "가수이름",
         img : "music_view03",
-        audio : "music_audio03"
+        audio : "Emotional Mess - Amy Lynn & the Honey Men"
     },
     {
         name : "4. 음악이름",
         artist : "가수이름",
         img : "music_view04",
-        audio : "music_audio04"
+        audio : "Forever Young - Otis McDonald"
     },
     {
         name : "5. 음악이름",
         artist : "가수이름",
         img : "music_view05",
-        audio : "music_audio05"
+        audio : "I Wish I Knew - Otis McDonald"
     },
     {
         name : "6. 음악이름",
         artist : "가수이름",
         img : "music_view06",
-        audio : "music_audio06"
+        audio : "Ice & Fire - King Canyon"
     },
     {
         name : "7. 음악이름",
         artist : "가수이름",
         img : "music_view07",
-        audio : "music_audio07"
+        audio : "Jingle Bells - DJ Williams"
     },
     {
         name : "8. 음악이름",
         artist : "가수이름",
         img : "music_view08",
-        audio : "music_audio08"
+        audio : "Mulholland - King Canyon"
     },
     {
         name : "9. 음악이름",
         artist : "가수이름",
         img : "music_view09",
-        audio : "music_audio09"
+        audio : "Spooky Boop - Otis McDonald"
     },{
         name : "10. 음악이름",
         artist : "가수이름",
         img : "music_view10",
-        audio : "music_audio10"
+        audio : "We Cruisin' - Otis McDonald"
     },
 ];
 
