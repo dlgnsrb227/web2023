@@ -1,61 +1,61 @@
 const allMusic = [
     {
-        name : "1. 음악이름",
-        artist : "가수이름",
-        img : "music_view01",
-        audio : "Boom Bap Flick - Quincas Moreira"
+        name : "I Found Her",
+        artist : "Faime",
+        img : "music__view01",
+        audio : "music_audio01"
     },{
-        name : "2. 음악이름",
-        artist : "가수이름",
-        img : "music_view02",
-        audio : "Can't Hide - Otis McDonald"
+        name : "Let",
+        artist : "Vietra",
+        img : "music__view02",
+        audio : "music_audio02"
     },
     {
-        name : "3. 음악이름",
-        artist : "가수이름",
-        img : "music_view03",
-        audio : "Emotional Mess - Amy Lynn & the Honey Men"
+        name : "Stressin'",
+        artist : "Airr",
+        img : "music__view03",
+        audio : "music_audio03"
     },
     {
-        name : "4. 음악이름",
-        artist : "가수이름",
-        img : "music_view04",
-        audio : "Forever Young - Otis McDonald"
+        name : "Side Effects",
+        artist : "wip",
+        img : "music__view04",
+        audio : "music_audio04"
     },
     {
-        name : "5. 음악이름",
-        artist : "가수이름",
-        img : "music_view05",
-        audio : "I Wish I Knew - Otis McDonald"
+        name : "flowers",
+        artist : "honeywhip",
+        img : "music__view05",
+        audio : "music_audio05"
     },
     {
-        name : "6. 음악이름",
-        artist : "가수이름",
-        img : "music_view06",
-        audio : "Ice & Fire - King Canyon"
+        name : "Summer Is for Falling in Love",
+        artist : "Sarah Kang",
+        img : "music__view06",
+        audio : "music_audio06"
     },
     {
-        name : "7. 음악이름",
-        artist : "가수이름",
-        img : "music_view07",
-        audio : "Jingle Bells - DJ Williams"
+        name : "For you",
+        artist : "Vietra",
+        img : "music__view07",
+        audio : "music_audio07"
     },
     {
-        name : "8. 음악이름",
-        artist : "가수이름",
-        img : "music_view08",
-        audio : "Mulholland - King Canyon"
+        name : "Foolish",
+        artist : "Faime",
+        img : "music__view08",
+        audio : "music_audio08"
     },
     {
-        name : "9. 음악이름",
-        artist : "가수이름",
-        img : "music_view09",
-        audio : "Spooky Boop - Otis McDonald"
+        name : "You set my world on fire",
+        artist : "Adelyn Paik",
+        img : "music__view09",
+        audio : "music_audio09"
     },{
-        name : "10. 음악이름",
-        artist : "가수이름",
-        img : "music_view10",
-        audio : "We Cruisin' - Otis McDonald"
+        name : "couldn't say it to your face",
+        artist : "honeywhip",
+        img : "music__view10",
+        audio : "music_audio10"
     },
 ];
 
