@@ -83,6 +83,57 @@
     color: #200053;
     font-size: 14px;
 }
+.music__control .control {
+    width: 100%;
+    color: #200053;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.music__control .control span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+.music__control .control span i {
+    display: block;
+    margin: 8px;
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/music_icon.svg);
+}
+.music__control .control span:nth-child(3) {
+    transform: scale(1.3);
+    background: #7F00FF;
+    background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);
+    background: linear-gradient(to right, #E100FF, #7F00FF);
+    border-radius: 50%;
+}
+.music__control .control span i.repeat {
+    background-position: 0 0;
+}
+.music__control .control span i.prev {
+    background-position: 0 -48px;
+}
+.music__control .control span i.play {
+        background-position: -23px -24px;
+}
+.music__control .control span i.next {
+        background-position: -72px 0;
+}
+.music__control .control span i.list {
+        background-position: 0 -24px;
+}
+.music__control .control span i.repeat_one {
+        background-position: 0 0;
+}
+.music__control .control span i.shuffle {
+        background-position: 0 0;
+}
+.music__control .control span i.stop {
+        background-position: 0 0;
+}
 .music__control .progress .timer .current {}
 .music__control .progress .timer .duration {}
 .music__footer {}
