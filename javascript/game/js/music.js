@@ -75,7 +75,7 @@ const musicCount = allMusic.length;
 
 let musicIndex = 1;     // 현재 음악 인덱스
 
-// 음악 재생
+// 음악 불러오기
 const loadMusic = (num) => {
     musicName.innerHTML = allMusic[num-1].name;             // 재생되고 있는 음악 제목 바꾸기
     musicArtist.innerHTML = allMusic[num-1].artist;         // 재생되고 있는 음악 아티스트 바꾸기
