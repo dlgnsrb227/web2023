@@ -56,7 +56,7 @@ const allMusic = [
         artist : "honeywhip",
         img : "music__view10",
         audio : "music_audio10"
-    },
+    }
 ];
 
 const musicWrap = document.querySelector(".music__wrap");
@@ -136,15 +136,14 @@ musicAudio.addEventListener("timeupdate", e => {
         if(totalSec < 10) totalSec = `0${totalSec}`;
         
         musicProgressDuration.innerText = `${totalMin}:${totalSec}`;
-        
-        // 현재 시간 출력
-        let currentMin = Math.floor(currentTime / 60);
-        let currentSec = Math.floor(currentTime % 60);
-        if(currentSec < 10) currentSec = `0${currentSec}`;
-
-        musicProgressCurrent.innerText =  `${currentMin}:${currentSec}`
-        console.log(`${currentMin}:${currentSec}`)
     });
+
+    // 현재 시간 출력
+    let currentMin = Math.floor(currentTime / 60);
+    let currentSec = Math.floor(currentTime % 60);
+    if(currentSec < 10) currentSec = `0${currentSec}`;
+
+    musicProgressCurrent.innerText = `${currentMin}:${currentSec}`
 });
 
 // 진행 버튼 클릭
