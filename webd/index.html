@@ -93,11 +93,11 @@
             </ul>
         </nav>
         <main id="main">
-            <iframe src="layout/B4.html" frameborder="0"></iframe>
+            <iframe src="layout/A1.html" frameborder="0"></iframe>
         </main>
     </div>
 
-    <script>
+    <!-- <script>
         const list = document.querySelectorAll("#nav ul li");
         const page = document.querySelectorAll("#nav ul li a");
         const frame = document.querySelector("#main iframe");
@@ -114,6 +114,19 @@
             document.querySelectorAll("#nav ul li").forEach((list) => {
                 list.classList.remove("active");
             });
+    </script> -->
+    <script>
+        document.querySelectorAll("#nav ul li").forEach(li => {
+            li.addEventListener("click", (e) => {
+                e.preventDefault();
+                let href = li.querySelector("a").getAttribute("href");
+                document.querySelector("#main iframe").setAttribute("src", href);
+                document.querySelectorAll("#nav ul li").forEach(el => {
+                    el.classList.remove("active");
+                })
+                li.classList.add("active");
+            })
+        });
     </script>
 </body>
 </html>
