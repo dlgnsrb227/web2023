@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://webfontworld.github.io/kotra/KotraGothic.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+
     <title>웹디자인기능사</title>
     <style>
         * {
             margin: 0;
             padding: 0;
-            font-family: KotraGothic;
+            font-family: 'Mulish', sans-serif;
         }
         iframe {
             width: 100%;
@@ -32,17 +35,18 @@
         }
         #nav li a {
             border: 1px solid #ccc;
+            border-radius: 5px;
             width: 50px;
-            height: 50px;
+            height: 45px;
             display: inline-block;
-            margin-bottom: 2px;
+            margin: 0 2px 2px 0;
             text-align: center;
-            line-height: 50px;
-            margin-right: 2px;
+            line-height: 45px;
+            transition: all 0.1s;
         }
         #nav li a:hover,
         #nav li.active a {
-            background-color: #000;
+            background-color: #474747;
             border-color: #000;
             color: #fff;
         }
@@ -97,35 +101,28 @@
         </main>
     </div>
 
-    <!-- <script>
-        const list = document.querySelectorAll("#nav ul li");
-        const page = document.querySelectorAll("#nav ul li a");
-        const frame = document.querySelector("#main iframe");
-
-        page.forEach((a) => {
-            a.addEventListener("click", (e) => {
-                e.preventDefault();
-                let href = a.getAttribute("href");
-
-                frame.setAttribute("src", href)
-            });
-        });
-
-            document.querySelectorAll("#nav ul li").forEach((list) => {
-                list.classList.remove("active");
-            });
-    </script> -->
     <script>
-        document.querySelectorAll("#nav ul li").forEach(li => {
+        // 선택자
+        const indexList = document.querySelectorAll("#nav ul li");
+        const iFrame = document.querySelector("#main iframe");
+
+        indexList.forEach(li => {
             li.addEventListener("click", (e) => {
+                // 클릭 시 효과 모두 중지 (링크이동 방지)
                 e.preventDefault();
+
+                // 각 li 안의 a태그를 선택해 href 속성 가져오기
                 let href = li.querySelector("a").getAttribute("href");
-                document.querySelector("#main iframe").setAttribute("src", href);
-                document.querySelectorAll("#nav ul li").forEach(el => {
-                    el.classList.remove("active");
-                })
+                // iframe의 src속성 값 변경하기
+                iFrame.src = href
+
+                // 클릭 시 모든 li의 classList에서 active 삭제
+                indexList.forEach((el) => {
+                    el.classList.remove('active');
+                });
+                // 클릭 한 li의 classList에 active 추가
                 li.classList.add("active");
-            })
+            });
         });
     </script>
 </body>

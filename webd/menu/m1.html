@@ -172,14 +172,20 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
+        // 선택자
         const submenuList = document.querySelectorAll(".nav > ul > li");
 
+        // 각각 서브메뉴 나오게 작업
         submenuList.forEach(li => {
+            // 각각의 li에 mouseover 이벤트 주기
             li.addEventListener("mouseover", () => {
+                // 각각의 li 안의 ul태그에 forEach 사용
                 li.querySelectorAll("ul").forEach((el) => {
+                    // 각 el(요소)에 display : block 속성
                     el.style.display = "block";
                 })
             });
+            // 똑같이 mouseout 이벤트로 display : none
             li.addEventListener("mouseout", () => {
                 li.querySelectorAll("ul").forEach((el) => {
                     el.style.display = "none";
@@ -187,6 +193,10 @@
             });
         });
 
+        // 전체 서브메뉴 한번에 나오게 작업
+
+
+        // Jquery
         // 각각 하나씩
         // $(".nav > ul > li").mouseover(function(){
         //     $(this).find(".submenu").stop().slideDown();
