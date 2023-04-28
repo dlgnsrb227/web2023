@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    #wrap {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    #header {
+        height: 100px;
+        display: flex;
+    }
+    #header .left {
+        width: 30%;
+        background-color: #bb9090;
+    }
+    #header .right {
+        width: 70%;
+        background-color: #c06060;
+    }
+    #main {
+        height: 500px;
+    }
+    #main .top {
+        height: 300px;
+        background-color: #4d2222;
+    }
+    #main .bottom {
+        height: 200px;
+        display: flex;
+    }
+    #main .bottom .notice {
+        width: 33.33%;
+        background-color: #bfe26d;
+    }
+    #main .bottom .banner {
+        width: 33.33%;
+        background-color: #90eea4;
+    }
+    #main .bottom .link {
+        width: 33.33%;
+        background-color: #7dd4e4;
+    }
+    #footer {
+        height: 100px;
+        display: flex;
+    }
+    #footer .logo {
+        width: 20%;
+        background-color: #a2b5e9;
+    }
+    #footer .copyright {
+        width: 60%;
+        background-color: #f193ed;
+    }
+    #footer .sns {
+        width: 20%;
+        background-color: #9beb65;
+    }
+</style>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="left"></div>
+            <div class="right"></div>
+        </header>
+        <main id="main">
+            <div class="top"></div>
+            <div class="bottom">
+                <div class="notice"></div>
+                <div class="banner"></div>
+                <div class="link"></div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="logo"></div>
+            <div class="copyright"></div>
+            <div class="sns"></div>
+        </footer>
+    </div>
+</body>
+</html>
