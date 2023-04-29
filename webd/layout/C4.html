@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 C유형 4번 레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 1000px;
+            height: 650px;
+            display: flex;
+        }
+        #aside {
+            width: 30%;
+        }
+        #aside .aside1 {
+            height: 20%;
+            background-color: #f7ffe3;
+        }
+        #aside .aside2 {
+            height: 80%;
+            background-color: #ebffb8;
+        }
+        .container {
+            width: 70%;
+        }
+        #main .main1 {
+            height: 350px;
+            background-color: #e5fda8;
+        }
+        #main .main2 {
+            height: 200px;
+            display: flex;
+        }
+        #main .main2 .main2-1 {
+            width: 33.33%;
+            height: inherit;
+            background-color: #ddff87;
+        }
+        #main .main2 .main2-2 {
+            width: 33.33%;
+            height: inherit;
+            background-color: #d7f195;
+        }
+        #main .main2 .main2-3 {
+            width: 33.33%;
+            height: inherit;
+            background-color: #d1e798;
+        }
+        #footer {
+            height: 100px;
+            display: flex;
+        }
+        #footer .footer1 {
+            width: 20%;
+            height: inherit;
+            background-color: #e0f3af;
+        }
+        #footer .footer2 {
+            width: 60%;
+            height: inherit;
+            background-color: #d2e999;
+        }
+        #footer .footer3 {
+            width: 20%;
+            height: inherit;
+            background-color: #bfe06c;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <div class="aside1"></div>
+            <div class="aside2"></div>
+        </aside>
+        <div class="container">
+            <main id="main">
+                <div class="main1"></div>
+                <div class="main2">
+                    <div class="main2-1"></div>
+                    <div class="main2-2"></div>
+                    <div class="main2-3"></div>
+                </div>
+            </main>
+            <footer id="footer">
+                <div class="footer1"></div>
+                <div class="footer2"></div>
+                <div class="footer3"></div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

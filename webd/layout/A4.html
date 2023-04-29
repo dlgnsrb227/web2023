@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 A유형 4번 레이아웃</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    #wrap {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    #header {
+        height: 100px;
+        display: flex;
+    }
+    #header .left {
+        width: 30%;
+        background-color: #ffdbdb;
+    }
+    #header .right {
+        width: 70%;
+        background-color: #ffafaf;
+    }
+    #main {
+        height: 500px;
+    }
+    #main .top {
+        height: 300px;
+        background-color: #ff8f8f;
+    }
+    #main .bottom {
+        height: 200px;
+        display: flex;
+    }
+    #main .bottom .notice {
+        width: 33.33%;
+        background-color: #aa5454;
+    }
+    #main .bottom .banner {
+        width: 33.33%;
+        background-color: #9e4242;
+    }
+    #main .bottom .link {
+        width: 33.33%;
+        background-color: #7c3333;
+    }
+    #footer {
+        display: flex;
+    }
+    #footer .logo {
+        width: 20%;
+        height: 100px;
+        background-color: #ffb8b8;
+    }
+    #footer .footleft {
+        width: 80%;
+        height: 100px;
+    }
+    #footer .copyright {
+        width: 100%;
+        height: 50%;
+        background-color: #ff8c8c;
+    }
+    #footer .sns {
+        width: 100%;
+        height: 50%;
+        background-color: #c96e6e;
+    }
+</style>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="left"></div>
+            <div class="right"></div>
+        </header>
+        <main id="main">
+            <div class="top"></div>
+            <div class="bottom">
+                <div class="notice"></div>
+                <div class="banner"></div>
+                <div class="link"></div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="footleft">
+                <div class="copyright"></div>
+                <div class="sns"></div>
+            </div>
+            <div class="logo"></div>
+        </footer>
+    </div>
+</body>
+</html>
