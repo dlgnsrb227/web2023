@@ -176,31 +176,27 @@
         const submenuList = document.querySelectorAll(".nav > ul > li");
         const subMenu = document.querySelectorAll(".submenu");
 
-        // 각각 서브메뉴 나오게 작업
+        // 전체 서브메뉴 한번에 나오게 작업
         submenuList.forEach(li => {
-            // 각각의 li에 mouseover 이벤트 주기
             li.addEventListener("mouseover", () => {
-                // 각각의 li 안의 ul태그에 forEach 사용
-                li.querySelectorAll("ul").forEach((el) => {
-                    // 각 el(요소)에 display : block 속성
+                subMenu.forEach(el => {
                     el.style.display = "block";
-                })
+                });
             });
-            // 똑같이 mouseout 이벤트로 display : none
             li.addEventListener("mouseout", () => {
-                li.querySelectorAll("ul").forEach((el) => {
+                subMenu.forEach(el => {
                     el.style.display = "none";
-                })
+                });
             });
         });
 
         // jQuery
-        // 각각 하나씩
+        // 전체 한번에
         // $(".nav > ul > li").mouseover(function(){
-        //     $(this).find(".submenu").stop().slideDown();
+        //     $(".nav > ul > li").find(".submenu").stop().slideDown();
         // });
         // $(".nav > ul > li").mouseout(function(){
-        //     $(this).find(".submenu").stop().slideUp();
+        //     $(".nav > ul > li").find(".submenu").stop().slideUp();
         // });
     </script>
 </body>
