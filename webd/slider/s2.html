@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹디자인 기능사 실기 A유형 1번 레이아웃</title>
+    <title>웹디자인 기능사 실기 슬라이더 2</title>
 </head>
 <style>
     * {
@@ -39,7 +39,6 @@
     }
     #main .slider__wrap .slider__inner {
         display: flex;
-        transition: all 0.3s;
     }
     #main .main1 {
         height: 200px;
@@ -113,11 +112,29 @@
         // 순서
         let currentIndex = 0;
 
-        // 이미지 슬라이드
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % count;
+        // // 이미지 슬라이드
+        // setInterval(() => {
+        //     currentIndex = (currentIndex + 1) % count;
 
+        //     sliderInner.style.transform = `translateX(-${1200*currentIndex}px)`;
+        // }, 3000);
+
+        // 이미지 슬라이드 (연속)
+        const sliderClone = sliderInner.firstElementChild.cloneNode(true);
+        sliderInner.appendChild(sliderClone);
+
+        setInterval(() => {
+            currentIndex++;
+            sliderInner.style.transition = "all 0.3s"
             sliderInner.style.transform = `translateX(-${1200*currentIndex}px)`;
+
+            if(currentIndex == slider.length){
+                setTimeout(() => {
+                    sliderInner.style.transition = "all 0s"
+                    sliderInner.style.transform = "translateX(0px)";
+                    currentIndex = 0;
+                },1000);
+            }
         }, 3000);
     </script>
 </body>
