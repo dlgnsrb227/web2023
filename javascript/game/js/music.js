@@ -242,12 +242,15 @@ musicListClose.addEventListener("click", () => {
 for(let i=0; i<musicCount; i++){
     let li = `
         <li data-index="${i+1}">
-            <div>
+            <span class="img">
+                <img src="img/${allMusic[i].img}.png" alt="${allMusic[i].name}" class="img">
+            </span>
+            <span class="title">
                 <strong>${allMusic[i].name}</strong>
                 <em>${allMusic[i].artist}</em>
                 <audio class="${allMusic[i].audio}" src="audio/${allMusic[i].audio}.mp3"></audio>
-            </div>
-            <span class="audio-duration" id="${allMusic[i].audio}">2:54</span>
+            </span>
+            <span class="audio-duration" id="${allMusic[i].audio}"></span>
         </li>
     `;
 
