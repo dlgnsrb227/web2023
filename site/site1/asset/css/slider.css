@@ -1,11 +1,19 @@
 .slider__inner .slider {
-    height: 600px;
-    background-image: url(../img/SLIDER-TYPE01_01.jpg);
+    /* height: 600px; */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
     z-index: 1;
+}
+.slider__inner .slider.img1 {
+    background-image: url(../img/SLIDER-TYPE01_01.jpg);
+}
+.slider__inner .slider.img2 {
+    background-image: url(../img/SLIDER-TYPE01_02.jpg);
+}
+.slider__inner .slider.img3 {
+    background-image: url(../img/SLIDER-TYPE01_03.jpg);
 }
 .slider__inner .slider::after {
     content: '';
@@ -113,7 +121,106 @@ only screen and (min-resolution: 2dppx) {
      }
 }
 
+/* swiper */
+.swiper-button-prev,
+.swiper-button-next {
+    width: 30px;
+    height: 56px;
+    background-image: url(../img/icon_main.svg);
+    background-size: 500px;
+}
+.swiper-button-next {
+    background-position: -50px 0;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 0;
+}
+.swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    background-image: url(../img/icon_main.svg);
+    background-size: 500px;
+    opacity: 1;
+    background-position: -100px -1px;
+}
+.swiper-pagination-bullet-active {
+    background-image: url(../img/icon_main.svg);
+    background-size: 500px;
+    background-position: -120px -1px;
+}
+.swiper-pagination {
+    bottom: 20px !important;
+}
+.swiper-button {
+    position: absolute;
+    left: 50%;
+    bottom: 23px;
+    display: flex;
+    margin-left: 40px;
+    z-index: 1000;
+}
+.swiper-button-play {
+    background-image: url(../img/icon_main.svg);
+    background-position: -161px -2px;
+    background-size: 500px;
+    margin-right: 8px;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+.swiper-button-stop {
+    background-image: url(../img/icon_main.svg);
+    background-position: -184px -1px;
+    background-size: 500px;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+
 /* 미디어쿼리 */
+@media (max-width : 1200px){
+    .slider {
+        text-align: center;
+    }
+    .slider__info .desc {
+        width: 100%;
+        padding: 0 5%;
+        box-sizing: border-box;
+    }
+}
 @media (max-width : 960px){
-    
+    .slider__info .title {
+        font-size: 40px;
+    }
+    .slider__info .btn {
+        margin-top: 50px;
+    }
+}
+@media (max-width : 600px){
+    .slider__info {
+        padding: 50px 0 70px;
+    }
+    .slider__info .title {
+        font-size: 30px;
+    }
+    .slider__info .desc {
+        font-size: 14px;
+    }
+    .slider__info .btn a {
+        width: 120px;
+        font-size: 14px;
+    }
+    .swiper-pagination {
+        bottom: 10px !important;
+    }
+    .swiper-button {
+        bottom: 14px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
 }

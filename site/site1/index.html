@@ -21,7 +21,11 @@
     <link rel="stylesheet" href="asset/css/fonts.css">
     <link rel="stylesheet" href="asset/css/reset.css">
     <link rel="stylesheet" href="asset/css/common.css">
+    <link rel="stylesheet" href="asset/css/swiper.css">
     <link rel="stylesheet" href="asset/css/style.css">
+
+    <style>
+    </style>
 </head>
 <body>
     <div id="skip">
@@ -56,6 +60,65 @@
        </div>
     </header>
     <!-- headerType -->
+    <section id="sliderType" class="nexon">
+        <h2 class="blind">슬라이드 영역</h2>
+        <div class="slider__inner">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slider img1">
+                            <div class="slider__info container">
+                                 <span class="small">EVENT</span>
+                                 <h3 class="title">한강 무료 아메리카노</h3>
+                                 <p class="desc">여의도 한강공원 여의나루역 5번출구로 나와 전방 300m 부근에서 무료 아메리카노
+                                 시식 이벤트가 진행됩니다.</p>
+                                 <div class="btn">
+                                      <a href="#">자세히 보기</a>
+                                      <a href="#">참여 하기</a>
+                                 </div>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider img2">
+                            <div class="slider__info container">
+                                 <span class="small">EVENT</span>
+                                 <h3 class="title">한강 무료 아메리카노</h3>
+                                 <p class="desc">여의도 한강공원 여의나루역 5번출구로 나와 전방 300m 부근에서 무료 아메리카노
+                                 시식 이벤트가 진행됩니다.</p>
+                                 <div class="btn">
+                                      <a href="#">자세히 보기</a>
+                                      <a href="#">참여 하기</a>
+                                 </div>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider img3">
+                            <div class="slider__info container">
+                                 <span class="small">EVENT</span>
+                                 <h3 class="title">한강 무료 아메리카노</h3>
+                                 <p class="desc">여의도 한강공원 여의나루역 5번출구로 나와 전방 300m 부근에서 무료 아메리카노
+                                 시식 이벤트가 진행됩니다.</p>
+                                 <div class="btn">
+                                      <a href="#">자세히 보기</a>
+                                      <a href="#">참여 하기</a>
+                                 </div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button">
+                    <div class="swiper-button-play"><span class="ir">play</span></div>
+                    <div class="swiper-button-stop"><span class="ir">stop</span></div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+    <!-- //sliderType -->
     <main id="mainType">
         <section id="sliderType" class="nexon hide">
             <div class="slider__inner">
@@ -313,5 +376,44 @@
         </section>
     </footer>
     <!-- footerType -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+
+        const stopBtn = document.querySelector(".swiper-button-stop");
+        const playBtn = document.querySelector(".swiper-button-play");
+
+        playBtn.style.display = "none";
+
+        playBtn.addEventListener("click", () => {
+            swiper.autoplay.start();
+            playBtn.style.display = "none";
+            stopBtn.style.display = "block";
+        });
+
+        stopBtn.addEventListener("click", () => {
+            swiper.autoplay.stop();
+            playBtn.style.display = "block";
+            stopBtn.style.display = "none";
+        });
+    </script>
 </body>
 </html>
