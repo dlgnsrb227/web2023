@@ -1,0 +1,271 @@
+.mainCircle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.item {
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+.item .circle {
+    border: 1px solid #00b40f;
+    position: absolute;
+    opacity: 0.8;
+    width: 260px;
+    height: 260px;
+    }
+@keyframes reverse-rotate {
+    50% {
+        border-radius: 40%;
+    }
+    100% {
+        transform: rotate(360deg);
+        border-radius: 50%;
+    }
+    }
+.item .circle-1 {
+    animation: rotate-circle1 4s ease-in-out infinite alternate;
+    }
+    @keyframes rotate-circle1 {
+    0% {
+        transform: rotate(0);
+        border-color: #c4fdc9;
+    }
+    100% {
+        transform: rotate(370deg) scaleY(0.4);
+        border-radius: 50%;
+    }
+    }
+.item .circle-2 {
+    animation: rotate-circle2 4s ease-in-out infinite alternate;
+    }
+    @keyframes rotate-circle2 {
+    0% {
+        transform: rotate(0);
+        border-color: #c4fdc9;
+    }
+    100% {
+        transform: rotate(380deg) scaleY(0.4);
+        border-radius: 50%;
+    }
+    }
+.item .circle-3 {
+    animation: rotate-circle3 4s ease-in-out infinite alternate;
+    }
+    @keyframes rotate-circle3 {
+    0% {
+        transform: rotate(0);
+        border-color: #c4fdc9;
+    }
+    100% {
+        transform: rotate(390deg) scaleY(0.4);
+        border-radius: 50%;
+    }
+    }
+.item .circle-4 {
+    animation: rotate-circle4 4s ease-in-out infinite alternate;
+    }
+    @keyframes rotate-circle4 {
+    0% {
+        transform: rotate(0);
+        border-color: #c4fdc9;
+    }
+    100% {
+        transform: rotate(400deg) scaleY(0.4);
+        border-radius: 50%;
+    }
+    }
+.item .circle-5 {
+    animation: rotate-circle5 4s ease-in-out infinite alternate;
+    }
+    @keyframes rotate-circle5 {
+    0% {
+        transform: rotate(0);
+        border-color: #c4fdc9;
+    }
+    100% {
+        transform: rotate(410deg) scaleY(0.4);
+        border-radius: 50%;
+    }
+    }
+.item .circle-6 {
+    animation: rotate-circle6 4s ease-in-out infinite alternate;
+    }
+    @keyframes rotate-circle6 {
+    0% {
+        transform: rotate(0);
+        border-color: #c4fdc9;
+    }
+    100% {
+        transform: rotate(420deg) scaleY(0.4);
+        border-radius: 50%;
+    }
+    }
+.item .circle-7 {
+    animation: rotate-circle7 4s ease-in-out infinite alternate;
+    }
+    @keyframes rotate-circle7 {
+    0% {
+        transform: rotate(0);
+        border-color: #c4fdc9;
+    }
+    100% {
+        transform: rotate(430deg) scaleY(0.4);
+        border-radius: 50%;
+    }
+    }
+.item .circle-8 {
+    animation: rotate-circle8 4s ease-in-out infinite alternate;
+    }
+    @keyframes rotate-circle8 {
+    0% {
+        transform: rotate(0);
+        border-color: #c4fdc9;
+    }
+    100% {
+        transform: rotate(440deg) scaleY(0.4);
+        border-radius: 50%;
+    }
+    }
+.item .circle-9 {
+    animation: rotate-circle9 4s ease-in-out infinite alternate;
+    }
+    @keyframes rotate-circle9 {
+    0% {
+        transform: rotate(0);
+        border-color: #c4fdc9;
+    }
+    100% {
+        transform: rotate(450deg) scaleY(0.4);
+        border-radius: 50%;
+    }
+    }
+.item .circle-10 {
+    animation: rotate-circle10 4s ease-in-out infinite alternate;
+    }
+    @keyframes rotate-circle10 {
+    0% {
+        transform: rotate(0);
+        border-color: #c4fdc9;
+    }
+    100% {
+        transform: rotate(460deg) scaleY(0.4);
+        border-radius: 50%;
+    }
+    }
+.item .circle-11 {
+    animation: rotate-circle11 4s ease-in-out infinite alternate;
+    }
+    @keyframes rotate-circle11 {
+    0% {
+        transform: rotate(0);
+        border-color: #c4fdc9;
+    }
+    100% {
+        transform: rotate(470deg) scaleY(0.4);
+        border-radius: 50%;
+    }
+    }
+.item .circle-12 {
+    animation: rotate-circle12 4s ease-in-out infinite alternate;
+    }
+    @keyframes rotate-circle12 {
+    0% {
+        transform: rotate(0);
+        border-color: #c4fdc9;
+    }
+    100% {
+        transform: rotate(480deg) scaleY(0.4);
+        border-radius: 50%;
+    }
+    }
+.item .circle-13 {
+    animation: rotate-circle13 4s ease-in-out infinite alternate;
+    }
+    @keyframes rotate-circle13 {
+    0% {
+        transform: rotate(0);
+        border-color: #c4fdc9;
+    }
+    100% {
+        transform: rotate(490deg) scaleY(0.4);
+        border-radius: 50%;
+    }
+    }
+.item .circle-14 {
+    animation: rotate-circle14 4s ease-in-out infinite alternate;
+    }
+    @keyframes rotate-circle14 {
+    0% {
+        transform: rotate(0);
+        border-color: #c4fdc9;
+    }
+    100% {
+        transform: rotate(500deg) scaleY(0.4);
+        border-radius: 50%;
+    }
+    }
+.item .circle-15 {
+    animation: rotate-circle15 4s ease-in-out infinite alternate;
+    }
+    @keyframes rotate-circle15 {
+    0% {
+        transform: rotate(0);
+        border-color: #c4fdc9;
+    }
+    100% {
+        transform: rotate(510deg) scaleY(0.4);
+        border-radius: 50%;
+    }
+    }
+.item .circle-16 {
+    animation: rotate-circle16 4s ease-in-out infinite alternate;
+}
+    @keyframes rotate-circle16 {
+    0% {
+        transform: rotate(0);
+        border-color: #c4fdc9;
+    }
+    100% {
+        transform: rotate(520deg) scaleY(0.4);
+        border-radius: 50%;
+    }
+    }
+.item .circle-17 {
+    animation: rotate-circle17 4s ease-in-out infinite alternate;
+}
+@keyframes rotate-circle17 {
+    0% {
+        transform: rotate(0);
+        border-color: #c4fdc9;
+    }
+    100% {
+        transform: rotate(530deg) scaleY(0.4);
+        border-radius: 50%;
+    }
+}
+.item .circle-18 {
+    animation: rotate-circle18 4s ease-in-out infinite alternate;
+}
+@keyframes rotate-circle18 {
+    0% {
+        transform: rotate(0);
+        border-color: #c4fdc9;
+    }
+    100% {
+        transform: rotate(540deg) scaleY(0.4);
+        border-radius: 50%;
+    }
+}
