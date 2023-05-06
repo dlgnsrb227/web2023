@@ -10,8 +10,8 @@ body {
 /* Header Navigation */
 #top-nav{
 	/* border-bottom: 1px solid #e1e6dd; */
-	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.3);
-	background: #f5ffee31;
+	box-shadow: 4px 8px 16px 0 rgba(96, 117, 94, 0.233);
+	background: #f5ffee1e;
 	-webkit-transform: translateZ(0)
 
 }
@@ -134,29 +134,34 @@ pre.pre-show{
 .header_tit h1 {display:inline-block; font-size: 45px; text-transform:uppercase; color:#fff;}
 .header_tit h2 {margin-top:4px;}
 .header_tit h2 a {font-size:30px; font-family: 'Abel'; color:#fff;}
-.header_icon {margin: 20px 0; }
-.header_icon ul {margin:20px 0;}
+.header_icon {margin: 20px 0; width: 100%;}
+.header_icon ul {
+	margin:20px 0;
+	position: absolute;
+	right: 10px;
+	top: 50px;
+}
 
-.header_icon {text-align: center;}
-.header_icon li {display: inline; margin: 0 2px;}
-.header_icon li a {position: relative; background-color: #569783b7; width: 60px; height: 60px; border-radius: 50%; display: inline-block; font-size: 28px; color: #fff; line-height: 60px; transition: box-shadow 0.3s ease;}
+.header_icon {text-align: right;}
+.header_icon li {display: inline; margin: 0 5px;}
+.header_icon li a {position: relative; background-color: #569783b7; width: 45px; height: 45px; border-radius: 50%; display: inline-block; text-align: center; font-size: 20px; color: #fff; line-height: 45px; transition: box-shadow 0.3s ease;}
 .header_icon li a span {
     position: absolute; left: 50%; top: -40px; transform: translateX(-50%);
-    font-size: 12px; line-height: 1.6; background: #77b5e6; padding: 3px 9px;
+    font-size: 12px; line-height: 1.6; background: #77e67cbd; padding: 3px 9px;
     border-radius: 6px 0; opacity: 0; transition: opacity 0.3s ease, top 0.3s ease;
 }
 .header_icon li a span:before {
     content: '';
     position: absolute; left: 50%; bottom: -5px;
     transform: translateX(-50%);
-    border-top: 5px solid #77b5e6;
+    border-top: 5px solid #77e67cbd;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
 }
 .header_icon li a:hover span {opacity: 1; top: -33px;}
 .header_icon li a:hover {
     box-shadow: 
-        0 0 0 3px rgba(97,148,189,0.9) inset,
+        0 0 0 30px rgba(97, 189, 102, 0.9) inset,
         0 0 0 100px rgba(0,0,0,0.1) inset;
 }
 
@@ -179,7 +184,8 @@ padding: 8px 12px;
 #footer{
 	margin-top: 80px;
 	padding: 20px;
-	background: #f3f3f3;
+	background: #f3f3f328;
+	color: #ffffffaf;
 	text-align: center
 }
 .twitter-share-button{

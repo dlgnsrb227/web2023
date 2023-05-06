@@ -71,9 +71,9 @@
   height: 350px;
   margin-bottom: 1%;
   float: left;
-
-  border-bottom: 3px solid #a5d5fa;
-  background-color: #ecfdcd3b;
+  /* box-shadow: 5px 5px 20px 0 rgba(200, 255, 195, 0.3); */
+  /* border-bottom: 3px solid #a5d5fa; */
+  background-color: #ecfdcd21;
 }
 .color-shape:first-child:hover {
     border-bottom: 3px solid #a92c76;
