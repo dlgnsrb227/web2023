@@ -3695,9 +3695,9 @@ input[type="submit"].btn.btn-mini {
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
-    font-size: 33px;
-  color: #000;
-    font-family: Abel;;
+  font-size: 33px;
+  color: #ffffff;
+  font-family: 'Chakra Petch', sans-serif;
 }
 .navbar .brand:hover,
 .navbar .brand:focus {

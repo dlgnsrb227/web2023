@@ -213,7 +213,7 @@
 ================================================== */
 
 #contents_tit {
-	background-color: #f1ffe3ad;
+	background-color: #f1ffe357;
 	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.3);
 	text-align: center; 
 	height: 90px;
@@ -225,7 +225,7 @@
 	font-size: 40px;
 }
 #contents_tit p a {
-	color:#5a9622; 
+	color:#88e234; 
 }
 
 
