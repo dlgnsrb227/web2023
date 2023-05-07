@@ -411,3 +411,119 @@ span.menu__circle:nth-of-type(8) {
     }
 }
 /* //menu__circle */
+
+/* menu__planet */
+.menu__planet {
+    position: absolute;
+    left: 50%;
+    top: 120px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu__planet::before {
+    content: "";
+    position: absolute;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0) rotate(15deg);
+    height: 25px;
+    width: 120px;
+}
+.menu__planet.menu__class {
+    background: #fb82ff94;
+}
+.menu__planet.menu__class::before {
+    border: 6px solid rgba(0, 255, 221, 0.87);
+    border-top: 0;
+}
+.menu__planet.menu__javascript {
+    background: #2048c9d3;
+}
+.menu__planet.menu__javascript::before {
+    border: 6px solid rgba(247, 244, 67, 0.911);
+    border-top: 0;
+}
+.menu__planet.menu__site {
+    background: #c6ff7bbb;
+}
+.menu__planet.menu__site::before {
+    border: 6px solid rgb(255, 123, 0);
+    border-top: 0;
+}
+.menu__planet.menu__html {
+    background: #4828bdb6;
+}
+.menu__planet.menu__html::before {
+    border: 6px solid rgba(233, 111, 168, 0.938);
+    border-top: 0;
+}
+
+.menu__planet:after {
+    content: "";
+    width: 320px;
+    height: 320px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+    border-radius: 100%;
+    z-index: -1;
+}
+
+.menu__planet:hover::before {
+    animation: bounce 0.8s ease-out;
+}
+
+.menu__planet:hover::after {
+    background-image: url('data:image/svg+xml;utf8,\
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 400 400" width="160" height="160">\
+<style>\
+    @keyframes rotateShape %7Bto %7B transform: rotate(-360deg)}} %3C/style>\
+<g>\
+  <menu__planet cx="15" cy="85" r="10" style="fill:none;stroke-width:4;stroke:rgb(192,192,192);"/>\
+  <polygon points="110 10, 100 30, 120 30" style="fill:none;stroke-width:2;stroke: rgb(255,102,102);transform-origin: 120px 25px;transform: rotate(-25deg);animation:rotateShape 2s linear infinite"/>\
+<polygon points="110 100, 90 100, 90 120, 110 120" style="fill:none;stroke-width:2;stroke: rgb(0,102,204);transform-origin: 100px 110px;transform: rotate(5deg);animation:rotateShape 2s linear infinite"/>\
+</g>\
+</svg>');
+    background-size: 100px 100px;
+    animation: burst 0.8s ease-out;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+    }
+
+    25% {
+        transform: translate3d(-50%, -50%, 0) scale3d(1.2, 1.2, 1.2);
+    }
+
+    45% {
+        transform: translate3d(-50%, -50%, 0) scale3d(0.85, 0.85, 0.85);
+    }
+
+    60% {
+        transform: translate3d(-50%, -50%, 0) scale3d(1.05, 1.05, 1.05);
+    }
+
+    100% {
+        transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+    }
+}
+
+@keyframes burst {
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+        opacity: 0;
+    }
+}
