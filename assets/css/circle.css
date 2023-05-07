@@ -269,3 +269,145 @@
         border-radius: 50%;
     }
 }
+/* //mainCircle */
+/* menu__circle */
+div.menu__circle__wrap {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+}
+
+span.menu__circle {
+    display: block;
+    width: 36px;
+    height: 4px;
+    border-radius: 3px;
+    background: rgb(123, 255, 0);
+    position: absolute;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+}
+
+span.menu__circle:nth-of-type(4n - 3) {
+    left: 24.5px;
+    -webkit-animation-name: rotate1;
+    animation-name: rotate1;
+}
+
+span.menu__circle:nth-of-type(3) {
+    left: 2px;
+}
+
+span.menu__circle:nth-of-type(7) {
+    right: 2px;
+}
+
+span.menu__circle:nth-of-type(4n-1) {
+    top: 24.5px;
+    width: 4px;
+    height: 39px;
+    -webkit-animation-name: rotate1;
+    animation-name: rotate1;
+}
+
+span.menu__circle:nth-of-type(5) {
+    bottom: 0;
+}
+
+span.menu__circle:nth-of-type(4n - 2) {
+    transform: rotate(-45deg);
+    -webkit-animation-name: rotate2;
+    animation-name: rotate2;
+}
+
+span.menu__circle:nth-of-type(2) {
+    top: 12px;
+}
+
+span.menu__circle:nth-of-type(6) {
+    bottom: 12px;
+    right: 0;
+}
+
+span.menu__circle:nth-of-type(4n) {
+    transform: rotate(45deg);
+    -webkit-animation-name: rotate3;
+    animation-name: rotate3;
+}
+
+span.menu__circle:nth-of-type(4) {
+    bottom: 12px;
+}
+
+span.menu__circle:nth-of-type(8) {
+    top: 12px;
+    right: 0;
+}
+
+@-webkit-keyframes rotate1 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes rotate1 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@-webkit-keyframes rotate2 {
+    from {
+        transform: rotate(-45deg);
+    }
+
+    to {
+        transform: rotate(135deg);
+    }
+}
+
+@keyframes rotate2 {
+    from {
+        transform: rotate(-45deg);
+    }
+
+    to {
+        transform: rotate(135deg);
+    }
+}
+
+@-webkit-keyframes rotate3 {
+    from {
+        transform: rotate(45deg);
+    }
+
+    to {
+        transform: rotate(225deg);
+    }
+}
+
+@keyframes rotate3 {
+    from {
+        transform: rotate(45deg);
+    }
+
+    to {
+        transform: rotate(225deg);
+    }
+}
+/* //menu__circle */
