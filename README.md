@@ -9,6 +9,11 @@
    
 퀴즈 게임01 : https://dlgnsrb227.github.io/web2023/javascript/quiz/quizEffect01.html   
 퀴즈 게임02 : https://dlgnsrb227.github.io/web2023/javascript/quiz/quizEffect02.html   
+퀴즈 게임03 : https://dlgnsrb227.github.io/web2023/javascript/quiz/quizEffect03.html   
+퀴즈 게임04 : https://dlgnsrb227.github.io/web2023/javascript/quiz/quizEffect04.html   
+퀴즈 게임05 : https://dlgnsrb227.github.io/web2023/javascript/quiz/quizEffect05.html   
+퀴즈 게임06 : https://dlgnsrb227.github.io/web2023/javascript/quiz/quizEffect06.html   
+퀴즈 게임07 : https://dlgnsrb227.github.io/web2023/javascript/quiz/quizEffect07.html   
    
 # 사이트
 이미지 유형 : https://dlgnsrb227.github.io/web2023/site/imageType/imageType01.html   
