@@ -150,11 +150,11 @@ root.render(hello);
 </code></pre>
                     <p>객체와 함수를 동시에 사용하는 경우</p>
 <pre><code class="language-js">function helloName(){
-return name.nick;
+    return name.nick;
 };
 
 const name = {
-nick : "Hoong",
+    nick : "Hoong",
 };
 
 const hello = &lt;h1>Hello, {helloName()}&lt;/h1>
@@ -163,27 +163,55 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(hello);
 </code></pre>
                     <h4 id="intro3-1" class="page-header">3. 렌더링</h4>
-<pre><code class="language-js">// function clock(){
-//   let clock = document.getElementById("clock");
-
-//   setInterval(function(){
-//     clock.innerHTML = new Date().toLocaleString
-//   }, 1000);
-// };
-// clock();
-
-function clock(){
+<pre><code class="language-js">function clock(){
     const element = (
-    &lt;div>
-        &lt;div>Hello, Hoong&lt;/div>
-        &lt;h2>지금은 {new Date().toLocaleString()} 입니다.&lt;/h2>
-    &lt;/div>
+        &lt;div>
+            &lt;div>Hello, Hoong&lt;/div>
+            &lt;h2>지금은 {new Date().toLocaleString()} 입니다.&lt;/h2>
+        &lt;/div>
     );
-
     ReactDOM.render(element, document.getElementById("root"));
 };
 
 export default clock;
+</code></pre>
+                    <h4 id="intro3-1" class="page-header">4. 컴퍼넌트</h4>
+<pre><code class="language-js">function Hello() {
+    return (
+        &lt;h1>Hello, Hooong&lt;/h1>
+    )
+}
+const element = &lt;Hello />
+
+ReactDOM.render(element, document.getElementById("root"));
+
+export default Hello
+</code></pre>
+<pre><code class="language-js">function Welcome(props){
+    return &lt;h1>Hello, {props.name}&lt;/h1>
+}
+
+function App(){
+    return (
+        &lt;div>
+        &lt;Welcome name = "hoong" />
+        &lt;Welcome name = "hooong" />
+        &lt;Welcome name = "hoooong" />
+        &lt;/div>
+    )
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+</code></pre>
+                    <h4 id="intro3-1" class="page-header">5. props</h4>
+<pre><code class="language-js">function Hello(props){
+    return &lt;h1>Hello, {props.name}&lt;/h1>
+}
+const element = &lt;Hello name="hoooong" />
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(element);
 </code></pre>
                 </div>
                 <!-- intro3 -->
