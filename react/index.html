@@ -202,7 +202,9 @@ function App(){
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(&lt;App />);
+</code></pre>
+<pre><code class="language-js">
 </code></pre>
                     <h4 id="intro3-1" class="page-header">5. props</h4>
 <pre><code class="language-js">function Hello(props){
@@ -212,6 +214,29 @@ const element = &lt;Hello name="hoooong" />
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(element);
+</code></pre>
+<pre><code class="language-js">function formatDate(date){
+    return date.toLocaleString();
+};
+
+function Comment(props){
+    return (
+        &lt;div>
+            &lt;div>{formatDate(props.date)}&lt;/div>
+            &lt;div>{props.text}&lt;/div>
+            &lt;div>3&lt;/div>
+            &lt;div>4&lt;/div>
+        &lt;/div>
+    )
+}
+
+const comment = {
+    date : new Date(),
+    text : "이해했습니다.",
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(&lt;Comment date={comment.date} text={comment.text} />);
 </code></pre>
                 </div>
                 <!-- intro3 -->
