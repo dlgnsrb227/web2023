@@ -1,3 +1,7 @@
+main {
+    width: 100%;
+    overflow: hidden;
+}
 /* header */
 #header {
     position: absolute;
@@ -126,19 +130,20 @@
     padding-bottom: 56.25%; /* 가상 height */
     position: relative;
     z-index: -1;
+    overflow: hidden;
 }
 .parallax__item__img {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: -5%;
+    top: -5%;
     background-image: url(../img/parallaxEffect01-min.jpg);
-    width: 100%;
-    height: 100%;
+    width: 110%;
+    height: 110%;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    filter: saturate(10%);
-    transition: all 1s;
+    filter: saturate(35%);
+    transition: filter 1s;
 }
 .parallax__item:nth-child(1) .parallax__item__img {
     background-image: url(../img/parallaxEffect01-min.jpg);
@@ -228,6 +233,32 @@
 }
 .parallax__dot li.active a {
     transform: scale(0.4);
+}
+.parallax__top {
+    position: fixed;
+    bottom: -40px;
+    right: 20px;
+    z-index: 1000;
+    transition: all 0.3s;
+}
+.parallax__top a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.parallax__top.show {
+    bottom: 20px;
+}
+.parallax__top a:hover {
+    background-color: #000;
+    color: #fff;
 }
 
 @media (max-width: 1200px){
