@@ -32,7 +32,7 @@
             transform: translateY(100px);
             transition: all 0.6s cubic-bezier(0.54, 0.01, 0, 1);
         }
-        .split.show span {
+        .split span.show {
             opacity: 1;
             transform: translateY(0);
         }
@@ -76,6 +76,255 @@
         .split span:nth-child(38) {transition-delay: 1950ms;}
         .split span:nth-child(39) {transition-delay: 2000ms;}
         .split span:nth-child(40) {transition-delay: 2050ms;} */
+
+        .style1.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+            transition: all 0.6s cubic-bezier(0.54, 0.01, 0, 1);
+        }
+        .style1.split span.show {
+            opacity: 1;
+        }
+
+        .style2.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+            transform: translateY(100px);
+            transition: all 0.6s cubic-bezier(0.54, 0.01, 0, 1);
+        }
+        .style2.split span.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .style3.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+            transform: translateY(100px) translateX(-100px) rotate(360deg);
+            transition: all 0.6s cubic-bezier(0.54, 0.01, 0, 1);
+        }
+        .style3.split span.show {
+            opacity: 1;
+            transform: translateY(0) translateX(0) rotate(0);
+        }
+
+        .style4.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        }
+        .style4.split span.show {
+            opacity: 1;
+            animation: lightSpeedIn 1s 1;
+        }
+
+        .style5.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        }
+        .style5.split span.show {
+            opacity: 1;
+            animation: zoomInDown 1s 1;
+        }
+
+        .style6.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        }
+        .style6.split span.show {
+            opacity: 1;
+            animation: flipInX 1s 1;
+        }
+
+        .style7.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        }
+        .style7.split span.show {
+            opacity: 1;
+            animation: flip 1s 1;
+        }
+
+        .style8.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        }
+        .style8.split span.show {
+            opacity: 1;
+            animation: rubberBand 1s 1;
+        }
+
+        /* flipInX */
+        @keyframes flipInX {
+            0% {
+                -webkit-transform: perspective(400px) rotateX(90deg);
+                transform: perspective(400px) rotateX(90deg);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+                opacity: 0
+            }
+
+            40% {
+                -webkit-transform: perspective(400px) rotateX(-20deg);
+                transform: perspective(400px) rotateX(-20deg);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in
+            }
+
+            60% {
+                -webkit-transform: perspective(400px) rotateX(10deg);
+                transform: perspective(400px) rotateX(10deg);
+                opacity: 1
+            }
+
+            80% {
+                -webkit-transform: perspective(400px) rotateX(-5deg);
+                transform: perspective(400px) rotateX(-5deg)
+            }
+
+            to {
+                -webkit-transform: perspective(400px);
+                transform: perspective(400px)
+            }
+        }
+
+        /* zoomInDown */
+        @keyframes zoomInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+                transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+                -webkit-animation-timing-function: cubic-bezier(.55, .055, .675, .19);
+                animation-timing-function: cubic-bezier(.55, .055, .675, .19)
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+                transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+                -webkit-animation-timing-function: cubic-bezier(.175, .885, .32, 1);
+                animation-timing-function: cubic-bezier(.175, .885, .32, 1)
+            }
+        }
+
+        /* lightSpeedIn */
+        @keyframes lightSpeedIn {
+            0% {
+                -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+                transform: translate3d(100%, 0, 0) skewX(-30deg);
+                opacity: 0
+            }
+
+            60% {
+                -webkit-transform: skewX(20deg);
+                transform: skewX(20deg);
+                opacity: 1
+            }
+
+            80% {
+                -webkit-transform: skewX(-5deg);
+                transform: skewX(-5deg)
+            }
+
+            to {
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0)
+            }
+        }
+
+        /* flip */
+        @keyframes flip {
+            0% {
+                -webkit-transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
+                transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out
+            }
+
+            40% {
+                -webkit-transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
+                transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out
+            }
+
+            50% {
+                -webkit-transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg);
+                transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in
+            }
+
+            80% {
+                -webkit-transform: perspective(400px) scale3d(.95, .95, .95) translateZ(0) rotateY(0deg);
+                transform: perspective(400px) scale3d(.95, .95, .95) translateZ(0) rotateY(0deg);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in
+            }
+
+            to {
+                -webkit-transform: perspective(400px) scaleX(1) translateZ(0) rotateY(0deg);
+                transform: perspective(400px) scaleX(1) translateZ(0) rotateY(0deg);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in
+            }
+        }
+
+        /* rubberBand */
+        @keyframes rubberBand {
+            0% {
+                -webkit-transform: scaleX(1);
+                transform: scaleX(1)
+            }
+
+            30% {
+                -webkit-transform: scale3d(1.25, .75, 1);
+                transform: scale3d(1.25, .75, 1)
+            }
+
+            40% {
+                -webkit-transform: scale3d(.75, 1.25, 1);
+                transform: scale3d(.75, 1.25, 1)
+            }
+
+            50% {
+                -webkit-transform: scale3d(1.15, .85, 1);
+                transform: scale3d(1.15, .85, 1)
+            }
+
+            65% {
+                -webkit-transform: scale3d(.95, 1.05, 1);
+                transform: scale3d(.95, 1.05, 1)
+            }
+
+            75% {
+                -webkit-transform: scale3d(1.05, .95, 1);
+                transform: scale3d(1.05, .95, 1)
+            }
+
+            to {
+                -webkit-transform: scaleX(1);
+                transform: scaleX(1)
+            }
+        }
+
+        /* gsap */
+        /* .split {
+            transform-style: preserve-3d;
+        }
+        .split span {
+            display: inline-block;
+            min-width: 1vw;
+            opacity: 0;
+            transform: translate3d(-200px, -500px, 30px) scale(2) rotate(200deg);
+        } */
     </style>
 
 </head>
@@ -91,6 +340,9 @@
             <li><a href="parallaxEffect05.html">5</a></li>
             <li class="active"><a href="parallaxEffect06.html">6</a></li>
             <li><a href="parallaxEffect07.html">7</a></li>
+            <li><a href="parallaxEffect07.html">8</a></li>
+            <li><a href="parallaxEffect07.html">9</a></li>
+            <li><a href="parallaxEffect07.html">10</a></li>
         </ul>
     </header>
     <!-- header -->
@@ -103,7 +355,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">과정도 중요하지만, 결과도 꽤나 중요하다.</p>
+                <p class="parallax__item__desc split style1">과정도 중요하지만, 결과도 꽤나 중요하다.</p>
             </section>
             <!-- section1 -->
             <section id="section2" class="parallax__item">
@@ -112,7 +364,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">후회하기 싫으면 그렇게 살지 말고, 그렇게 살거면 후회하지마라.</p>
+                <p class="parallax__item__desc split style2">후회하기 싫으면 그렇게 살지 말고, 그렇게 살거면 후회하지마라.</p>
             </section>
             <!-- section2 -->
             <section id="section3" class="parallax__item">
@@ -121,7 +373,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">인생은 곱셈이다. 어떤 찬스가 와도 내가 제로면 아무런 의미가 없다.</p>
+                <p class="parallax__item__desc split style3">인생은 곱셈이다. 어떤 찬스가 와도 내가 제로면 아무런 의미가 없다.</p>
             </section>
             <!-- section3 -->
             <section id="section4" class="parallax__item">
@@ -130,7 +382,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">꿈에 눈이 멀어라 시시한 현실 따위 보이지 않게.</p>
+                <p class="parallax__item__desc split style4">꿈에 눈이 멀어라 시시한 현실 따위 보이지 않게.</p>
             </section>
             <!-- section4 -->
             <section id="section5" class="parallax__item">
@@ -139,7 +391,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">네가 모든 사람을 사랑할 수 없듯이 모든 사람이 널 사랑할 수도 없다.</p>
+                <p class="parallax__item__desc split style5">네가 모든 사람을 사랑할 수 없듯이 모든 사람이 널 사랑할 수도 없다.</p>
             </section>
             <!-- section5 -->
             <section id="section6" class="parallax__item">
@@ -148,7 +400,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">내안에 빛이 있으면 스스로 빛나는 법이다.</p>
+                <p class="parallax__item__desc split style6">내안에 빛이 있으면 스스로 빛나는 법이다.</p>
             </section>
             <!-- section6 -->
             <section id="section7" class="parallax__item">
@@ -157,7 +409,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">넌 죽고 싶은 게 아니라 그렇게 살기 싫은거겠지.</p>
+                <p class="parallax__item__desc split style7">넌 죽고 싶은 게 아니라 그렇게 살기 싫은거겠지.</p>
             </section>
             <!-- section7 -->
             <section id="section8" class="parallax__item">
@@ -166,7 +418,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">상상할 수 없는 꿈을 꾸고 있다면 상상할 수 없는 노력을 해라.</p>
+                <p class="parallax__item__desc split style8">상상할 수 없는 꿈을 꾸고 있다면 상상할 수 없는 노력을 해라.</p>
             </section>
             <!-- section8 -->
             <section id="section9" class="parallax__item">
@@ -205,22 +457,72 @@
             txt.setAttribute("aria-label", splitText);
         });
 
+        // function scroll(){
+        //     let scrollTop = window.pageYOffset || window.screenY;
+
+        //     // CSS클래스 추가
+        //     document.querySelectorAll(".parallax__item").forEach(item => {
+        //         if(scrollTop >= item.offsetTop - window.innerHeight/2){
+        //             item.querySelector(".split").classList.add("show");
+        //             item.querySelectorAll(".split span").forEach((spn, i) => {
+        //                 spn.style.transitionDelay = `${100 + 50*i}ms`;
+        //             });
+        //         };
+        //     });
+
+        //     requestAnimationFrame(scroll);
+        // }
+        // scroll()
+
         function scroll(){
             let scrollTop = window.pageYOffset || window.screenY;
 
             // CSS클래스 추가
             document.querySelectorAll(".parallax__item").forEach(item => {
-                if(scrollTop > item.offsetTop - window.innerHeight/2){
+                if(scrollTop >= item.offsetTop - window.innerHeight/2){
                     item.querySelector(".split").classList.add("show");
                     item.querySelectorAll(".split span").forEach((spn, i) => {
-                        spn.style.transitionDelay = `${100 + 50*i}ms`;
+                        setTimeout(() => {
+                            spn.classList.add("show");
+                        }, 50*i);
                     });
                 };
             });
 
+            // gsap
+            // document.querySelectorAll(".parallax__item").forEach(item => {
+            //     if(scrollTop >= item.offsetTop){
+            //         item.querySelectorAll(".split span").forEach((span, i) => {
+            //             gsap.to(span, {
+            //                 duration: 0.05,
+            //                 stagger: 0.1
+            //             });
+            //         });
+            //     }
+            // })
+
+        //     const items = document.querySelectorAll(".parallax__item");
+            
+        //     items.forEach((item, index) => {
+        //         const spans = item.querySelectorAll(".split span");
+
+        //         if(scrollTop >= item.offsetTop){
+        //             gsap.to(spans, {
+        //                 duration: 0.1,
+        //                 opacity: 1,
+        //                 x: 0,
+        //                 y: 0,
+        //                 z: 0,
+        //                 scale: 1,
+        //                 rotation: 0,
+        //                 stagger: 0.05,
+        //             })
+        //         }
+        //     });
             requestAnimationFrame(scroll);
         }
         scroll()
+
     </script>
     
 </body>
