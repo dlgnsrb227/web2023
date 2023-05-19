@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>철길 마을</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        li {
+            list-style: none;
+        }
+        img {
+            vertical-align: top;
+        }
+        /* wrap */
+        #wrap {
+            width: 100%;
+        }
+        /* main */
+        #main {
+            width: 100%;
+            height: calc(100vh - 120px);
+            background-color: #e7ffef;
+            display: flex;
+        }
+        /* header */
+        #header {
+            width: 200px;
+            height: inherit;
+        }
+        #header .logo {
+            width: 100%;
+            text-align: center;
+            background-color: #fff;
+            padding: 30px 0;
+        }
+        #header .logo a {
+            color: #005c3f;
+            font-weight: 800;
+        }
+        #header .nav {}
+        #header .nav > ul {}
+        #header .nav > ul > li {
+            text-align: center;
+            position: relative;
+        }
+        #header .nav > ul > li > a {
+            display: inline-block;
+            padding: 10px 0;
+            background-color: #005c3f;
+            color: #fff;
+            width: 100%;
+        }
+        #header .nav > ul > li > a:hover {
+            background-color: #003d29;
+            color: #fff;
+        }
+        #header .nav > ul > li > ul {
+            z-index: 10;
+            position: absolute;
+            right: -200px;
+            background-color: #005c3f;
+            top: 0;
+            width: 200px;
+            display: none;
+        }
+        #header .nav > ul > li > ul > li > a {
+            display: inline-block;
+            color: #fff;
+            width: 100%;
+            padding: 10px 0;
+        }
+        #header .nav > ul > li > ul > li > a:hover {
+            background-color: #fff;
+            color: #005c3f;
+        }
+        /* section */
+        #contents {
+            width: 400px;
+            height: inherit;
+        }
+        #contents .banner {
+            width: 100%;
+            height: 15%;
+            background-color: #ffd8d8;
+            background-image: url(img/banner01.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #contents .banner h3 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        #contents .banner a {
+            color: #fff;
+            background-color: #00a5717a;
+            padding: 5px 20px;
+            border-radius: 40px;
+        }
+        #contents .banner a:hover {
+            background-color: #005c3f;
+        }
+        #contents .notice {
+            width: 100%;
+            height: 35%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px dashed #d9d9d9;
+        }
+        #contents .notice h3 {
+            color: #ffffff;
+            padding: 4px 10px;
+            margin-bottom: 15px;
+            background-color: #005c3f;
+        }
+        #contents .notice ul {}
+        #contents .notice ul > li {
+            display: flex;
+            justify-content: space-between;
+            line-height: 1.6;
+            padding-left: 15px;
+            position: relative;
+        }
+        #contents .notice ul > li::before {
+            content: '';
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 9px;
+            background-color: #000000;
+        }
+        #contents .notice ul > li > a {
+            width: 70%;
+            overflow: hidden;
+            white-space: nowrap;
+            color: #000000d2;
+        }
+        #contents .notice ul > li > a:hover {
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        #contents .notice ul > li > span {
+            width: 30%;
+            text-align: right;
+        }
+        #contents .notice .more {
+            display: inline-block;
+            background-color: #009767;
+            padding: 2px 4px;
+            border-radius: 40px;
+            position: absolute;
+            right: 25px;
+            top: 25px;
+            color: #fff;
+        }
+        #contents .notice .more:hover {
+            background-color: #00c788;
+            color: #000000;
+        }
+        #contents .gallery {
+            width: 100%;
+            height: 35%;
+            background-color: #e7ffef;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+            position: relative;
+        }
+        #contents .gallery h3 {
+            color: #ffffff;
+            padding: 4px 10px;
+            margin-bottom: 15px;
+            background-color: #005c3f;
+        }
+        #contents .gallery ul {
+            display: flex;
+            justify-content: space-between;
+        }
+        #contents .gallery ul li {
+            width: 115px;
+            height: 180px;
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        #contents .gallery li:nth-child(1) {
+            background-image: url(img/gallery01.png);
+        }
+        #contents .gallery li:nth-child(2) {
+            background-image: url(img/gallery02.png);
+        }
+        #contents .gallery li:nth-child(3) {
+            background-image: url(img/gallery03.png);
+        }
+        #contents .gallery ul li a {
+            display: block;
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        #contents .gallery ul li a:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        #contents .gallery .more {
+            display: inline-block;
+            background-color: #009767;
+            padding: 2px 4px;
+            border-radius: 40px;
+            position: absolute;
+            right: 25px;
+            top: 25px;
+            color: #fff;
+        }
+        #contents .gallery .more:hover {
+            background-color: #00c788;
+            color: #000000;
+        }
+        #contents .link {
+            width: 100%;
+            height: 15%;
+            background-color: #e7ffef;
+        }
+        #contents .link ul {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+        #contents .link ul li {
+            width: 70px;
+            height: 70px;
+            text-align: center;
+            /* background-color: #000; */
+        }
+        #contents .link ul li a {
+            display: block;
+            padding-top: 50px;
+            position: relative;
+            transition: all 0.1s;
+            /* background-color: #000; */
+        }
+        #contents .link ul li a:hover {
+            color: #00c788;
+            transform: scale(1.1);
+        }
+        #contents .link ul li a::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            background-position: center center;
+        }
+        #contents .link ul li:nth-child(1) a::before {
+            background-image: url(img/icon01.png);
+        }
+        #contents .link ul li:nth-child(2) a::before {
+            background-image: url(img/icon04.png);
+        }
+        #contents .link ul li:nth-child(3) a::before {
+            background-image: url(img/icon06.png);
+        }
+        #contents .link ul li:nth-child(4) a::before {
+            background-image: url(img/icon02.png);
+        }
+        /* slider */
+        #slider {
+            width: calc(100% - 600px);
+            height: 100%;
+            overflow: hidden;
+        }
+        #slider .slider__wrap {
+            width: 400%;
+            height: 100%;
+            display: flex;
+        }
+        #slider .slider__wrap .slider {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #slider .slider__wrap .slider.s1 {
+            background-image: url(img/slider01.png);
+        }
+        #slider .slider__wrap .slider.s2 {
+            background-image: url(img/slider02.png);
+        }
+        #slider .slider__wrap .slider.s3 {
+            background-image: url(img/slider03.png);
+        }
+        #slider .slider__wrap .slider .text {
+            background-color: #3fc7005d;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        #slider .slider__wrap .slider .text h3 {
+            color: #e6e6e6;
+            font-size: 24px;
+        }
+        #slider .slider__wrap .slider .text p {
+            color: #e6e6e6;
+            margin-top: 15px;
+        }
+        /* footer */
+        #footer {
+            width: 100%;
+            display: flex;
+        }
+        #footer .footer1 {
+            width: 200px;
+            height: 120px;
+            background-color: #e7ffef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #a0a0a0;
+        }
+        #footer .footer2 {
+            width: calc(100% - 400px);
+            background-color: #e7ffef;
+        }
+        #footer .footer2 .footer2-1 {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #footer .footer2 .footer2-1 li {
+            display: inline-block;
+        }
+        #footer .footer2 .footer2-1 a {
+            padding: 20px 10px;
+            display: inline-block;
+        }
+        #footer .footer2 .footer2-1 a:hover {
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        #footer .footer2 .footer2-2 {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #footer .footer3 {
+            width: 200px;
+            background-color: #e7ffef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #footer .footer3 select {
+            display: inline-block;
+            width: 90%;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main id="main">
+            <header id="header">
+                <h1 class="logo">
+                    <a href="#">철길마을</a>
+                </h1>
+                <nav class="nav">
+                    <ul>
+                        <li>
+                            <a href="#">철길마을</a>
+                            <ul class="submenu">
+                                <li><a href="#">마을 소개</a></li>
+                                <li><a href="#">마을의 유래</a></li>
+                                <li><a href="#">볼거리</a></li>
+                                <li><a href="#">찾아오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">주변 맛집</a>
+                            <ul class="submenu">
+                                <li><a href="#">빵집</a></li>
+                                <li><a href="#">간장게장</a></li>
+                                <li><a href="#">중국음식점</a></li>
+                                <li><a href="#">횟집</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">주변 여행지</a>
+                            <ul class="submenu">
+                                <li><a href="#">온파호수공원</a></li>
+                                <li><a href="#">초원사진관</a></li>
+                                <li><a href="#">월명공원</a></li>
+                                <li><a href="#">진포해양공원</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">도움마당</a>
+                            <ul class="submenu">
+                                <li><a href="#">교통정보</a></li>
+                                <li><a href="#">주변 주차장</a></li>
+                                <li><a href="#">자료실</a></li>
+                                <li><a href="#">자료마당</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- //header -->
+            <section id="contents">
+                <article class="banner">
+                    <h3>기차여행</h3>
+                    <a href="#">예매하기</a>
+                </article>
+                <article class="notice">
+                    <h3>철길마을 공지사항</h3>
+                    <ul>
+                        <li><a href="#">공지사항 제목이 들어갑니다.</a><span>2023.05.19</span></li>
+                        <li><a href="#">공지사항 제목이 들어갑니다.</a><span>2023.04.18</span></li>
+                        <li><a href="#">공지사항 제목이 들어갑니다.</a><span>2023.03.17</span></li>
+                        <li><a href="#">공지사항 제목이 들어갑니다.</a><span>2023.02.16</span></li>
+                        <li><a href="#">공지사항 제목이 들어갑니다.</a><span>2023.01.15</span></li>
+                    </ul>
+                    <a href="#" class="more">더보기</a>
+                </article>
+                <article class="gallery">
+                    <h3>철길마을 갤러리</h3>
+                    <ul>
+                        <li><a href="#">최고의 뷰</a></li>
+                        <li><a href="#">위험한 뷰</a></li>
+                        <li><a href="#">엄청난 뷰</a></li>
+                    </ul>
+                    <a href="#" class="more">더보기</a>
+                </article>
+                <article class="link">
+                    <ul>
+                        <li><a href="#">오락거리</a></li>
+                        <li><a href="#">참고영상</a></li>
+                        <li><a href="#">참고사진</a></li>
+                        <li><a href="#">상담예약</a></li>
+                    </ul>
+                </article>
+            </section>
+            <!-- //section -->
+            <article id="slider">
+                <div class="slider__wrap">
+                    <div class="slider s1">
+                        <div class="text">
+                            <h3>추억을 소환하는 철길마을</h3>
+                            <p>고향의 향수를 느끼게 해주는 철길마을로 놀러오세요.</p>
+                        </div>
+                    </div>
+                    <div class="slider s2">
+                        <div class="text">
+                            <h3>추억을 소환하는 철길마을</h3>
+                            <p>고향의 향수를 느끼게 해주는 철길마을로 놀러오세요.</p>
+                        </div>
+                    </div>
+                    <div class="slider s3">
+                        <div class="text">
+                            <h3>추억을 소환하는 철길마을</h3>
+                            <p>고향의 향수를 느끼게 해주는 철길마을로 놀러오세요.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- //slider -->
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <div class="footer1">
+                <h4>철길 마을</h4>
+            </div>
+            <div class="footer2">
+                <div class="footer2-1">
+                    <ul>
+                        <li><a href="#">개인정보처리방침</a></li> |
+                        <li><a href="#">정보 공개</a></li> |
+                        <li><a href="#">홈페이지운영지침</a></li> |
+                    </ul>
+                </div>
+                <div class="footer2-2">
+                    15073 경기도 군산시 군산로 237 (정왕동) 철길 마을 COPYRIGHT &copy; ALL RIGHTS
+                </div>
+            </div>
+            <div class="footer3">
+                <select name="family" id="family">
+                    <option value="철길마을1">철길마을1</option>
+                    <option value="철길마을2">철길마을2</option>
+                    <option value="철길마을3">철길마을3</option>
+                </select>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <script>
+        // 이미지
+        $(function(){
+            let currentIndex = 0;
+            $(".slider__wrap").append($(".slider").first().clone(true));
+
+            setInterval(function(){
+                currentIndex++;
+                $(".slider__wrap").animate({marginLeft: -100 * currentIndex + "%"}, 600)
+
+                if(currentIndex ==3){
+                    setTimeout(function(){
+                        $(".slider__wrap").animate({marginLeft: 0}, 0);
+                        currentIndex = 0;
+                    }, 700);
+                }
+            }, 3000);
+        });
+
+        // 메뉴
+        $(".nav > ul > li").mouseover(function(){
+            $(this).find(".submenu").stop().slideDown();
+        });
+        $(".nav > ul > li").mouseout(function(){
+            $(this).find(".submenu").stop().slideUp();
+        });
+
+        // 팝업
+        $(".popup-btn").click(function(){
+            $(".popup-view").show();
+        });
+        $(".popup-close").click(function(){
+            $(".popup-view").hide();
+        });
+    </script>
+</body>
+</html>
