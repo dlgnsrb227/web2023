@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #333333;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+img {
+    display: block;
+}
+#wrap {
+    width: 100%;
+    font-family: 'NanumSquareNeo';
+    background-color: rgb(28, 34, 51);;
+}
+#main {
+    height: 650;
+    display: flex;
+}
+#main #aside {
+    width: 200px;
+    height: 650px;
+    background-color: #001724;
+}
+#main #aside .logo {
+    height: 20%;
+    font-size: 35px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px dashed #ccc;
+    color: aliceblue;
+}
+#main #aside #nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#main #aside #nav > ul {
+    width: 90%;
+    border: 1px solid #ffffff33;
+}
+#main #aside #nav > ul > li {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#main #aside #nav > ul > li > a {
+    text-align: center;
+    color: aliceblue;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: #001724;
+}
+#main #aside #nav > ul > li:hover > a {
+    background-color: #003350;
+}
+#main #aside #nav > ul > li > ul {
+    display: none;
+}
+#main #aside #nav > ul > li > ul > li {
+    text-align: center;
+}
+#main #aside #nav > ul > li > ul > li > a {
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+#main #aside #nav > ul > li > ul > li:hover > a {
+    color: aliceblue;
+    background-color: #003350;
+}
+#main #section {
+    width: calc(100% - 200px);
+    height: inherit;
+}
+#main #section #article1 {
+    width: 100%;
+    height: 400px;
+    display: flex;
+}
+#main #section #article1 .slider {
+    width: calc(100% - 230px);
+    background-color: #ffbfbf;
+    overflow: hidden;
+}
+#main #section #article1 .slider .slider__wrap {
+    width: 100%;
+}
+#main #section #article1 .banner {
+    width: 230px;
+    background-color: #ffa5a5;
+    background-image: url(../img/banner01.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#main #section #article1 .banner span {
+    font-size: 20px;
+    display: block;
+    color: aliceblue;
+}
+#main #section #article1 .banner a {
+    padding: 5px 20px;
+    border-radius: 40px;
+    font-size: 18px;
+    color: aliceblue;
+    margin-top: 20px;
+    background-color:rgb(28, 34, 51);
+}
+#main #section #article2 {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+#main #section #article2 .notice {
+    width: 49%;
+    background-color: rgb(28, 34, 51);
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#main #section #article2 .notice > span {
+    font-size: 24px;
+    font-weight: 600;
+    color: aliceblue;
+}
+#main #section #article2 .notice > ul {
+    margin-top: 10px;
+}
+#main #section #article2 .notice > ul > li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+    padding: 15px 0 5px 0;
+    transition: all 0.2s;
+}
+#main #section #article2 .notice > ul > li:hover {
+    border-bottom: 1px solid #d4d4d4;
+}
+#main #section #article2 .notice > ul > li > a {
+    font-size: 18px;
+    color: aliceblue;
+}
+#main #section #article2 .notice > ul > li > em {
+    font-style: normal;
+    color: aliceblue;
+}
+#main #section #article2 .gallery {
+    width: 49%;
+    background-color: rgb(28, 34, 51);
+    padding: 20px;
+    box-sizing: border-box;
+}
+#main #section #article2 .gallery > span {
+    font-size: 24px;
+    font-weight: 600;
+    color: aliceblue;
+}
+#main #section #article2 .gallery .gallery__img {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+#main #section #article2 .gallery .gallery__img .img__inner {
+    width: 28%;
+}
+#main #section #article2 .gallery .gallery__img .img__inner img {
+    width: 100%;
+    height: 10vw;
+    max-height: 150px;
+}
+#main #section #article2 .gallery .gallery__img .img__inner p {
+    text-align: center;
+    padding: 10px;
+    color: aliceblue;
+}
+#footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: rgb(32, 39, 58);
+}
+#footer .footlogo {
+    height: inherit;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: aliceblue;
+    font-weight: 800;
+    border-right: 1px dotted #666;
+}
+#footer .copy {
+    width: calc(100% - 430px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px dotted #666;
+}
+#footer .copy > address {
+    font-style: normal;
+    color: rgb(112, 117, 121);
+}
+#footer .copy > span {
+    color: rgb(112, 117, 121);
+    margin-top: 10px;
+}
+#footer .famsite {
+    width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footer .famsite select {
+    width: 80%;
+    height: 40px;
+    border: 0;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+#wrap {
+    position: relative;
+}
+.modal {
+    z-index: 1000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 500px;
+    background-color: #f0eeff;
+    padding: 50px 30px 30px 30px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 5px;
+    border: 5px ridge #000a46;
+    display: none;
+}
+.modal h2 {
+    font-size: 28px;
+}
+.modal h2 span {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #000a46;
+    padding: 5px 30px;
+    border-radius: 30px;
+    color: aliceblue;
+}
+.modal ul {
+    margin-top: 50px;
+}
+.modal ul > li {
+    padding: 20px;
+    border-bottom: 1px dashed #dadada;
+    transition: all 0.1s;
+}
+.modal ul > li > a {
+    font-size: 20px;
+    font-weight: 600;
+}
+.modal ul > li:hover {
+    background-color: #000a46;
+}
+.modal ul > li:hover a {
+    color: aliceblue;
+}
+.modal .close {
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/x.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
