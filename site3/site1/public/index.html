@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹표준 사이트 만들기</title>
+
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon-6955439f.png" />
+
+    <meta name="author" content="훙쓰">
+    <meta name="description" content="훙쓰와 함께 만드는 사이트 튜토리얼입니다.">
+    <meta name="keyword" content="훙쓰, 사이트, 사이트 만들기, 튜토리얼">
+    <meta name="robots" content="all">
+
+  <script type="module" crossorigin src="/assets/index-d6f47aa9.js"></script>
+  <link rel="stylesheet" href="/assets/index-7dbf541c.css">
+</head>
+<body class="nanumneo">
+    <div id="skip">
+        <a href="#sliderSection">슬라이드 영역 바로가기</a>
+        <a href="#introSection">소개 영역 바로가기</a>
+        <a href="#profileSection">프로필 영역 바로가기</a>
+        <a href="#portSection">포트폴리오 영역 바로가기</a>
+        <a href="#youtubeSection">youtube 영역 바로가기</a>
+        <a href="#unsplashSection">unsplash 영역 바로가기</a>
+        <a href="#movieSection">movie 영역 바로가기</a>
+        <a href="#reviewSection">리뷰 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header" class="header__wrap bg-blue" role="heading">
+        <div class="header__inner container">
+            <h1 class="header__logo">
+                <a href="#">Hoong <em>Site</em></a>
+            </h1>
+            <nav class="header__nav" role="navigation">
+                <ul>
+                    <li><a href="#introSection">소개</a></li>
+                    <li><a href="#profileSection">프로필</a></li>
+                    <li><a href="#portSection">포트폴리오</a></li>
+                    <li><a href="#youtubeSection">유튜브</a></li>
+                    <li><a href="#unsplashSection">이미지</a></li>
+                    <li><a href="#movieSection">영화</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+    <main id="main" role="main">
+        <section id="sliderSection" class="slider__wrap section">
+            <div class="slider__inner">
+                <h2 class="blind">배너 슬라이드</h2>
+                <div class="slider__img">
+                    <div class="slider s1 container">
+                        <div class="text">
+                            <h3>New<br>portfolio</h3>
+                            <p>재능은 노력끝에서 발견된다.<br>어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고 생각합니다.</p>
+                            <a href="#" class="more button-green">자세히보기</a>
+                        </div>
+                        <div class="img" aria-label="hidden">
+                            <img src="/assets/icon04-93a9513a.png" alt="클립이미지">
+                            <img src="/assets/icon08-353e2138.png" alt="전구이미지">
+                            <img src="/assets/icon10-98011bf4.png" alt="핀이미지">
+                        </div>
+                        <div class="circle" aria-label="hidden">
+                            <span class="circle c1"></span>
+                            <span class="circle c2"></span>
+                            <span class="circle c3"></span>
+                            <span class="circle c4"></span>
+                            <span class="circle c5"></span>
+                        </div>
+                    </div>
+                    <!-- <div class="slider s2">
+                        <h3>New<br>portfolio</h3>
+                        <p>재능은 노력끝에서 발견된다.<br>어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고 생각합니다.</p>
+                        <a href="#">자세히보기</a>
+                    </div>
+                    <div class="slider s3">
+                        <h3>New<br>portfolio</h3>
+                        <p>재능은 노력끝에서 발견된다.<br>어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고 생각합니다.</p>
+                        <a href="#">자세히보기</a>
+                    </div> -->
+                </div>
+                <div class="slider__btn">
+                    <a href="#" class="left"><span class="ir">이전이미지</span></a>
+                    <a href="#" class="right"><span class="ir">다음이미지</span></a>
+                </div>
+                <div class="slider__dot">
+                    <a href="#" class="dot"><span class="ir">1번 이미지</span></a>
+                    <a href="#" class="dot"><span class="ir">2번 이미지</span></a>
+                    <a href="#" class="dot active"><span class="ir">3번 이미지</span></a>
+                </div>
+            </div>
+        </section>
+        <!-- //sliderSection -->
+        <section id="introSection" class="intro__wrap bg-blue section">
+            <h3 class="blind">프론트엔드 커리큘럼 과정 소개</h3>
+            <div class="intro__inner container">
+                <div class="intro__title">
+                    <span>Frontend</span>
+                    <h3>프론트앤드<br>전문과정</h3>
+                    <p>프론트앤드 개발자로 취업하기 위한<br>전문과정입니다.<br>여러분들도 도전해보세요!</p>
+                </div>
+                <div class="intro__desc">
+                    <div>
+                        <h4 class="icon-react">React.js</h4>
+                        <p>React는 사용자 인터페이스(UI)를 구축하기 위한 JavaScript 라이브러리입니다. React는 웹 애플리케이션 개발에 주로 사용되며, 모바일 앱과도 통합할 수 있습니다.</p>
+                    </div>
+                    <div>
+                        <h4 class="icon-vue">Vue.js</h4>
+                        <p>Vue는 사용자 인터페이스(UI)를 구축하기 위한 프로그레시브 자바스크립트 프레임워크입니다. React와 마찬가지로 웹 애플리케이션 개발에 주로 사용됩니다.</p>
+                    </div>
+                    <div>
+                        <h4 class="icon-vite">Vite.js</h4>
+                        <p>사이트와 상호작용하는 모든 부분에 대한 개발, 관리, 유지 보수를 하는 것 솔루션의 프로세스를 개발합니다.</p>
+                    </div>
+                    <div>
+                        <h4 class="icon-next">Next.js</h4>
+                        <p>용어 자체에서 알 수 있듯이, 백엔드는 웹사이트나 웹 애플리케이션 또는 모바일 솔루션의 프로세스와 관련된입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //introSection -->
+        <section id="profileSection" class="profile__wrap section center">
+            <h3>프로필 소개</h3>
+            <p>웹디자이너, 웹퍼블리셔, 프론트앤드 개발자를 희망합니다.</p>
+            <div class="profile__inner container">
+                <div class="profile">
+                    <figure class="profile__header">
+                        <img src="/assets/profile01-42a701bf.svg" alt="프로필이미지">
+                    </figure>
+                    <div class="profile__body">
+                        <h4 class="title">이훈규</h4>
+                        <a href="#" class="btn">포트폴리오 보기</a>
+                    </div>
+                </div>
+                <div class="profile">
+                    <figure class="profile__header">
+                        <img src="/assets/profile02-2a799636.svg" alt="프로필이미지">
+                    </figure>
+                    <div class="profile__body">
+                        <h4 class="title">이훈규</h4>
+                        <a href="#" class="btn">포트폴리오 보기</a>
+                    </div>
+                </div>
+                <div class="profile">
+                    <figure class="profile__header">
+                        <img src="/assets/profile03-e43e6344.svg" alt="프로필이미지">
+                    </figure>
+                    <div class="profile__body">
+                        <h4 class="title">이훈규</h4>
+                        <a href="#" class="btn">포트폴리오 보기</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //profileSection -->
+        <section id="portSection" class="port__wrap bg-blue section center">
+            <h3>포트폴리오 소개</h3>
+            <p>웹디자이너, 웹퍼블리셔, 프론트앤드 개발자를 희망합니다.</p>
+            <div class="port__inner container">
+                <div class="port__btn">
+                    <a href="#" class="active">21기</a>
+                    <a href="#">22기</a>
+                    <a href="#">23기</a>
+                    <a href="#">24기</a>
+                </div>
+                <div class="port__cont">
+                    <div class="port">
+                        <figure class="port__header">
+                            <img src="/assets/port01-95d33fb6.png" alt="프로필이미지">
+                        </figure>
+                        <div class="port__body">
+                            <span>
+                                <img src="/assets/portprofile01-a5d903a9.png" alt="포폴프로필">
+                                <div>
+                                    <h4>이훈규 포트폴리오</h4>
+                                    <p>프론트앤드 개발자 포트폴리오</p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="port">
+                        <figure class="port__header">
+                            <img src="/assets/port02-a5a21f83.png" alt="프로필이미지">
+                        </figure>
+                        <div class="port__body">
+                            <span>
+                                <img src="/assets/portprofile02-4686bc59.png" alt="포폴프로필">
+                                <div>
+                                    <h4>이훈규 포트폴리오</h4>
+                                    <p>프론트앤드 개발자 포트폴리오</p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="port">
+                        <figure class="port__header">
+                            <img src="/assets/port03-741cb2da.png" alt="프로필이미지">
+                        </figure>
+                        <div class="port__body">
+                            <span>
+                                <img src="/assets/portprofile03-e8d59ce4.png" alt="포폴프로필">
+                                <div>
+                                    <h4>이훈규 포트폴리오</h4>
+                                    <p>프론트앤드 개발자 포트폴리오</p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="port">
+                        <figure class="port__header">
+                            <img src="/assets/port04-dbda9f70.png" alt="프로필이미지">
+                        </figure>
+                        <div class="port__body">
+                            <span>
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAA2cSURBVHgBjdpHyGbFEgbgnm9+c84555yzmBBMiBEEMeDSjQsXunBzUXDh2qULEUFRUTAgYsCAOeeccw6T852n4P1vz5nzz7Xh8J3Qp7qq3reqq/t8s+bNm7eirWyTyaSlzZo1q36XLl3aFi9e3BYtWtTuvPPOdtttt7X111+/rbfeeu23335re+yxR1t77bXbZ5991rbYYot20UUXVZ+5c+eWvN13373k6L/rrrvW9d13391WjlljeNf9b7/9tl1++eVtn332abvsskvbeuut24oVpVb1SXMvh7Z8+fLpZ1NuxogYkJcYMmfOnPbnn3+2r7/+um222WZt8803r3sMYsCOO+7Ypqam2l9//dXuuOOO6vP333+3rbbaqq277rpt4cKFdb7DDju0Rx99tM2fP7/kb7DBBu2ggw5qCxYsqD7vvPNOyZg9e3bpY5zoQP7QydE7Rv2vR9fSGRoaD1P6+++/L8EM4w1GGNg1oZDjVZ73nIK8zbgnnniibbfddiVT348++qiMYiyvv/zyy4UUeZ9//nk76aSTygGuoyy9cj7UdeIkxxAVSj/88MPt1ltvbT/99FMpuM0225SSKHHEEUe0X3/9te22225tr732KkU9o/z+++9fClMOtc4888z2+++/t19++aWM3WSTTerceBtttFHbb7/9ymHGe/DBB9uNN97Y3n777bZs2bLV9Mp1r/dk2KFv//zzT3vttdfa9ddf304//fTyHu9uvPHGZeRTTz1VsB966KFFtZ122ql98803pfwnn3zS9t5776IU49566632wQcfFJWee+65QmvnnXcuj5988smF1B9//NG++OKLduqpp5bjPvzwwzJ2JhT6NhkzwIsEg37LLbdst99+e3vvvffKQy+88EIp6/m2227bTjvttPI8elGSsZ5tuumm7ZRTTqlrzykJlYMPPrgQ2nPPPYtSgptR0BaHkOXA4447ri1ZsqQQp88Yc/rzSRSP1X550MBPPvlke+mll9p9991X96+88soKwsQNmm2//fbt3XffnX6fJykAOahAjDz0Ecxol0D17Oeff654efHFF+s+eQx844032ptv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" alt="포폴프로필">
+                                <div>
+                                    <h4>이훈규 포트폴리오</h4>
+                                    <p>프론트앤드 개발자 포트폴리오</p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="port">
+                        <figure class="port__header">
+                            <img src="/assets/port05-93059c17.png" alt="프로필이미지">
+                        </figure>
+                        <div class="port__body">
+                            <span>
+                                <img src="/assets/portprofile05-763eea73.png" alt="포폴프로필">
+                                <div>
+                                    <h4>이훈규 포트폴리오</h4>
+                                    <p>프론트앤드 개발자 포트폴리오</p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="port">
+                        <figure class="port__header">
+                            <img src="/assets/port06-c582331c.png" alt="프로필이미지">
+                        </figure>
+                        <div class="port__body">
+                            <span>
+                                <img src="data:image/png;base64,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" alt="포폴프로필">
+                                <div>
+                                    <h4>이훈규 포트폴리오</h4>
+                                    <p>프론트앤드 개발자 포트폴리오</p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //portSection -->
+        <section id="youtubeSection" class="youtube__wrap section">
+            <div class="youtube__inner container">
+                <div class="youtube__text">
+                    <h3>추천 유튜브</h3>
+                    <p>더 다양한 강의는 유튜브를 통해 제공하고 있습니다.<br>구독과 좋아요! 부탁드립니다.</p>
+                    <a href="#" class="button-red">자세히보기</a>
+                </div>
+                <div class="youtube__item">
+                    <div>
+                        <img src="/assets/youtube01-6126b42a.png" alt="유튜브썸네일이미지">
+                    </div>
+                    <div>
+                        <img src="/assets/youtube02-84979599.png" alt="유튜브썸네일이미지">
+                    </div>
+                    <div>
+                        <img src="/assets/youtube03-0178d57e.png" alt="유튜브썸네일이미지">
+                    </div>
+                    <div>
+                        <img src="/assets/youtube04-afc6cbd5.png" alt="유튜브썸네일이미지">
+                    </div>
+                    <div>
+                        <img src="/assets/youtube05-ee984b8f.png" alt="유튜브썸네일이미지">
+                    </div>
+                    <div>
+                        <img src="/assets/youtube06-21220dfa.png" alt="유튜브썸네일이미지">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //youtubeSection -->
+        <section id="unsplashSection" class="unsplash__wrap section bg-blue">
+            <div class="unsplash__inner container">
+                <div class="unsplash__text">
+                    <h3>추천 unsplash 이미지</h3>
+                    <p>더 다양한 강의는 유튜브를 통해 제공하고 있습니다.<br>구독과 좋아요! 부탁드립니다.</p>
+                    <a href="#" class="button-blue">자세히보기</a>
+                </div>
+                <div class="unsplash__item">
+                    <div>
+                        <img src="/assets/unsplash01-1bef92ab.png" alt="언스플래쉬이미지">
+                    </div>
+                    <div>
+                        <img src="/assets/unsplash02-6d97a069.png" alt="언스플래쉬이미지">
+                    </div>
+                    <div>
+                        <img src="/assets/unsplash03-f32deaf1.png" alt="언스플래쉬이미지">
+                    </div>
+                    <div>
+                        <img src="/assets/unsplash01-1bef92ab.png" alt="언스플래쉬이미지">
+                    </div>
+                    <div>
+                        <img src="/assets/unsplash05-3923cc91.png" alt="언스플래쉬이미지">
+                    </div>
+                    <div>
+                        <img src="/assets/unsplash06-d88a6634.png" alt="언스플래쉬이미지">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //unsplashSection -->
+        <section id="movieSection" class="movie__wrap section">
+            <div class="movie__inner container">
+                <div class="movie__text">
+                    <h3>추천 movie</h3>
+                    <p>더 다양한 강의는 유튜브를 통해 제공하고 있습니다.<br>구독과 좋아요! 부탁드립니다.</p>
+                    <a href="#" class="button-green">자세히보기</a>
+                </div>
+                <div class="movie__item">
+                    <div>
+                        <img src="/assets/movie01-42bbf3c4.png" alt="영화썸네일이미지">
+                    </div>
+                    <div>
+                        <img src="/assets/movie02-b13cdb28.png" alt="영화썸네일이미지">
+                    </div>
+                    <div>
+                        <img src="/assets/movie03-9971fef1.png" alt="영화썸네일이미지">
+                    </div>
+                    <div>
+                        <img src="/assets/movie04-26cad958.png" alt="영화썸네일이미지">
+                    </div>
+                    <div>
+                        <img src="/assets/movie05-c7d7c696.png" alt="영화썸네일이미지">
+                    </div>
+                    <div>
+                        <img src="/assets/movie06-2591294e.png" alt="영화썸네일이미지">
+                    </div>
+                    <div>
+                        <img src="/assets/movie07-67ee3140.png" alt="영화썸네일이미지">
+                    </div>
+                    <div>
+                        <img src="/assets/movie08-7486417c.png" alt="영화썸네일이미지">
+                    </div>
+                    <div>
+                        <img src="/assets/movie09-d013e5aa.png" alt="영화썸네일이미지">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //movieSection -->
+    </main>
+    <!-- //main -->
+    <footer id="footer" class="footer__wrap section bg-blue" role="contentinfo">
+        <div class="footer__inner container">
+            <div class="footer__text">
+                <h5>Hooooong</h5>
+                <p>더 궁금하신 것이나<br>문의하실 사항이 있다면 연락주세요.</p>
+                <a href="mailto:gnsrbdi@naver.com">gnsrbdi@naver.com</a>
+                <ul class="sns">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+            <div class="footer__menu">
+                <div>
+                    <h4>사이트</h4>
+                    <ul>
+                        <li><a href="#">웹표준 사이트</a></li>
+                        <li><a href="#">반응형 사이트</a></li>
+                        <li><a href="#">패럴랙스 사이트</a></li>
+                        <li><a href="#">포트폴리오 사이트</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>유형</h4>
+                    <ul>
+                        <li><a href="#">이미지 유형</a></li>
+                        <li><a href="#">카드 유형</a></li>
+                        <li><a href="#">이미지/텍스트 유형</a></li>
+                        <li><a href="#">배너 유형</a></li>
+                        <li><a href="#">텍스트 유형</a></li>
+                        <li><a href="#">푸터 유형</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>스크립트</h4>
+                    <ul>
+                        <li><a href="#">검색 이펙트</a></li>
+                        <li><a href="#">퀴즈 이펙트</a></li>
+                        <li><a href="#">마우스 이펙트</a></li>
+                        <li><a href="#">슬라이드 이펙트</a></li>
+                        <li><a href="#">패럴랙스 이펙트</a></li>
+                        <li><a href="#">게임 이펙트</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>레퍼런스</h4>
+                    <ul>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">FONTS</a></li>
+                        <li><a href="#">BLOG</a></li>
+                        <li><a href="#">REFERENCE</a></li>
+                        <li><a href="#">TUTORIAL</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__right">
+            <span>Copyright 2022. All Rights Reserved. - Designed by Hoong</span>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    
+</body>
+</html>
