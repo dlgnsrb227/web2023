@@ -1,5 +1,9 @@
 // header__wrap
-.header__wrap {}
+.header__wrap {
+    position: relative;
+    z-index: 100;
+    box-shadow: 0 0 20px 10px #dfdfdf;
+}
 
 // header__inner
 .header__inner {
