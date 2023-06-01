@@ -1,30 +1,24 @@
 import React from 'react'
-import Header from "./components/layout/Header.jsx"
-import Footer from "./components/layout/Footer.jsx"
-import Main from "./components/layout/Main.jsx"
-import SliderSection from "./components/section/SliderSection.jsx"
-import IntroSection from "./components/section/IntroSection.jsx"
-import ProfileSection from "./components/section/ProfileSection.jsx"
-import PortSection from "./components/section/PortSection.jsx"
-import YoutubeSection from "./components/section/YoutubeSection.jsx"
-import UnsplashSection from "./components/section/UnsplashSection.jsx"
-import MovieSection from "./components/section/MovieSection.jsx"
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Main from './components/pages/Main'
+import Profile from './components/pages/Profile'
+import Port from './components/pages/Port'
+import Youtube from './components/pages/Youtube'
+import Movie from './components/pages/Movie'
+import Unsplash from './components/pages/Unsplash'
 
 function App() {
   return (
-    <>
-      <Header attr={["header__wrap", "bg-blue", "nanumneo"]} />
-      <Main>
-        <SliderSection attr={"slider__wrap section nanumneo"} />
-        <IntroSection attr={"intro__wrap bg-blue section nanumneo"} />
-        <ProfileSection attr={"profile__wrap section center nanumneo"} />
-        <PortSection attr={"port__wrap bg-blue section center nanumneo"} />
-        <YoutubeSection attr={"youtube__wrap section nanumneo"} />
-        <UnsplashSection attr={"unsplash__wrap section bg-blue nanumneo"} />
-        <MovieSection attr={"movie__wrap section nanumneo"} />
-      </Main>
-      <Footer attr={"footer__wrap section bg-blue nanumneo"} />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Main />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/port' element={<Port />} />
+        <Route path='/youtube' element={<Youtube />} />
+        <Route path='/movie' element={<Movie />} />
+        <Route path='/unsplash' element={<Unsplash />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
