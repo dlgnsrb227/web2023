@@ -1,0 +1,75 @@
+// 가운데 정렬
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// 양쪽 정렬
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+// 포지션 중앙
+@mixin position-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// 한줄효과
+@mixin line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// 두줄이상
+@mixin line($num) {
+    display: -webkit-box;
+    -webkit-line-clamp: $num;
+    -webkit-box-orient: vertical;
+}
+
+// button
+@mixin button($bg-color, $text-color){
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: $bg-color;
+    color: $text-color;
+    border: 0;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken($bg-color, 10%);
+    }
+}
+
+// icon
+@mixin icon($bg-color, $icon-num){
+    position: relative;
+    padding-top: 75px;
+
+    &::before {
+        content: '';
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: $bg-color;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: $icon-num;
+        background-position: center center;
+        background-repeat: no-repeat;
+        transition: all 0.2s;
+    }
+    &:hover::before {
+        background-color: darken($bg-color, 10%);
+    }
+}
