@@ -27,12 +27,22 @@ setInterval(() =>{
 // }
 // sliderH();
 
-$("#aside .menu > ul > li > ul").css("display", "none");
+// $("#aside .menu > ul > li > ul").css("display", "none");
+// $("#aside .menu > ul").mouseover(function(){
+//     $("#aside .menu > ul > li > ul").stop().fadeIn()
+// });
+// $("#aside .menu > ul").mouseout(function(){
+//     $("#aside .menu > ul > li > ul").stop().fadeOut()
+// });
+
+// $("#aside .menu > ul > li > ul").css("display", "none");
 $("#aside .menu > ul").mouseover(function(){
-    $("#aside .menu > ul > li > ul").stop().fadeIn()
+    $("#aside .menu > ul > li > ul").css("transform", "translateY(-38px) scaleX(1)")
+    $("#aside .menu > ul > li > ul > li > a").css()
 });
 $("#aside .menu > ul").mouseout(function(){
-    $("#aside .menu > ul > li > ul").stop().fadeOut()
+    $("#aside .menu > ul > li > ul").css("transform", "translateY(-38px) scaleX(0)")
+    $("#aside .menu > ul > li > ul > li > a").css()
 });
 
 

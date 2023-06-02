@@ -44,17 +44,20 @@ img {
     background-color: #b1dd97;
     transition: all 0.2s;
 }
-#aside .menu > ul > li:hover > a {
+#aside .menu > ul > li > a:hover {
     background-color: #92b87c;
 }
 #aside .menu > ul > li > ul {
     position: absolute;
     left: 175px;
-    width: 100%;
+    width: calc(100% - 175px);
+    overflow: hidden;
     height: 38px;
     background-color: #baeb9e;
     display: flex;
-    transform: translateY(-38px);
+    transform: translateY(-38px) scaleX(0);
+    transform-origin: left;
+    transition: all 0.4s;
     z-index: 10;
 }
 #aside .menu > ul > li > ul > li {
