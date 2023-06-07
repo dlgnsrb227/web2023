@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gsap 패럴랙스 03</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/parallax.css">
+
+    <style>
+        .container::-webkit-scrollbar {
+            width: 10px;
+        }
+        .container::-webkit-scrollbar-thumb {
+            background-color: #ffffff;
+            border-radius: 10px;
+            /* background-clip: padding-box; */
+            border: 2px solid transparent;
+        }
+        .container::-webkit-scrollbar-track {
+            background-color: grey;
+            border-radius: 10px;
+            box-shadow: inset 0px 0px 5px white;
+        }
+    </style>
+
+</head>
+<body class="img01 bg01 seoulhangang container">
+    <header id="header">
+        <h1>Javascript gsap Parallax Effect03</h1>
+        <p>패럴랙스 이펙트 : 나타나기</p>
+        <ul>
+            <li><a href="gsap01.html">1</a></li>
+            <li><a href="gsap02.html">2</a></li>
+            <li class="active"><a href="gsap03.html">3</a></li>
+            <li><a href="gsap04.html">4</a></li>
+            <li><a href="gsap05.html">5</a></li>
+            <li><a href="gsap06.html">6</a></li>
+            <li><a href="gsap07.html">7</a></li>
+            <li><a href="gsap08.html">8</a></li>
+            <li><a href="gsap09.html">9</a></li>
+            <li><a href="gsap10.html">10</a></li>
+        </ul>
+    </header>
+    <!-- header -->
+
+    <main id="main">
+        <div class="parallax__wrap">
+            <section id="section1" class="parallax__item">
+                <span class="parallax__item__num">01</span>
+                <h2 class="parallax__item__title">Section1</h2>
+                <figure class="parallax__item__imgWrap gsap_reveal reveal_BTT">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc gsap_reveal" data-delay="0.3">과정도 중요하지만, 결과도 꽤나 중요하다.</p>
+            </section>
+            <!-- section1 -->
+            <section id="section2" class="parallax__item">
+                <span class="parallax__item__num">02</span>
+                <h2 class="parallax__item__title">Section2</h2>
+                <figure class="parallax__item__imgWrap gsap_reveal reveal_TTB">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc gsap_reveal reveal_LTR" data-delay="0.3">후회하기 싫으면 그렇게 살지 말고, 그렇게 살거면 후회하지마라.</p>
+            </section>
+            <!-- section2 -->
+            <section id="section3" class="parallax__item">
+                <span class="parallax__item__num">03</span>
+                <h2 class="parallax__item__title">Section3</h2>
+                <figure class="parallax__item__imgWrap gsap_reveal reveal_BTT">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc gsap_reveal" data-delay="0.3">인생은 곱셈이다. 어떤 찬스가 와도 내가 제로면 아무런 의미가 없다.</p>
+            </section>
+            <!-- section3 -->
+            <section id="section4" class="parallax__item">
+                <span class="parallax__item__num">04</span>
+                <h2 class="parallax__item__title">Section4</h2>
+                <figure class="parallax__item__imgWrap gsap_reveal reveal_TTB">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc gsap_reveal reveal_LTR" data-delay="0.3">꿈에 눈이 멀어라 시시한 현실 따위 보이지 않게.</p>
+            </section>
+            <!-- section4 -->
+            <section id="section5" class="parallax__item">
+                <span class="parallax__item__num">05</span>
+                <h2 class="parallax__item__title">Section5</h2>
+                <figure class="parallax__item__imgWrap gsap_reveal reveal_BTT">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc gsap_reveal" data-delay="0.3">네가 모든 사람을 사랑할 수 없듯이 모든 사람이 널 사랑할 수도 없다.</p>
+            </section>
+            <!-- section5 -->
+            <section id="section6" class="parallax__item">
+                <span class="parallax__item__num">06</span>
+                <h2 class="parallax__item__title">Section6</h2>
+                <figure class="parallax__item__imgWrap gsap_reveal reveal_TTB">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc gsap_reveal reveal_LTR" data-delay="0.3">내안에 빛이 있으면 스스로 빛나는 법이다.</p>
+            </section>
+            <!-- section6 -->
+            <section id="section7" class="parallax__item">
+                <span class="parallax__item__num">07</span>
+                <h2 class="parallax__item__title">Section7</h2>
+                <figure class="parallax__item__imgWrap gsap_reveal reveal_BTT">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc gsap_reveal" data-delay="0.3">넌 죽고 싶은 게 아니라 그렇게 살기 싫은거겠지.</p>
+            </section>
+            <!-- section7 -->
+            <section id="section8" class="parallax__item">
+                <span class="parallax__item__num">08</span>
+                <h2 class="parallax__item__title">Section8</h2>
+                <figure class="parallax__item__imgWrap gsap_reveal reveal_TTB">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc gsap_reveal reveal_LTR" data-delay="0.3">상상할 수 없는 꿈을 꾸고 있다면 상상할 수 없는 노력을 해라.</p>
+            </section>
+            <!-- section8 -->
+            <section id="section9" class="parallax__item">
+                <span class="parallax__item__num">09</span>
+                <h2 class="parallax__item__title">Section9</h2>
+                <figure class="parallax__item__imgWrap gsap_reveal reveal_BTT">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc gsap_reveal" data-delay="0.3">사람 고쳐 쓰는게 아니다.</p>
+            </section>
+            <!-- section9 -->
+            <section id="sectionEnd" class="parallaxs__item">
+                <span class="parallaxs__item__num">End</span>
+                <div class="parallaxs__item__img"></div>
+            </section>
+            <!-- sectionEnd -->
+        </div>
+    </main>
+    <!-- main -->
+
+    <footer id="footer">
+        <a href="mailto:gnsrbdi@naver.com">gnsrdbi@naver.com</a>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+
+    <script>
+        const reveal = document.querySelectorAll(".gsap_reveal");
+        const revealLTR = document.querySelectorAll(".reveal_LTR");
+
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.registerPlugin(ScrollTrigger);
+            
+            function animate(item){
+                let revealData = item.dataset.delay;
+                let y = 0;
+                let x = 0;
+                if(item.classList.contains("reveal_LTR")){
+                    x = -100
+                    y = 0
+                } else if(item.classList.contains("reveal_BTT")){
+                    x = 0
+                    y = 100
+                } else if(item.classList.contains("reveal_TTB")){
+                    x = 0
+                    y = -100
+                } else {
+                    x = 100
+                    y = 0
+                }
+
+                if(revealData){
+                    gsap.fromTo(item,
+                    {autoAlpha: 0, x: x, y: y},
+                    {autoAlpha: 1, x: 0, y: 0, duration: 2, delay:revealData, overwrite: 'auto', ease: 'expo'});
+                } else {
+                    gsap.fromTo(item,
+                    {autoAlpha: 0, x: x, y: y},
+                    {autoAlpha: 1, x: 0, y: 0, duration: 2, overwrite: 'auto', ease: 'expo'});
+                }
+
+            }
+
+            gsap.utils.toArray(reveal).forEach(item => {
+                item.style.opacity = '0';
+                ScrollTrigger.create({
+                    trigger: item,
+                    markers: true,
+                    start: 'top 80%',
+                    onEnter: () => {animate(item)},
+                })
+            });
+        });
+    </script>
+</body>
+</html>

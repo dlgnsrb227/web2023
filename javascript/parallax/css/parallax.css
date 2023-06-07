@@ -129,7 +129,7 @@ main {
     width: 100%;
     padding-bottom: 56.25%; /* 가상 height */
     position: relative;
-    z-index: -1;
+    /* z-index: -1; */
     overflow: hidden;
 }
 .parallax__item__img {
@@ -143,7 +143,11 @@ main {
     background-position: center center;
     background-size: cover;
     filter: saturate(20%);
-    transition: filter 1s;
+    transition: all 1s;
+}
+.parallax__item__img:hover {
+    filter: saturate(80%);
+    transform: scale(1.025);
 }
 .parallax__item:nth-child(1) .parallax__item__img {
     background-image: url(../img/parallaxEffect01-min.jpg);
@@ -173,12 +177,14 @@ main {
     background-image: url(../img/parallaxEffect09-min.jpg);
 }
 .parallax__item__desc {
+    position: relative;
     font-size: 4vw;
     line-height: 1.4;
     margin-top: -5vw;
     margin-left: -4vw;
     word-break: keep-all;
     font-weight: 100;
+    z-index: 1;
 }
 .parallax__item:nth-child(even) .parallax__item__desc {
     margin-left: auto;
