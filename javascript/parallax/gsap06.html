@@ -4,33 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gsap 패럴랙스 04</title>
+    <title>gsap 패럴랙스 06</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/parallax.css">
 
     <style>
         .container::-webkit-scrollbar {
-            width: 10px;
+            width: 13px;
         }
         .container::-webkit-scrollbar-thumb {
             background-color: #ffffff;
-            border-radius: 10px;
-            /* background-clip: padding-box; */
+            border-radius: 5px;
+            background-clip: padding-box;
             border: 2px solid transparent;
         }
         .container::-webkit-scrollbar-track {
             background-color: grey;
-            border-radius: 10px;
-            box-shadow: inset 0px 0px 5px white;
+            border-radius: 1px;
+            box-shadow: inset 0px 0px 5px rgb(206, 206, 206);
         }
 
+        /* option */
+        body {
+            overscroll-behavior: none;
+        }
+        .parallaxs__wrap {
+            width: 900%;
+            height: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        #main {
+            /* overflow: auto; */
+        }
         #header {
             z-index: 10000;
             position: fixed;
         }
         .parallaxs__item{
-            width: 100vw;
+            width: 100%;
+            height: 100vh;
             position: relative;
             display: flex;
             align-items: center;
@@ -46,15 +60,12 @@
             color: #fff;
             z-index: 1000;
         }
-        .parallaxs__item__title {
-            font-size: 10vw;
-            color: #fff;
-        }
         .parallaxs__item__img {
-            width: 100%;
-            height: 100vh;
+            width: 200px;
+            height: 200px;
             background-size: cover;
-            filter: brightness(50%);
+            border-radius: 20px;
+            transition: border-radius 0.3s;
         }
         .parallaxs__item__img.active {
             border-radius: 50%;
@@ -97,19 +108,18 @@
         #section8 {background-color: #888;}
         #section9 {background-color: #999;}
     </style>
-
 </head>
 <body class="img01 bg01 seoulhangang container">
     <header id="header">
-        <h1>Javascript gsap Parallax Effect04</h1>
-        <p>패럴랙스 이펙트 : pin 효과</p>
+        <h1>Javascript gsap Parallax Effect06</h1>
+        <p>패럴랙스 이펙트 : 가로효과</p>
         <ul>
             <li><a href="gsap01.html">1</a></li>
             <li><a href="gsap02.html">2</a></li>
             <li><a href="gsap03.html">3</a></li>
-            <li class="active"><a href="gsap04.html">4</a></li>
+            <li><a href="gsap04.html">4</a></li>
             <li><a href="gsap05.html">5</a></li>
-            <li><a href="gsap06.html">6</a></li>
+            <li class="active"><a href="gsap06.html">6</a></li>
             <li><a href="gsap07.html">7</a></li>
             <li><a href="gsap08.html">8</a></li>
             <li><a href="gsap09.html">9</a></li>
@@ -165,32 +175,35 @@
                 <div class="parallaxs__item__img"></div>
             </section>
             <!-- section9 -->
-            <section id="sectionEnd" class="parallaxs__item">
-                <span class="parallaxs__item__num">End</span>
-                <div class="parallaxs__item__img"></div>
-            </section>
-            <!-- sectionEnd -->
         </div>
     </main>
     <!-- main -->
 
-    <footer id="footer">
-        <a href="mailto:gnsrbdi@naver.com">gnsrdbi@naver.com</a>
-    </footer>
-    
+    <progress max="100" value="0"></progress>
+
+    <!-- <aside class="parallax__info">
+        <div class="scroll">scrollTop : <span>0</span>px</div>
+    </aside> -->
+    <!-- parallax__info -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
 
     <script>
-        const parallaxItem = document.querySelectorAll(".parallaxs__item__img");
+        let sections = gsap.utils.toArray(".parallaxs__item");
 
-        gsap.utils.toArray(parallaxItem).forEach((item, i) => {
-            ScrollTrigger.create({
-                trigger: item,
-                start: 'top top',
+        gsap.to(sections, {
+            xPercent: -100 * (sections.length -1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".parallaxs__wrap",
                 pin: true,
-            });
-        });
+                scrub: 1,
+                snap: 1 / (sections.length -1),
+                // end: "+=5000",
+                end: document.querySelector(".parallaxs__wrap").offsetWidth,
+            }
+        })
     </script>
 </body>
 </html>

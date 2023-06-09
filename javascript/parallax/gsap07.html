@@ -4,33 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gsap 패럴랙스 04</title>
+    <title>gsap 패럴랙스 07</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/parallax.css">
 
     <style>
         .container::-webkit-scrollbar {
-            width: 10px;
+            width: 13px;
         }
         .container::-webkit-scrollbar-thumb {
             background-color: #ffffff;
-            border-radius: 10px;
-            /* background-clip: padding-box; */
+            border-radius: 5px;
+            background-clip: padding-box;
             border: 2px solid transparent;
         }
         .container::-webkit-scrollbar-track {
             background-color: grey;
-            border-radius: 10px;
-            box-shadow: inset 0px 0px 5px white;
+            border-radius: 1px;
+            box-shadow: inset 0px 0px 5px rgb(206, 206, 206);
         }
 
+        /* option */
+        #main {
+            /* overflow: auto; */
+        }
+        #horizontality {
+            width: 500%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        #horizontality > section {
+            width: 100%;
+            height: 100%;
+        }
         #header {
             z-index: 10000;
             position: fixed;
         }
         .parallaxs__item{
-            width: 100vw;
+            width: 100%;
+            height: 100vh;
             position: relative;
             display: flex;
             align-items: center;
@@ -46,15 +61,12 @@
             color: #fff;
             z-index: 1000;
         }
-        .parallaxs__item__title {
-            font-size: 10vw;
-            color: #fff;
-        }
         .parallaxs__item__img {
-            width: 100%;
-            height: 100vh;
+            width: 200px;
+            height: 200px;
             background-size: cover;
-            filter: brightness(50%);
+            border-radius: 20px;
+            transition: border-radius 0.3s;
         }
         .parallaxs__item__img.active {
             border-radius: 50%;
@@ -97,20 +109,19 @@
         #section8 {background-color: #888;}
         #section9 {background-color: #999;}
     </style>
-
 </head>
 <body class="img01 bg01 seoulhangang container">
     <header id="header">
-        <h1>Javascript gsap Parallax Effect04</h1>
-        <p>패럴랙스 이펙트 : pin 효과</p>
+        <h1>Javascript gsap Parallax Effect07</h1>
+        <p>패럴랙스 이펙트 : 세로 + 가로효과</p>
         <ul>
             <li><a href="gsap01.html">1</a></li>
             <li><a href="gsap02.html">2</a></li>
             <li><a href="gsap03.html">3</a></li>
-            <li class="active"><a href="gsap04.html">4</a></li>
+            <li><a href="gsap04.html">4</a></li>
             <li><a href="gsap05.html">5</a></li>
             <li><a href="gsap06.html">6</a></li>
-            <li><a href="gsap07.html">7</a></li>
+            <li class="active"><a href="gsap07.html">7</a></li>
             <li><a href="gsap08.html">8</a></li>
             <li><a href="gsap09.html">9</a></li>
             <li><a href="gsap10.html">10</a></li>
@@ -130,31 +141,33 @@
                 <div class="parallaxs__item__img"></div>
             </section>
             <!-- section2 -->
-            <section id="section3" class="parallaxs__item">
-                <span class="parallaxs__item__num">03</span>
-                <div class="parallaxs__item__img"></div>
-            </section>
-            <!-- section3 -->
-            <section id="section4" class="parallaxs__item">
-                <span class="parallaxs__item__num">04</span>
-                <div class="parallaxs__item__img"></div>
-            </section>
-            <!-- section4 -->
-            <section id="section5" class="parallaxs__item">
-                <span class="parallaxs__item__num">05</span>
-                <div class="parallaxs__item__img"></div>
-            </section>
-            <!-- section5 -->
-            <section id="section6" class="parallaxs__item">
-                <span class="parallaxs__item__num">06</span>
-                <div class="parallaxs__item__img"></div>
-            </section>
-            <!-- section6 -->
-            <section id="section7" class="parallaxs__item">
-                <span class="parallaxs__item__num">07</span>
-                <div class="parallaxs__item__img"></div>
-            </section>
-            <!-- section7 -->
+            <main id="horizontality">
+                <section id="section3" class="parallaxs__item">
+                    <span class="parallaxs__item__num">03</span>
+                    <div class="parallaxs__item__img"></div>
+                </section>
+                <!-- section3 -->
+                <section id="section4" class="parallaxs__item">
+                    <span class="parallaxs__item__num">04</span>
+                    <div class="parallaxs__item__img"></div>
+                </section>
+                <!-- section4 -->
+                <section id="section5" class="parallaxs__item">
+                    <span class="parallaxs__item__num">05</span>
+                    <div class="parallaxs__item__img"></div>
+                </section>
+                <!-- section5 -->
+                <section id="section6" class="parallaxs__item">
+                    <span class="parallaxs__item__num">06</span>
+                    <div class="parallaxs__item__img"></div>
+                </section>
+                <!-- section6 -->
+                <section id="section7" class="parallaxs__item">
+                    <span class="parallaxs__item__num">07</span>
+                    <div class="parallaxs__item__img"></div>
+                </section>
+                <!-- section7 -->
+            </main>
             <section id="section8" class="parallaxs__item">
                 <span class="parallaxs__item__num">08</span>
                 <div class="parallaxs__item__img"></div>
@@ -165,31 +178,42 @@
                 <div class="parallaxs__item__img"></div>
             </section>
             <!-- section9 -->
-            <section id="sectionEnd" class="parallaxs__item">
-                <span class="parallaxs__item__num">End</span>
-                <div class="parallaxs__item__img"></div>
-            </section>
-            <!-- sectionEnd -->
         </div>
     </main>
     <!-- main -->
 
-    <footer id="footer">
-        <a href="mailto:gnsrbdi@naver.com">gnsrdbi@naver.com</a>
-    </footer>
-    
+    <progress max="100" value="0"></progress>
+
+    <!-- <aside class="parallax__info">
+        <div class="scroll">scrollTop : <span>0</span>px</div>
+    </aside> -->
+    <!-- parallax__info -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
 
     <script>
-        const parallaxItem = document.querySelectorAll(".parallaxs__item__img");
+        const horizon = document.querySelector("#horizontality");
+        const sections = gsap.utils.toArray("#horizontality > section");
 
-        gsap.utils.toArray(parallaxItem).forEach((item, i) => {
-            ScrollTrigger.create({
-                trigger: item,
+        gsap.to(sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '#horizontality',
                 start: 'top top',
+                end: () => '+=' + (horizon.offsetWidth - innerWidth),
                 pin: true,
-            });
+                anticipate: 1,
+                scrub: 1,
+                // snap: 1 / (sections.length -1),
+                snap: {
+                    snapTo: 1 / (sections.length -1),
+                    inertia: false,
+                    duration: {min: 0.1, max: 0.1}
+                },
+                invalidateOnRefresh: true,
+            }
         });
     </script>
 </body>
