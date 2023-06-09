@@ -149,17 +149,17 @@
                 <!-- section3 -->
                 <section id="section4" class="parallaxs__item">
                     <span class="parallaxs__item__num">04</span>
-                    <div class="parallaxs__item__img"></div>
+                    <div class="parallaxs__item__img img4"></div>
                 </section>
                 <!-- section4 -->
                 <section id="section5" class="parallaxs__item">
                     <span class="parallaxs__item__num">05</span>
-                    <div class="parallaxs__item__img"></div>
+                    <div class="parallaxs__item__img img5"></div>
                 </section>
                 <!-- section5 -->
                 <section id="section6" class="parallaxs__item">
                     <span class="parallaxs__item__num">06</span>
-                    <div class="parallaxs__item__img"></div>
+                    <div class="parallaxs__item__img img6"></div>
                 </section>
                 <!-- section6 -->
                 <section id="section7" class="parallaxs__item">
@@ -190,13 +190,13 @@
     <!-- parallax__info -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 
     <script>
         const horizon = document.querySelector("#horizontality");
         const sections = gsap.utils.toArray("#horizontality > section");
 
-        gsap.to(sections, {
+        let scrollTween = gsap.to(sections, {
             xPercent: -100 * (sections.length - 1),
             ease: 'none',
             scrollTrigger: {
@@ -206,7 +206,6 @@
                 pin: true,
                 anticipate: 1,
                 scrub: 1,
-                // snap: 1 / (sections.length -1),
                 snap: {
                     snapTo: 1 / (sections.length -1),
                     inertia: false,
@@ -215,6 +214,51 @@
                 invalidateOnRefresh: true,
             }
         });
+
+        gsap.to(".img4", {
+            y: -200,
+            duration: 2,
+            ease: 'elastic',
+            scrollTrigger: {
+                trigger: '.img4',
+                containerAnimation: scrollTween,
+                start: 'left center',
+                toggleActions: 'play none reverse none',
+                markers: true,
+                id: 'img4',
+            }
+        })
+
+        gsap.to(".img5", {
+            y: -300,
+            scale: 0.1,
+            duration: 1,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.img5',
+                containerAnimation: scrollTween,
+                start: 'center 80%',
+                end: 'center 20%',
+                markers: true,
+                scrub: 1,
+                id: 'img5',
+            }
+        })
+
+        gsap.to(".img6", {
+            scale: 0.1,
+            duration: 1,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.img6',
+                containerAnimation: scrollTween,
+                start: 'center 80%',
+                end: 'center 20%',
+                markers: true,
+                scrub: 1,
+                id: 'img6',
+            }
+        })
     </script>
 </body>
 </html>
