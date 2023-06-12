@@ -50,6 +50,11 @@
     }
 }
 
+// border
+@mixin border($radius){
+    border-radius: ($radius);
+}
+
 // icon
 @mixin icon($bg-color, $icon-num){
     position: relative;
