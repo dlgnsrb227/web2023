@@ -1,218 +1,232 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>02. 마우스 이펙트</title>
 
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/mouse.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/mouse.css" />
     <style>
-        .mouse__wrap {
-            cursor: none;
-        }
-        .mouse__text {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            overflow: hidden;
-        }
-        .mouse__text p {
-            font-size: 2vw;
-            line-height: 1.5;
-        }
-        .mouse__text p:last-child {
-            font-size: 4vw;
-        }
-        .mouse__text p span {
-            color: rgb(243, 223, 136);
-        }
-        .mouse__cursor {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 10px;
-            height: 10px;
-            z-index: 9999;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.3);
-            user-select: none;
-            pointer-events: none;
-            transition: transform 0.3s;
-        }
-        .mouse__cursor2 {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 30px;
-            height: 30px;
-            z-index: 9998;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.3);
-            user-select: none;
-            pointer-events: none;
-            transition: transform 0.3s;
-        }
-        .mouse__cursor3 {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 40px;
-            height: 40px;
-            z-index: 9997;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.3);
-            user-select: none;
-            pointer-events: none;
-            transition: transform 0.3s, border 0.3s;
-        }
-        .mouse__cursor.active {
-            transform: scale(0);
-        }
-        .mouse__cursor2.active {
-            transform: scale(5);
-            background-color: #ffd380a6;
-        }
-        .mouse__cursor3.active {
-            transform: scale(5);
-            background-color: #ffd380a6;
-        }
+      .mouse__wrap {
+        cursor: none;
+      }
+      .mouse__text {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .mouse__text p {
+        font-size: 2vw;
+        line-height: 1.5;
+      }
+      .mouse__text p:last-child {
+        font-size: 4vw;
+      }
+      .mouse__text p span {
+        color: rgb(243, 223, 136);
+      }
+      .mouse__cursor {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 10px;
+        height: 10px;
+        z-index: 9999;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+        user-select: none;
+        pointer-events: none;
+        transition: transform 0.3s;
+      }
+      .mouse__cursor2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        z-index: 9998;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+        user-select: none;
+        pointer-events: none;
+        transition: transform 0.3s;
+      }
+      .mouse__cursor3 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        z-index: 9997;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+        user-select: none;
+        pointer-events: none;
+        transition: transform 0.3s, border 0.3s;
+      }
+      .mouse__cursor.active {
+        transform: scale(0);
+      }
+      .mouse__cursor2.active {
+        transform: scale(5);
+        background-color: #ffd380a6;
+      }
+      .mouse__cursor3.active {
+        transform: scale(5);
+        background-color: #ffd380a6;
+      }
 
-        .mouse__cursor.active2 {
-            transform: scale(0);
-        }
-        .mouse__cursor2.active2 {
-            transform: scale(3) rotateY(540deg);
-            background-color: #dfff4ea6;
-        }
-        .mouse__cursor3.active2 {
-            transform: scale(3);
-            background-color: #fcb74f;
-        }
+      .mouse__cursor.active2 {
+        transform: scale(0);
+      }
+      .mouse__cursor2.active2 {
+        transform: scale(3) rotateY(540deg);
+        background-color: #dfff4ea6;
+      }
+      .mouse__cursor3.active2 {
+        transform: scale(3);
+        background-color: #fcb74f;
+      }
 
-        .mouse__cursor.active3 {
-            transform: scale(2);
-            background-color: #da6e6e;
-            border-radius: 20%;
-        }
-        .mouse__cursor2.active3 {
-            transform: scale(3) rotateY(540deg);
-            border: 2px dotted #cfc750;
-            background-color: #9fb639a6;
-        }
-        .mouse__cursor3.active3 {
-            transform: scale(3) rotateX(540deg);
-            border: 2px dotted #bbe966;
-            background-color: #74c952;
-        }
+      .mouse__cursor.active3 {
+        transform: scale(2);
+        background-color: #da6e6e;
+        border-radius: 20%;
+      }
+      .mouse__cursor2.active3 {
+        transform: scale(3) rotateY(540deg);
+        border: 2px dotted #cfc750;
+        background-color: #9fb639a6;
+      }
+      .mouse__cursor3.active3 {
+        transform: scale(3) rotateX(540deg);
+        border: 2px dotted #bbe966;
+        background-color: #74c952;
+      }
     </style>
-</head>
-<body class="img02 bg02 danjunghae">
+  </head>
+  <body class="img02 bg02 danjunghae">
     <header id="header">
-        <h1><a href="../javascript15.html">Javascript Mouse Effect02</a></h1>
-        <p>GSAP를 이용해서 마우스를 따라다니기</p>
-        <ul>
-            <li><a href="mouseEffect01.html">1</a></li>
-            <li class="active"><a href="mouseEffect02.html">2</a></li>
-            <li><a href="mouseEffect03.html">3</a></li>
-            <li><a href="mouseEffect04.html">4</a></li>
-            <li><a href="mouseEffect05.html">5</a></li>
-            <li><a href="mouseEffect06.html">6</a></li>
-        </ul>
+      <h1><a href="../javascript15.html">Javascript Mouse Effect02</a></h1>
+      <p>GSAP를 이용해서 마우스를 따라다니기</p>
+      <ul>
+        <li><a href="mouseEffect01.html">1</a></li>
+        <li class="active"><a href="mouseEffect02.html">2</a></li>
+        <li><a href="mouseEffect03.html">3</a></li>
+        <li><a href="mouseEffect04.html">4</a></li>
+      </ul>
     </header>
     <!-- header -->
 
     <main id="main">
-        <div class="mouse__wrap">
-            <div class="mouse__cursor"></div>
-            <div class="mouse__cursor2"></div>
-            <div class="mouse__cursor3"></div>
-            <div class="mouse__text">
-                <p>Age is no guarantee of <span>maturity</span>.</p>
-                <p>나이가 <span>성숙</span>을 보장하지는 않는다.</p>
-            </div>
+      <div class="mouse__wrap">
+        <div class="mouse__cursor"></div>
+        <div class="mouse__cursor2"></div>
+        <div class="mouse__cursor3"></div>
+        <div class="mouse__text">
+          <p>Age is no guarantee of <span>maturity</span>.</p>
+          <p>나이가 <span>성숙</span>을 보장하지는 않는다.</p>
         </div>
+      </div>
     </main>
     <!-- main -->
 
     <footer id="footer">
-        <a href="mailto:gnsrbdi@naver.com">gnsrdbi@naver.com</a>
+      <a href="mailto:gnsrbdi@naver.com">gnsrdbi@naver.com</a>
     </footer>
     <!-- footer -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script>
-        // 선택자
-        const cursor = document.querySelector(".mouse__cursor");
-        const cursor2 = document.querySelector(".mouse__cursor2");
-        const cursor3 = document.querySelector(".mouse__cursor3");
-        const cursors = document.querySelectorAll(".mouse__text span");
+      // 선택자
+      const cursor = document.querySelector(".mouse__cursor");
+      const cursor2 = document.querySelector(".mouse__cursor2");
+      const cursor3 = document.querySelector(".mouse__cursor3");
+      const cursors = document.querySelectorAll(".mouse__text span");
 
-        // 커서 좌표값
-        window.addEventListener("mousemove", e => {
-            // cursor.style.left = e.pageX + "px";
-            // cursor.style.top = e.pageY + "px";
-            // cursor2.style.left = e.pageX + "px";
-            // cursor2.style.top = e.pageY + "px";
+      // 커서 좌표값
+      window.addEventListener("mousemove", (e) => {
+        // cursor.style.left = e.pageX + "px";
+        // cursor.style.top = e.pageY + "px";
+        // cursor2.style.left = e.pageX + "px";
+        // cursor2.style.top = e.pageY + "px";
 
-            // GSAP
-            gsap.to(cursor, {duration: 0.2, left: e.pageX -5, top: e.pageY -5});
-            gsap.to(cursor2, {duration: 0.4, left: e.pageX -15, top: e.pageY -15});
-            gsap.to(cursor3, {duration: 0.6, left: e.pageX -20, top: e.pageY -20});
-
-            // 오버효과
-            // document.querySelector(".mouse__text span").addEventListener("mouseenter", () => {
-            //     cursor.classList.add("active");
-            //     cursor2.classList.add("active");
-            //     cursor3.classList.add("active");
-            // });
-
-            // document.querySelector(".mouse__text span").addEventListener("mouseleave", () => {
-            // cursor.classList.remove("active");
-            // cursor2.classList.remove("active");
-            // cursor3.classList.remove("active");
-            // });
-
-            cursors.forEach(function (el){
-                el.addEventListener("mouseenter", () => {
-                    cursor.classList.add("active");
-                    cursor2.classList.add("active");
-                    cursor3.classList.add("active");
-                });
-                el.addEventListener("mouseleave", () => {
-                    cursor.classList.remove("active");
-                    cursor2.classList.remove("active");
-                    cursor3.classList.remove("active");
-                });
-            });
-
-            // 제목 부분
-            document.querySelector("#header h1").addEventListener("mouseenter", () => {
-                cursor.classList.add("active2");
-                cursor2.classList.add("active2");
-                cursor3.classList.add("active2");
-            });
-            document.querySelector("#header h1").addEventListener("mouseleave", () => {
-                cursor.classList.remove("active2");
-                cursor2.classList.remove("active2");
-                cursor3.classList.remove("active2");
-            });
-
-            // 메일 부분
-            document.querySelector("#footer a").addEventListener("mouseenter", () => {
-                cursor.classList.add("active3");
-                cursor2.classList.add("active3");
-                cursor3.classList.add("active3");
-            });
-            document.querySelector("#footer a").addEventListener("mouseleave", () => {
-                cursor.classList.remove("active3");
-                cursor2.classList.remove("active3");
-                cursor3.classList.remove("active3");
-            });
+        // GSAP
+        gsap.to(cursor, { duration: 0.2, left: e.pageX - 5, top: e.pageY - 5 });
+        gsap.to(cursor2, {
+          duration: 0.4,
+          left: e.pageX - 15,
+          top: e.pageY - 15,
         });
+        gsap.to(cursor3, {
+          duration: 0.6,
+          left: e.pageX - 20,
+          top: e.pageY - 20,
+        });
+
+        // 오버효과
+        // document.querySelector(".mouse__text span").addEventListener("mouseenter", () => {
+        //     cursor.classList.add("active");
+        //     cursor2.classList.add("active");
+        //     cursor3.classList.add("active");
+        // });
+
+        // document.querySelector(".mouse__text span").addEventListener("mouseleave", () => {
+        // cursor.classList.remove("active");
+        // cursor2.classList.remove("active");
+        // cursor3.classList.remove("active");
+        // });
+
+        cursors.forEach(function (el) {
+          el.addEventListener("mouseenter", () => {
+            cursor.classList.add("active");
+            cursor2.classList.add("active");
+            cursor3.classList.add("active");
+          });
+          el.addEventListener("mouseleave", () => {
+            cursor.classList.remove("active");
+            cursor2.classList.remove("active");
+            cursor3.classList.remove("active");
+          });
+        });
+
+        // 제목 부분
+        document
+          .querySelector("#header h1")
+          .addEventListener("mouseenter", () => {
+            cursor.classList.add("active2");
+            cursor2.classList.add("active2");
+            cursor3.classList.add("active2");
+          });
+        document
+          .querySelector("#header h1")
+          .addEventListener("mouseleave", () => {
+            cursor.classList.remove("active2");
+            cursor2.classList.remove("active2");
+            cursor3.classList.remove("active2");
+          });
+
+        // 메일 부분
+        document
+          .querySelector("#footer a")
+          .addEventListener("mouseenter", () => {
+            cursor.classList.add("active3");
+            cursor2.classList.add("active3");
+            cursor3.classList.add("active3");
+          });
+        document
+          .querySelector("#footer a")
+          .addEventListener("mouseleave", () => {
+            cursor.classList.remove("active3");
+            cursor2.classList.remove("active3");
+            cursor3.classList.remove("active3");
+          });
+      });
     </script>
-</body>
+  </body>
 </html>

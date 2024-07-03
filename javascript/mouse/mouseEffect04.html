@@ -74,8 +74,6 @@
         <li><a href="mouseEffect02.html">2</a></li>
         <li><a href="mouseEffect03.html">3</a></li>
         <li class="active"><a href="mouseEffect04.html">4</a></li>
-        <li><a href="mouseEffect05.html">5</a></li>
-        <li><a href="mouseEffect06.html">6</a></li>
       </ul>
     </header>
     <!-- header -->
@@ -105,9 +103,9 @@
 
     <script>
       document
-        .querySelector('.mouse__img figure')
-        .addEventListener('mousemove', (e) => {
-          gsap.to('.mouse__cursor', {
+        .querySelector(".mouse__img figure")
+        .addEventListener("mousemove", (e) => {
+          gsap.to(".mouse__cursor", {
             duration: 0.2,
             left: e.pageX,
             top: e.pageY,
@@ -127,7 +125,7 @@
           let centerPageY = window.innerHeight / 2 - mousePageY;
 
           // 이미지 움직이기
-          const imgMove = document.querySelector('.mouse__img figure img');
+          const imgMove = document.querySelector(".mouse__img figure img");
           // imgMove.style.transform = "translate("+centerPageX/20+"px, "+centerPageY/20+"px)";
 
           gsap.to(imgMove, {

@@ -1,233 +1,234 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>01. 마우스 이펙트</title>
 
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/mouse.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/mouse.css" />
     <style>
-        .mouse__wrap {
-            cursor: none;
-        }
-        .mouse__cursor {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: 3px solid #fff;
-            background-color: rgba(255, 255, 255, 0.1);
-            user-select: none;
-            pointer-events: none;
-            transition:
-                background-color 0.2s,
-                border-color 0.2s,
-                transform 0.45s,
-                border 0.3s
-                ;
-        }
-        .mouse__cursor.s1 {
-            background-color: rgba(187, 170, 72, 0.582);
-            border-color: #c1c43e;
-        }
-        .mouse__cursor.s2 {
-            background-color: rgba(153, 219, 122, 0.4);
-            border-color: #97d36e;
-            transform: scale(2) rotateY(720deg);
-        }
-        .mouse__cursor.s3 {
-            background-color: rgba(235, 135, 218, 0.4);
-            border-color: #d36ed3;
-            transform: scale(1.5) rotateX(720deg);
-        }
-        .mouse__cursor.s4 {
-            background-color: rgba(135, 212, 235, 0.4);
-            border-color: #6ebbd3;
-            transform: scale(10);
-            border-radius: 0.5px;
-        }
-        .mouse__cursor.s5 {
-            background-color: rgba(138, 235, 135, 0.4);
-            border-color: #6ed387;
-            transform: scale(3) skew(15deg) rotateY(200deg);
-        }
-        .mouse__cursor.s6 {
-            border: 5px dotted #fffc34;
-            background-color: rgba(220, 235, 135, 0.4);
-            transform: scale(3) rotateX(180deg) rotate(720deg);
-        }
-        .mouse__text {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-        .mouse__text p {
-            font-size: 2vw;
-            line-height: 1.9;
-        }
-        .mouse__text p:last-child {
-            font-size: 3vw;
-        }
-        .mouse__text p span {
-            color: #c1c43e;
-            font-weight: bold;
-        }
-        .mouse__info {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            padding: 20px;
-            font-size: 16px;
-            line-height: 1.6;
-        }
+      .mouse__wrap {
+        cursor: none;
+      }
+      .mouse__cursor {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        background-color: rgba(255, 255, 255, 0.1);
+        user-select: none;
+        pointer-events: none;
+        transition: background-color 0.2s, border-color 0.2s, transform 0.45s,
+          border 0.3s;
+      }
+      .mouse__cursor.s1 {
+        background-color: rgba(187, 170, 72, 0.582);
+        border-color: #c1c43e;
+      }
+      .mouse__cursor.s2 {
+        background-color: rgba(153, 219, 122, 0.4);
+        border-color: #97d36e;
+        transform: scale(2) rotateY(720deg);
+      }
+      .mouse__cursor.s3 {
+        background-color: rgba(235, 135, 218, 0.4);
+        border-color: #d36ed3;
+        transform: scale(1.5) rotateX(720deg);
+      }
+      .mouse__cursor.s4 {
+        background-color: rgba(135, 212, 235, 0.4);
+        border-color: #6ebbd3;
+        transform: scale(10);
+        border-radius: 0.5px;
+      }
+      .mouse__cursor.s5 {
+        background-color: rgba(138, 235, 135, 0.4);
+        border-color: #6ed387;
+        transform: scale(3) skew(15deg) rotateY(200deg);
+      }
+      .mouse__cursor.s6 {
+        border: 5px dotted #fffc34;
+        background-color: rgba(220, 235, 135, 0.4);
+        transform: scale(3) rotateX(180deg) rotate(720deg);
+      }
+      .mouse__text {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .mouse__text p {
+        font-size: 2vw;
+        line-height: 1.9;
+      }
+      .mouse__text p:last-child {
+        font-size: 3vw;
+      }
+      .mouse__text p span {
+        color: #c1c43e;
+        font-weight: bold;
+      }
+      .mouse__info {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 20px;
+        font-size: 16px;
+        line-height: 1.6;
+      }
     </style>
-</head>
-<body class="img01 bg01 pyeonchang">
+  </head>
+  <body class="img01 bg01 pyeonchang">
     <header id="header">
-        <h1><a href="../javascript15.html">Javascript Mouse Effect01</a></h1>
-        <p>마우스 이펙트 - 마우스 따라다니기</p>
-        <ul>
-            <li class="active"><a href="mouseEffect01.html">1</a></li>
-            <li><a href="mouseEffect02.html">2</a></li>
-            <li><a href="mouseEffect03.html">3</a></li>
-            <li><a href="mouseEffect04.html">4</a></li>
-            <li><a href="mouseEffect05.html">5</a></li>
-            <li><a href="mouseEffect06.html">6</a></li>
-        </ul>
+      <h1><a href="../javascript15.html">Javascript Mouse Effect01</a></h1>
+      <p>마우스 이펙트 - 마우스 따라다니기</p>
+      <ul>
+        <li class="active"><a href="mouseEffect01.html">1</a></li>
+        <li><a href="mouseEffect02.html">2</a></li>
+        <li><a href="mouseEffect03.html">3</a></li>
+        <li><a href="mouseEffect04.html">4</a></li>
+      </ul>
     </header>
     <!-- header -->
 
     <main id="main">
-        <div class="mouse__wrap">
-            <div class="mouse__cursor"></div>
-            <div class="mouse__text">
-                <p>If you don't want to <span class="s1">regret</span>, don't live <span class="s2">like that</span>, if you're going to live like that, <span class="s3">don't regret</span>.</p>
-                <p><span class="s4">후회</span>하기 싫으면 그렇게 <span class="s5">살지 말고</span>, 그렇게 살거면 <span class="s6">후회하지마라.</span></p>
-            </div>
+      <div class="mouse__wrap">
+        <div class="mouse__cursor"></div>
+        <div class="mouse__text">
+          <p>
+            If you don't want to <span class="s1">regret</span>, don't live
+            <span class="s2">like that</span>, if you're going to live like
+            that, <span class="s3">don't regret</span>.
+          </p>
+          <p>
+            <span class="s4">후회</span>하기 싫으면 그렇게
+            <span class="s5">살지 말고</span>, 그렇게 살거면
+            <span class="s6">후회하지마라.</span>
+          </p>
         </div>
-        <div class="mouse__info">
-            <ul>
-                <li>clientX : <span class="clientX">0</span>px</li>
-                <li>clientY : <span class="clientY">0</span>px</li>
-                <li>offsetX : <span class="offsetX">0</span>px</li>
-                <li>offsetY : <span class="offsetY">0</span>px</li>
-                <li>pageX : <span class="pageX">0</span>px</li>
-                <li>pageY : <span class="pageY">0</span>px</li>
-                <li>screenX : <span class="screenX">0</span>px</li>
-                <li>screenY : <span class="screenY">0</span>px</li>
-            </ul>
-        </div>
+      </div>
+      <div class="mouse__info">
+        <ul>
+          <li>clientX : <span class="clientX">0</span>px</li>
+          <li>clientY : <span class="clientY">0</span>px</li>
+          <li>offsetX : <span class="offsetX">0</span>px</li>
+          <li>offsetY : <span class="offsetY">0</span>px</li>
+          <li>pageX : <span class="pageX">0</span>px</li>
+          <li>pageY : <span class="pageY">0</span>px</li>
+          <li>screenX : <span class="screenX">0</span>px</li>
+          <li>screenY : <span class="screenY">0</span>px</li>
+        </ul>
+      </div>
     </main>
     <!-- main -->
 
     <footer id="footer">
-        <a href="mailto:gnsrbdi@naver.com">gnsrdbi@naver.com</a>
+      <a href="mailto:gnsrbdi@naver.com">gnsrdbi@naver.com</a>
     </footer>
     <!-- footer -->
 
     <script>
-        // 마우스가 움직일 때 이벤트 추가
-        window.addEventListener("mousemove", function(event){
-            document.querySelector(".clientX").innerHTML = event.clientX;
-            document.querySelector(".clientY").innerHTML = event.clientY;
-            document.querySelector(".offsetX").innerHTML = event.offsetX;
-            document.querySelector(".offsetY").innerHTML = event.offsetY;
-            document.querySelector(".pageX").innerHTML = event.pageX;
-            document.querySelector(".pageY").innerHTML = event.pageY;
-            document.querySelector(".screenX").innerHTML = event.screenX;
-            document.querySelector(".screenY").innerHTML = event.screenY;
+      // 마우스가 움직일 때 이벤트 추가
+      window.addEventListener("mousemove", function (event) {
+        document.querySelector(".clientX").innerHTML = event.clientX;
+        document.querySelector(".clientY").innerHTML = event.clientY;
+        document.querySelector(".offsetX").innerHTML = event.offsetX;
+        document.querySelector(".offsetY").innerHTML = event.offsetY;
+        document.querySelector(".pageX").innerHTML = event.pageX;
+        document.querySelector(".pageY").innerHTML = event.pageY;
+        document.querySelector(".screenX").innerHTML = event.screenX;
+        document.querySelector(".screenY").innerHTML = event.screenY;
+      });
+
+      // 선택자
+      const cursor = document.querySelector(".mouse__cursor");
+      const cursors = document.querySelectorAll(".mouse__text span");
+
+      window.addEventListener("mousemove", function (e) {
+        cursor.style.left = e.clientX - 25 + "px";
+        cursor.style.top = e.clientY - 25 + "px";
+      });
+
+      // document.querySelector(".s1").addEventListener("mouseover", function(){
+      //     cursor.classList.add("s1");
+      // })
+      // document.querySelector(".s1").addEventListener("mouseout", function(){
+      //     cursor.classList.remove("s1");
+      // })
+
+      // document.querySelector(".s2").addEventListener("mouseover", function(){
+      //     cursor.classList.add("s2");
+      // })
+      // document.querySelector(".s2").addEventListener("mouseout", function(){
+      //     cursor.classList.remove("s2");
+      // })
+
+      // document.querySelector(".s3").addEventListener("mouseover", function(){
+      //     cursor.classList.add("s3");
+      // })
+      // document.querySelector(".s3").addEventListener("mouseout", function(){
+      //     cursor.classList.remove("s3");
+      // })
+
+      // document.querySelector(".s4").addEventListener("mouseover", function(){
+      //     cursor.classList.add("s4");
+      // })
+      // document.querySelector(".s4").addEventListener("mouseout", function(){
+      //     cursor.classList.remove("s4");
+      // })
+
+      // document.querySelector(".s5").addEventListener("mouseover", function(){
+      //     cursor.classList.add("s5");
+      // })
+      // document.querySelector(".s5").addEventListener("mouseout", function(){
+      //     cursor.classList.remove("s5");
+      // })
+
+      // document.querySelector(".s6").addEventListener("mouseover", function(){
+      //     cursor.classList.add("s6");
+      // })
+      // document.querySelector(".s6").addEventListener("mouseout", function(){
+      //     cursor.classList.remove("s6");
+      // })
+
+      // for(let i=1; i<=6; i++){
+      //     document.querySelector(".s"+i).addEventListener("mouseover", function(){
+      //         cursor.classList.add("s"+i)
+      //     });
+      //     document.querySelector(".s"+i).addEventListener("mouseout", function(){
+      //         cursor.classList.remove("s"+i);
+      //     });
+      // };
+
+      // cursors.forEach(function(el, i){
+      //     el.addEventListener("mouseover", function(){
+      //         cursor.classList.add("s"+(i+1))
+      //     });
+      //     el.addEventListener("mouseout", function(){
+      //         cursor.classList.remove("s"+(i+1))
+      //     });
+      // });
+
+      // getAttribute();
+      cursors.forEach(function (el) {
+        let attr = el.getAttribute("class");
+        // attr = s1, s2, s3, s4, s5, s6
+        el.addEventListener("mouseover", function () {
+          cursor.classList.add(attr);
         });
-
-        // 선택자
-        const cursor = document.querySelector(".mouse__cursor");
-        const cursors = document.querySelectorAll(".mouse__text span")
-
-        window.addEventListener("mousemove", function(e){
-            cursor.style.left = e.clientX -25 + "px";
-            cursor.style.top = e.clientY -25 + "px";
+        el.addEventListener("mouseout", function () {
+          cursor.classList.remove(attr);
         });
+      });
 
-        // document.querySelector(".s1").addEventListener("mouseover", function(){
-        //     cursor.classList.add("s1");
-        // })
-        // document.querySelector(".s1").addEventListener("mouseout", function(){
-        //     cursor.classList.remove("s1");
-        // })
-
-        // document.querySelector(".s2").addEventListener("mouseover", function(){
-        //     cursor.classList.add("s2");
-        // })
-        // document.querySelector(".s2").addEventListener("mouseout", function(){
-        //     cursor.classList.remove("s2");
-        // })
-
-        // document.querySelector(".s3").addEventListener("mouseover", function(){
-        //     cursor.classList.add("s3");
-        // })
-        // document.querySelector(".s3").addEventListener("mouseout", function(){
-        //     cursor.classList.remove("s3");
-        // })
-
-        // document.querySelector(".s4").addEventListener("mouseover", function(){
-        //     cursor.classList.add("s4");
-        // })
-        // document.querySelector(".s4").addEventListener("mouseout", function(){
-        //     cursor.classList.remove("s4");
-        // })
-
-        // document.querySelector(".s5").addEventListener("mouseover", function(){
-        //     cursor.classList.add("s5");
-        // })
-        // document.querySelector(".s5").addEventListener("mouseout", function(){
-        //     cursor.classList.remove("s5");
-        // })
-
-        // document.querySelector(".s6").addEventListener("mouseover", function(){
-        //     cursor.classList.add("s6");
-        // })
-        // document.querySelector(".s6").addEventListener("mouseout", function(){
-        //     cursor.classList.remove("s6");
-        // })
-
-        // for(let i=1; i<=6; i++){
-        //     document.querySelector(".s"+i).addEventListener("mouseover", function(){
-        //         cursor.classList.add("s"+i)
-        //     });
-        //     document.querySelector(".s"+i).addEventListener("mouseout", function(){
-        //         cursor.classList.remove("s"+i);
-        //     });
-        // };
-
-        // cursors.forEach(function(el, i){
-        //     el.addEventListener("mouseover", function(){
-        //         cursor.classList.add("s"+(i+1))
-        //     });
-        //     el.addEventListener("mouseout", function(){
-        //         cursor.classList.remove("s"+(i+1))
-        //     });
-        // });
-
-        // getAttribute();
-        cursors.forEach(function(el){
-            let attr = el.getAttribute("class");
-            // attr = s1, s2, s3, s4, s5, s6
-            el.addEventListener("mouseover", function(){
-                cursor.classList.add(attr)
-            });
-            el.addEventListener("mouseout", function(){
-                cursor.classList.remove(attr)
-            });
-        });
-
-        // setAttribute();
+      // setAttribute();
     </script>
-
-</body>
+  </body>
 </html>
